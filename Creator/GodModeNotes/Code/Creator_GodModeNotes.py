@@ -17,10 +17,11 @@ from datetime import datetime
 OPENAI_API_KEY_PATH = "C:\\Presence\\GlobalResources\\OPENAI_API_KEY.txt"
 OPENAI_API_KEY = "OPENAI_API_KEY"
 
-DEBUG_MODE = False
+DEBUG_MODE = True
 DEBUG_TEXT = "Hello from Debug Mode!"
 
-ROOT_DIR = "C:\\Users\\omers\\Desktop\\DriveTest\\Creator\\GodModeNotes"
+ROOT_DIR = "C:\\Presence\\Presence0.1\\Creator\\GodModeNotes"
+
 DIR_OFFLINE_TEXT = f"{ROOT_DIR}\\Resources\\Text"
 DIR_OFFLINE_TEXT_ARCHIVE = f"{ROOT_DIR}\\Resources\\Text - Archive"
 PATH_PROMPT = f"{ROOT_DIR}\\Resources\\Prompt\\Main_Prompt.txt"
@@ -32,7 +33,7 @@ TYPING_SOUNDS_DIR = f"{ROOT_DIR}\\Resources\\Audio\\Typing_Audio"
 BACKGROUND_AUDIO = f"{ROOT_DIR}\\Resources\\Audio\\Background_Audio\\Root\\v1\\Full Audio.mp3"
 
 # Ancient effect overlay
-ANCIENT_IMG = "C:\\Users\\omers\\Workshop\\Development\\AutoCreate\\Clips\\Effects\\AncientEffect\\ancient.jpg"
+ANCIENT_IMG = f"{ROOT_DIR}\\Resources\\Overlays\\ancient.jpg"
 
 # Logo overlay
 LOGO_PATH = f"{ROOT_DIR}\\Resources\\Avatar\\David-Goggins-no-background3.png"
