@@ -26,11 +26,11 @@ DIR_OFFLINE_TEXT = f"{ROOT_DIR}\\Resources\\Text"
 DIR_OFFLINE_TEXT_ARCHIVE = f"{ROOT_DIR}\\Resources\\Text - Archive"
 PATH_PROMPT = f"{ROOT_DIR}\\Resources\\Prompt\\Main_Prompt.txt"
 
-OUT_BASE_FOLDER = f"{ROOT_DIR}\\Output"
-
 INCLUDE_TYPING_SOUNDS = True
 TYPING_SOUNDS_DIR = f"{ROOT_DIR}\\Resources\\Audio\\Typing_Audio"
 BACKGROUND_AUDIO = f"{ROOT_DIR}\\Resources\\Audio\\Background_Audio\\Root\\v1\\Full Audio.mp3"
+
+OUT_BASE_FOLDER = f"{ROOT_DIR}\\Debug_Output" if DEBUG_MODE else "C:\\Presence\\Presence0.1\\Channels\\GodModeNotes\\Clips"
 
 # Ancient effect overlay
 ANCIENT_IMG = f"{ROOT_DIR}\\Resources\\Overlays\\ancient.jpg"
@@ -44,11 +44,11 @@ FONT_SIZE = 48
 
 # Video specs
 WIDTH, HEIGHT = 1080, 1920
-FPS = 30
+FPS = 60
 
 # Make typing slower: about 70% speed => hold frames ~1 / 0.7 => ~1.4
 # (i.e. if original hold was 5 frames, now it's ~7 frames)
-SPEED_FACTOR = 1
+SPEED_FACTOR = 4
 
 def load_openai_key():
     try:
@@ -435,7 +435,7 @@ def main():
 
     # (b) Build background audio track
     if os.path.exists(BACKGROUND_AUDIO):
-        bg_audio_clip = AudioFileClip(BACKGROUND_AUDIO).subclip(0, video_duration)
+        bg_audio_clip = AudioFileClip(BACKGROUND_AUDIO).subclipped(0, video_duration)
     else:
         bg_audio_clip = None
 
@@ -455,7 +455,7 @@ def main():
             for t in keystroke_times:
                 snd_file = random.choice(typing_sounds)
                 # Start this clip at time t
-                snd_clip = AudioFileClip(snd_file).set_start(t)
+                snd_clip = AudioFileClip(snd_file).with_start(t)
                 keystroke_audio_clips.append(snd_clip)
 
     # (d) Composite all audio layers
@@ -470,7 +470,7 @@ def main():
 
     # (e) Attach audio to video clip
     if final_audio:
-        video_with_audio = video_clip.set_audio(final_audio)
+        video_with_audio = video_clip.with_audio(final_audio)
     else:
         video_with_audio = video_clip  # no audio at all
 
