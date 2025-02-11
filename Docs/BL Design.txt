@@ -1,0 +1,27 @@
+* Brand:
+Each Brand represents several channels with the brand's name.
+Each channel represents the actual platform channel like Youtube, TikTok, Facebook, etc.
+
+Each brand contains:
+1. Metadata (ChannelId, ChannelName, Platforms List (sub json), Url for each channel (separated for youtube, TikTok, etc).
+2. Posts directory which will be written by the MediaCreator and saved to a known location in that directory, and will be read by the Publisher for posting process (triggered by the Scheduler).
+3. Posts_Archive directory which will be written by the publisher (to move a post from Posts to Posts_Archive after posting it successfully).
+4. Audit for BLL Audit Trail.
+
+* Scheduler:
+There will be only one scheduler instance that will manage the queues for all the brands.
+The brand queue will be general for all the channels those it represents.
+Each queue item will contain the post id, post name, platforms list (bool for each supported platform).
+The scheduler contains each channel's data:
+1. Brand, Posts Queue, Queue Metadata (to specify the scheduling logic (FIFO, LIFO, etc), scheduling times (every day at X, on days A, B, C at time X, weekly etc.).
+
+* PublishManager:
+Upon a call from the Scheduler, the publisher will get the relevant parameters including which platform to upload to, and will call for the relevant publisher for this task.
+
+* Publisher:
+There will be a different publisher for each platform (with a different logic).
+For example:
+YoutubePublisher.Post(Id ChannelId, String PostPath, String PostMetadata);
+TiktokPublisher.Post(Id ChannelId, String PostPath, String PostMetadata);
+
+The publisher will call it's SetAccount (SwitchAccount) method before posting.

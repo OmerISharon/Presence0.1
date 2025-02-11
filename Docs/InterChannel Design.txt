@@ -1,0 +1,35 @@
+Inter Channel Design
+-----
+Interfaces:
+	* IPlatform:
+		> Properties:
+			Guid PlatformId;
+			String PlatformName;
+			String PlatformUrl;
+		> Methods:
+			SwitchAccount(IAccount Account);
+		> Instances:
+			Youtube
+			TikTok
+			Instagram
+			Facebook
+	* IAccount:
+		> Properties:
+			Guid AccountId;
+			IPlatform AccountPlatform;
+			String AccountName;
+			String AccountDescription;
+			String AccountEmailAccount;
+			String AccountJsonCredentials;
+			bool IsTest;
+	* IPublisher:
+		> Methods:
+			PostVideo(IPost Post, IAccount Account);		
+	* IPost:
+		Properties:
+			Guid PostId;
+			IChannel PostChannel;
+			String PostName;
+			String PostDescription;
+			(Enum PostType) PostType; //Enum: 1 - Video, 2 - Image, 3 - Text
+			String PostUrl;
