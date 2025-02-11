@@ -52,13 +52,18 @@ def run_script(script_path, channel_name, description):
     print(f"✅ {description} completed successfully.\n")
 
 def main():
-    # Prompt user to choose a channel.
-    channel_name = select_channel(CHANNELS_ROOT_DIR)
-    print(f"\n👉 Channel selected: {channel_name}")
+    # Check if a channel name was passed as a command-line parameter.
+    if len(sys.argv) > 1 and sys.argv[1].strip():
+        channel_name = sys.argv[1].strip()
+        print(f"\n👉 Channel provided from command line: {channel_name}")
+    else:
+        # If no parameter is passed, prompt the user.
+        channel_name = select_channel(CHANNELS_ROOT_DIR)
+        print(f"\n👉 Channel selected: {channel_name}")
 
     # Save the paths of the two scripts as variables.
-    switch_account_script = f"{ROOT_DIR}\\SwitchAccount - Youtube\\Code\\SwitchAccount - Youtube.py"
-    auto_upload_script    = f"{ROOT_DIR}\\AutoUpload - Youtube\\Code\\AutoUploadYouTube.py"
+    switch_account_script = os.path.join(ROOT_DIR, "SwitchAccount - Youtube", "Code", "SwitchAccount - Youtube.py")
+    auto_upload_script    = os.path.join(ROOT_DIR, "AutoUpload - Youtube", "Code", "AutoUploadYouTube.py")
 
     # Run the Switch Account script.
     run_script(switch_account_script, channel_name, "SwitchAccount")
