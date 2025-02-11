@@ -9,46 +9,7 @@ import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 from moviepy import VideoFileClip, AudioFileClip, CompositeAudioClip
 from datetime import datetime
-
-# -----------------------------------------------------------------
-# Configuration Variables
-# -----------------------------------------------------------------
-
-OPENAI_API_KEY_PATH = "C:\\Presence\\GlobalResources\\OPENAI_API_KEY.txt"
-OPENAI_API_KEY = "OPENAI_API_KEY"
-
-DEBUG_MODE = True
-DEBUG_TEXT = "Hello from Debug Mode!"
-
-ROOT_DIR = "C:\\Presence\\Presence0.1\\Creator\\GodModeNotes"
-
-DIR_OFFLINE_TEXT = f"{ROOT_DIR}\\Resources\\Text"
-DIR_OFFLINE_TEXT_ARCHIVE = f"{ROOT_DIR}\\Resources\\Text - Archive"
-PATH_PROMPT = f"{ROOT_DIR}\\Resources\\Prompt\\Main_Prompt.txt"
-
-INCLUDE_TYPING_SOUNDS = True
-TYPING_SOUNDS_DIR = f"{ROOT_DIR}\\Resources\\Audio\\Typing_Audio"
-BACKGROUND_AUDIO = f"{ROOT_DIR}\\Resources\\Audio\\Background_Audio\\Root\\v1\\Full Audio.mp3"
-
-OUT_BASE_FOLDER = f"{ROOT_DIR}\\Debug_Output" if DEBUG_MODE else "C:\\Presence\\Presence0.1\\Channels\\GodModeNotes\\Clips"
-
-# Ancient effect overlay
-ANCIENT_IMG = f"{ROOT_DIR}\\Resources\\Overlays\\ancient.jpg"
-
-# Logo overlay
-LOGO_PATH = f"{ROOT_DIR}\\Resources\\Avatar\\David-Goggins-no-background3.png"
-
-# Font for Notepad
-FONT_PATH = r"C:\\Windows\\Fonts\\consola.ttf"
-FONT_SIZE = 48
-
-# Video specs
-WIDTH, HEIGHT = 1080, 1920
-FPS = 60
-
-# Make typing slower: about 70% speed => hold frames ~1 / 0.7 => ~1.4
-# (i.e. if original hold was 5 frames, now it's ~7 frames)
-SPEED_FACTOR = 4
+from config import *
 
 def load_openai_key():
     try:
@@ -59,7 +20,7 @@ def load_openai_key():
         return None
 
 # -----------------------------------------------------------------
-# 1) get_inspiration() from debug/offline/online
+# get_inspiration() from debug/offline/online
 # -----------------------------------------------------------------
 def get_inspiration():
     # DEBUG MODE
@@ -104,7 +65,7 @@ def get_inspiration():
         return "Exception while getting response from OpenAI", "online"
 
 # -----------------------------------------------------------------
-# 2) AncientEffect Filters
+# AncientEffect Filters
 # -----------------------------------------------------------------
 def apply_soft_sepia(frame_bgr, intensity=0.07):
     sepia_filter = np.array([
@@ -165,7 +126,7 @@ def old_film_effect(frame_bgr):
     return frame_bgr
 
 # -----------------------------------------------------------------
-# 3) Logo Overlay (bottom-right)
+# Logo Overlay (bottom-right)
 # -----------------------------------------------------------------
 def overlay_logo_bottom_right(frame_bgr, logo_bgra, scale=1.0):
     if logo_bgra is None:
@@ -198,7 +159,7 @@ def overlay_logo_bottom_right(frame_bgr, logo_bgra, scale=1.0):
     return frame_bgr
 
 # -----------------------------------------------------------------
-# 4) Word-Wrap (no word splits)
+# Word-Wrap (no word splits)
 # -----------------------------------------------------------------
 def wrap_text_by_words(text, max_chars=30):
     lines = []
@@ -222,7 +183,7 @@ def wrap_text_by_words(text, max_chars=30):
     return lines
 
 # -----------------------------------------------------------------
-# 5) Typing Speed & Frame Calculation
+# Typing Speed & Frame Calculation
 # -----------------------------------------------------------------
 def char_hold_frames(char, next_char):
     """
@@ -245,7 +206,7 @@ def char_hold_frames(char, next_char):
     return scaled
 
 # -----------------------------------------------------------------
-# 6) Render Frame
+# Render Frame
 # -----------------------------------------------------------------
 def render_frame(typed_text, font, brand_logo, frame_count, cursor_blink_rate):
     """
@@ -273,7 +234,7 @@ def render_frame(typed_text, font, brand_logo, frame_count, cursor_blink_rate):
     return frame_bgr
 
 # -----------------------------------------------------------------
-# 7) Extract Offline Title
+# Extract Offline Title
 # -----------------------------------------------------------------
 def extract_offline_title(text):
     """
@@ -315,7 +276,7 @@ def extract_offline_title(text):
             return snippet_str  # 10 or fewer words, no punctuation
 
 # -----------------------------------------------------------------
-# 8) Main Orchestration
+# Main Orchestration
 # -----------------------------------------------------------------
 def main():
     OPENAI_API_KEY = load_openai_key()
