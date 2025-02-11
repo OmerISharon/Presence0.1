@@ -1,4 +1,5 @@
 import os
+import time
 import cv2
 import glob
 import json
@@ -437,6 +438,8 @@ def main():
 
     # (f) Write final MP4
     video_with_audio.write_videofile(final_video_path, codec="libx264", fps=FPS, audio_codec="aac")
+
+    time.sleep(5)
 
     # (g) Remove temp silent file
     if os.path.exists(video_silent_path):
