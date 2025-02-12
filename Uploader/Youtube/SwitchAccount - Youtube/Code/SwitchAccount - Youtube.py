@@ -13,7 +13,9 @@ from chrome_config import *
 # Chrome options
 options = webdriver.ChromeOptions()
 options.add_argument("--log-level=3")
-options.add_argument(f"user-data-dir={CHROME_BETA_USER_DATA_DIR}")
+# options.add_argument(f"user-data-dir={CHROME_BETA_USER_DATA_DIR}")
+options.add_argument(f"--user-data-dir={CHROME_BETA_USER_DATA_DIR}")  # ✅ Use main User Data folder
+options.add_argument("--profile-directory=Default")  # ✅ Specify profile explicitly
 options.binary_location = CHROME_BETA_EXE_PATH
 
 def start_browser():
@@ -35,14 +37,14 @@ def find_account(bot, account_name, timeout=7):
             # wait_for_element uses WebDriverWait internally.
             element = wait_for_element(bot, By.XPATH, xpath_expr, timeout=timeout)
             if element:
-                print(f"✅ Found account element using variant: {variant}")
+                print(f"INFO: Found account element using variant: {variant}")
                 return element
         except Exception as e:
-            print(f"🔄 Variant '{variant}' not found, trying next variant...")
+            print(f"ERROR: Variant '{variant}' not found, trying next variant...")
     return None
 
 def switch_account(bot, account_name):
-    print("🔧 Switching account")
+    print("INFO: Switching account")
     
     bot.get(PLATFORM_URL)
     time.sleep(5)
@@ -53,11 +55,11 @@ def switch_account(bot, account_name):
         desired_account.click()
         time.sleep(5)
     else:
-        print(f"❌ ERROR: Desired account '{account_name}' not found using any case variant.")
+        print(f"ERROR: Desired account '{account_name}' not found using any case variant.")
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
-        print("❌ ERROR: Please provide the account name as a parameter.")
+        print("ERROR: Please provide the account name as a parameter.")
         sys.exit(1)
     
     # Get the account name from the command-line arguments
@@ -71,4 +73,4 @@ if __name__ == "__main__":
 
     bot.quit()
 
-    print("✅ Account switch process completed!")
+    print("INFO: Account switch process completed!")

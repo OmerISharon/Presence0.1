@@ -211,28 +211,37 @@ def char_hold_frames(char, next_char):
 # -----------------------------------------------------------------
 def render_frame(typed_text, font, brand_logo, frame_count, cursor_blink_rate):
     """
-    Creates a single frame (PIL -> BGR) with typed_text + blinking cursor,
-    then applies AncientEffect + logo overlay.
+    Creates a single frame (PIL -> BGR) with typed_text and a solid (always visible) cursor,
+    then applies AncientEffect and logo overlay.
     """
+    # Create a white background image
     img_pil = Image.new("RGB", (WIDTH, HEIGHT), (255, 255, 255))
     draw = ImageDraw.Draw(img_pil)
 
-    y_offset = 200
+    y_offset = 220
+    # Draw each line of the typed text
     for line in typed_text.split("\n"):
         draw.text((100, y_offset), line, font=font, fill=(0, 0, 0))
         y_offset += font.size + 20
 
-    # Blinking cursor
-    if frame_count % cursor_blink_rate < (cursor_blink_rate // 2):
-        last_line = typed_text.split("\n")[-1]
-        text_width = font.getbbox(last_line)[2] if last_line else 0
-        draw.text((100 + text_width, y_offset - (font.size + 20)),
-                  "|", font=font, fill=(0, 0, 0))
+    # Always draw a solid cursor at the end of the last line
+    last_line = typed_text.split("\n")[-1]
+    # Get the width of the last line of text
+    text_bbox = font.getbbox(last_line) if last_line else (0, 0, 0, 0)
+    text_width = text_bbox[2] if text_bbox else 0
 
+    # Draw the cursor. You can adjust the position or replace with a block cursor if desired.
+    cursor_position = (100 + text_width, y_offset - (font.size + 20))
+    draw.text(cursor_position, "|", font=font, fill=(0, 0, 0))
+
+    # Convert to BGR image for OpenCV processing
     frame_bgr = cv2.cvtColor(np.array(img_pil), cv2.COLOR_RGB2BGR)
+    # Apply the ancient film effects and overlay the logo
     frame_bgr = old_film_effect(frame_bgr)
     frame_bgr = overlay_logo_bottom_right(frame_bgr, brand_logo, scale=1.0)
+    
     return frame_bgr
+
 
 # -----------------------------------------------------------------
 # Extract Offline Title

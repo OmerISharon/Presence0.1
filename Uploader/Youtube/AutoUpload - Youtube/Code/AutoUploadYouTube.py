@@ -17,7 +17,7 @@ from chrome_config import *
 # 1. Get channel name from command-line argument and build directory paths.
 # -----------------------------------------------------------------------------
 if len(sys.argv) < 2:
-    print("❌ ERROR: Please provide the CHANNEL_NAME as a command-line argument.")
+    print("ERROR: Please provide the CHANNEL_NAME as a command-line argument.")
     sys.exit(1)
 
 CHANNEL_NAME = sys.argv[1]
@@ -49,7 +49,7 @@ def close_popups(bot):
             popup.click()
             time.sleep(1)
     except Exception as e:
-        print(f"⚠️  Warning: Could not close pop-ups. {e}")
+        print(f"Warning: Could not close pop-ups. {e}")
 
 # -----------------------------------------------------------------------------
 # 3. Get the earliest folder (by creation time) and select the MP4 file from it.
@@ -59,11 +59,11 @@ def get_earliest_video():
         # List all folders in INPUT_DIR.
         folders = [f for f in os.listdir(INPUT_DIR) if os.path.isdir(os.path.join(INPUT_DIR, f))]
     except Exception as e:
-        print(f"❌ ERROR: Could not list directory {INPUT_DIR}: {e}")
+        print(f"ERROR: Could not list directory {INPUT_DIR}: {e}")
         sys.exit(1)
     
     if not folders:
-        print(f"❌ ERROR: No folders found in {INPUT_DIR}")
+        print(f"ERROR: No folders found in {INPUT_DIR}")
         sys.exit(1)
     
     # Select the folder with the earliest creation time.
@@ -73,7 +73,7 @@ def get_earliest_video():
     # Inside the folder, find MP4 file(s).
     mp4_files = [f for f in os.listdir(folder_path) if f.endswith(".mp4")]
     if not mp4_files:
-        print(f"❌ ERROR: No MP4 files found in folder {folder_path}")
+        print(f"ERROR: No MP4 files found in folder {folder_path}")
         sys.exit(1)
     
     # If more than one, select the MP4 file with the earliest creation time.
@@ -93,7 +93,7 @@ def update_video_details(bot, folder_path):
     # Find the JSON file inside the folder.
     json_files = [f for f in os.listdir(folder_path) if f.endswith(".json")]
     if not json_files:
-        print(f"❌ ERROR: No JSON file found in folder {folder_path}")
+        print(f"ERROR: No JSON file found in folder {folder_path}")
         return
     
     # Choose the first JSON file (adjust if needed for your structure).
@@ -105,7 +105,7 @@ def update_video_details(bot, folder_path):
     new_title = data.get("title", "")
     new_description = data.get("description", "")
 
-    print("🔄 Updating video title and description...")
+    print("INFO: Updating video title and description...")
 
     try:
         # Wait until both text boxes (for title and description) are present.
@@ -113,7 +113,7 @@ def update_video_details(bot, folder_path):
             EC.presence_of_all_elements_located((By.ID, "textbox"))
         )
         if len(text_boxes) < 2:
-            print("❌ ERROR: Could not locate both title and description text boxes.")
+            print("ERROR: Could not locate both title and description text boxes.")
             return
         
         # Update Title (assumed to be the first textbox)
@@ -134,15 +134,15 @@ def update_video_details(bot, folder_path):
         description_box.send_keys(new_description)
         time.sleep(1)
 
-        print("✅ Video details updated successfully.")
+        print("INFO: Video details updated successfully.")
     except Exception as e:
-        print(f"❌ ERROR: Failed to update video details: {e}")
+        print(f"ERROR: Failed to update video details: {e}")
 
 # -----------------------------------------------------------------------------
 # 5. Upload video using Selenium.
 # -----------------------------------------------------------------------------
 def upload_video(bot, video_path, folder_path, timestamp):
-    print(f"🚀 Initiating upload for video: {video_path}")
+    print(f"INFO: Initiating upload for video: {video_path}")
     
     bot.get("https://studio.youtube.com")
     
@@ -157,16 +157,16 @@ def upload_video(bot, video_path, folder_path, timestamp):
     
     abs_path = os.path.abspath(video_path)
     if not os.path.exists(abs_path):
-        print(f"❌ ERROR: Video file not found -> {abs_path}")
+        print(f"ERROR: Video file not found -> {abs_path}")
         bot.quit()
         return
     
     file_input.send_keys(abs_path)
-    print("✅ Video file selected for upload.")
+    print("INFO: Video file selected for upload.")
     time.sleep(10)
 
     close_popups(bot)
-    print("⏳ Waiting for YouTube to finish processing the video...")
+    print("INFO: Waiting for YouTube to finish processing the video...")
 
     processing_done = False
     wait_time = 0
@@ -174,7 +174,7 @@ def upload_video(bot, video_path, folder_path, timestamp):
         try:
             next_button = bot.find_element(By.ID, "next-button")
             if next_button.is_enabled():
-                print("✅ Video processing completed.")
+                print("INFO: Video processing completed.")
                 processing_done = True
                 break
         except Exception:
@@ -184,12 +184,12 @@ def upload_video(bot, video_path, folder_path, timestamp):
         wait_time += 10
 
         if wait_time % 120 == 0:
-            print("🔄 Refreshing page to check processing status...")
+            print("INFO: Refreshing page to check processing status...")
             bot.refresh()
             time.sleep(5)
 
     if not processing_done:
-        print("❌ ERROR: Video processing exceeded time limit. Aborting upload.")
+        print("ERROR: Video processing exceeded time limit. Aborting upload.")
         bot.quit()
         return
 
@@ -207,10 +207,10 @@ def upload_video(bot, video_path, folder_path, timestamp):
                 bot.execute_script("arguments[0].scrollIntoView();", next_button)
                 time.sleep(1)
                 bot.execute_script("arguments[0].click();", next_button)
-                print(f"✅ Clicked 'Next' button ({i+1}/3).")
+                print(f"INFO: Clicked 'Next' button ({i+1}/3).")
                 break
             except Exception as e:
-                print(f"🔄 Warning: 'Next' button not clickable, retrying... ({retry_count + 1}/3). Error: {e}")
+                print(f"Warning: 'Next' button not clickable, retrying... ({retry_count + 1}/3). Error: {e}")
                 bot.refresh()
                 time.sleep(5)
                 retry_count += 1
@@ -223,9 +223,9 @@ def upload_video(bot, video_path, folder_path, timestamp):
         bot.execute_script("arguments[0].scrollIntoView();", done_button)
         time.sleep(1)
         bot.execute_script("arguments[0].click();", done_button)
-        print("✅ 'Done' button clicked. Video upload finalized.")
+        print("INFO: 'Done' button clicked. Video upload finalized.")
     except Exception as e:
-        print(f"❌ ERROR: Unable to click 'Done' button: {e}")
+        print(f"ERROR: Unable to click 'Done' button: {e}")
     
     time.sleep(5)
 
@@ -235,13 +235,13 @@ def upload_video(bot, video_path, folder_path, timestamp):
 def main():
     # Ensure the input directory exists.
     if not os.path.exists(INPUT_DIR):
-        print(f"❌ ERROR: Input directory not found: {INPUT_DIR}")
+        print(f"ERROR: Input directory not found: {INPUT_DIR}")
         sys.exit(1)
 
     # Get the earliest folder containing the video and JSON file.
     folder_path, video_path, timestamp = get_earliest_video()
-    print(f"📁 Selected folder: {folder_path}")
-    print(f"🎥 Video file: {video_path} (Timestamp: {timestamp})")
+    print(f"INFO: Selected folder: {folder_path}")
+    print(f"INFO: Video file: {video_path} (Timestamp: {timestamp})")
 
     bot = start_browser()
     try:
@@ -255,11 +255,11 @@ def main():
             os.makedirs(ARCHIVE_DIR)
         archive_path = os.path.join(ARCHIVE_DIR, os.path.basename(folder_path))
         shutil.move(folder_path, archive_path)
-        print(f"📂 Folder moved to archive: {archive_path}")
+        print(f"INFO: Folder moved to archive: {archive_path}")
     except Exception as e:
-        print(f"❌ ERROR: Failed to move folder to archive: {e}")
+        print(f"ERROR: Failed to move folder to archive: {e}")
 
-    print("✅ Auto-upload process completed successfully.")
+    print("INFO: Auto-upload process completed successfully.")
 
 if __name__ == "__main__":
     main()
