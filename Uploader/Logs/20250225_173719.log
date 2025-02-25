@@ -1,0 +1,18 @@
+INFO: Log file created: D:\2025\Projects\Presence\Presence0.1\Uploader\Logs\20250225_173719.log
+
+
+INFO: Channel provided from command line: RedNBlack
+INFO: Earliest folder found: D:\2025\Projects\Presence\Presence0.1\Channels\RedNBlack\Clips\20250225_134732
+
+INFO: YouTube AutoUpload for channel: 'RedNBlack', folder: 'D:\2025\Projects\Presence\Presence0.1\Channels\RedNBlack\Clips\20250225_134732'
+ERROR: 'main.py' failed with exit code 1
+INFO: Log file created: D:\2025\Projects\Presence\Presence0.1\Uploader\Youtube\Logs\20250225_173720.log
+
+
+INFO: Channel provided from command line: RedNBlack
+
+INFO: AutoUpload for channel: 'RedNBlack'
+ERROR: 'AutoUploadYouTube.py' failed with exit code 1
+ERROR: Please provide the CHANNEL_NAME and CLIP_FOLDER_PATH as command-line arguments.
+
+

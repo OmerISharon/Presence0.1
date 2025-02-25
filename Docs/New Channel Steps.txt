@@ -1,0 +1,8 @@
+New Channel Steps:
+1. Create channel local folder.
+2. Create creator local folder.
+3. Open new google account.
+4. Set credentials of google account in channel folder.
+5. Set new chrome beta profile with the google account signed in.
+6. Set default youtube channel settings (public, not for kids).\
+7. Set the channel logo.

@@ -13,9 +13,8 @@ from chrome_config import *
 # Chrome options
 options = webdriver.ChromeOptions()
 options.add_argument("--log-level=3")
-# options.add_argument(f"user-data-dir={CHROME_BETA_USER_DATA_DIR}")
-options.add_argument(f"--user-data-dir={CHROME_BETA_USER_DATA_DIR}")  # ✅ Use main User Data folder
-options.add_argument("--profile-directory=Default")  # ✅ Specify profile explicitly
+options.add_argument(f"--user-data-dir={CHROME_BETA_USER_DATA_DIR}")
+options.add_argument("--profile-directory=Default")
 options.binary_location = CHROME_BETA_EXE_PATH
 
 def start_browser():

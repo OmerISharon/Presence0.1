@@ -29,7 +29,8 @@ ARCHIVE_DIR = f"{CHANNELS_ROOT_DIR}\\{CHANNEL_NAME}\\Clips_Archive"
 # -----------------------------------------------------------------------------
 options = webdriver.ChromeOptions()
 options.add_argument("--log-level=3")
-options.add_argument(f"user-data-dir={CHROME_BETA_USER_DATA_DIR}")
+options.add_argument(f"--user-data-dir={CHROME_BETA_USER_DATA_DIR}")
+options.add_argument("--profile-directory=Default")
 options.binary_location = CHROME_BETA_EXE_PATH
 
 def start_browser():

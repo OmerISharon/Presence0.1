@@ -1,0 +1,57 @@
+INFO: Log file created: D:\2025\Projects\Presence\Presence0.1\Uploader\Logs\20250225_174743.log
+
+
+INFO: Channel provided from command line: RedNBlack
+INFO: Earliest folder found: D:\2025\Projects\Presence\Presence0.1\Channels\RedNBlack\Clips\20250225_135426
+
+INFO: YouTube AutoUpload for channel: 'RedNBlack', folder: 'D:\2025\Projects\Presence\Presence0.1\Channels\RedNBlack\Clips\20250225_135426'
+ERROR: 'AutoUploadYouTube.py' failed with exit code 1
+INFO: Video file: D:\2025\Projects\Presence\Presence0.1\Channels\RedNBlack\Clips\20250225_135426\20250225_135426.mp4 (Timestamp: 20250225_135426)
+Traceback (most recent call last):
+  File "D:\2025\Projects\Presence\Presence0.1\Uploader\Youtube\AutoUpload - Youtube\Code\AutoUploadYouTube.py", line 256, in <module>
+    main()
+  File "D:\2025\Projects\Presence\Presence0.1\Uploader\Youtube\AutoUpload - Youtube\Code\AutoUploadYouTube.py", line 247, in main
+    bot = start_browser()
+          ^^^^^^^^^^^^^^^
+  File "D:\2025\Projects\Presence\Presence0.1\Uploader\Youtube\AutoUpload - Youtube\Code\AutoUploadYouTube.py", line 61, in start_browser
+    return webdriver.Chrome(service=service, options=options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\omers\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 45, in __init__
+    super().__init__(
+  File "C:\Users\omers\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\chromium\webdriver.py", line 66, in __init__
+    super().__init__(command_executor=executor, options=options)
+  File "C:\Users\omers\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 250, in __init__
+    self.start_session(capabilities)
+  File "C:\Users\omers\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 342, in start_session
+    response = self.execute(Command.NEW_SESSION, caps)["value"]
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\omers\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 429, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\omers\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: session not created: Chrome failed to start: crashed.
+  (session not created: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location C:\Program Files\Google\Chrome Beta\Application\chrome.exe is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
+Stacktrace:
+	GetHandleVerifier [0x00007FF78FACB405+3109445]
+	(No symbol) [0x00007FF78F74B190]
+	(No symbol) [0x00007FF78F5E8FDA]
+	(No symbol) [0x00007FF78F625B42]
+	(No symbol) [0x00007FF78F621596]
+	(No symbol) [0x00007FF78F67545B]
+	(No symbol) [0x00007FF78F674A30]
+	(No symbol) [0x00007FF78F667013]
+	(No symbol) [0x00007FF78F62FF5E]
+	(No symbol) [0x00007FF78F6311E3]
+	GetHandleVerifier [0x00007FF78FB2B41D+3502685]
+	GetHandleVerifier [0x00007FF78FB46993+3614675]
+	GetHandleVerifier [0x00007FF78FB3BD23+3570531]
+	GetHandleVerifier [0x00007FF78F89ECBA+830202]
+	(No symbol) [0x00007FF78F75643F]
+	(No symbol) [0x00007FF78F752294]
+	(No symbol) [0x00007FF78F752436]
+	(No symbol) [0x00007FF78F741E89]
+	BaseThreadInitThunk [0x00007FFDBD30259D+29]
+	RtlUserThreadStart [0x00007FFDBDA8AF38+40]
+
+
