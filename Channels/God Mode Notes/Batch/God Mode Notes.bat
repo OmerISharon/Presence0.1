@@ -1,9 +1,4 @@
 @echo off
 
-cd /d "C:\Presence\Presence0.1\Creator\God Mode Notes\Code"
-python Creator_GodModeNotes.py
-
-cd /d "C:\Presence\Presence0.1\Uploader\Youtube\main"
-python main.py "God Mode Notes"
-
-exit
+cd /d "D:\2025\Projects\Presence\Presence0.1\Creator\God Mode Notes\Code"
+py Creator_GodModeNotes.py

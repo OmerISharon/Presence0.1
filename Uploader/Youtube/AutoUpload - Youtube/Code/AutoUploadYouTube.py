@@ -2,7 +2,6 @@ import os
 import sys
 import time
 import json
-import shutil
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
@@ -14,26 +13,50 @@ sys.path.insert(0, RESOURCES_DIR)
 from chrome_config import *
 
 # -----------------------------------------------------------------------------
-# 1. Get channel name from command-line argument and build directory paths.
+# Function to map the display profile name (e.g. "God Mode Notes") to the actual
+# Chrome profile folder (e.g. "Profile 1" or "Default") using the Local State file.
 # -----------------------------------------------------------------------------
-if len(sys.argv) < 2:
-    print("ERROR: Please provide the CHANNEL_NAME as a command-line argument.")
+def get_profile_directory(profile_name):
+    local_state_path = os.path.join(CHROME_BETA_USER_DATA_DIR, "Local State")
+    if not os.path.exists(local_state_path):
+        print("ERROR: Chrome Local State file not found. Cannot determine profiles.")
+        return None
+
+    with open(local_state_path, "r", encoding="utf-8") as file:
+        local_state = json.load(file)
+
+    profiles = local_state.get("profile", {}).get("info_cache", {})
+    for profile_folder, details in profiles.items():
+        if details.get("name") == profile_name:
+            return profile_folder  # e.g., "Profile 1" or "Default"
+    
+    print(f"ERROR: Profile '{profile_name}' not found.")
+    return None
+
+# -----------------------------------------------------------------------------
+# 1. Get channel name and folder path from command-line arguments.
+# -----------------------------------------------------------------------------
+if len(sys.argv) < 3:
+    print("ERROR: Please provide the CHANNEL_NAME and CLIP_FOLDER_PATH as command-line arguments.")
     sys.exit(1)
 
 CHANNEL_NAME = sys.argv[1]
-INPUT_DIR = f"{CHANNELS_ROOT_DIR}\\{CHANNEL_NAME}\\Clips"
-ARCHIVE_DIR = f"{CHANNELS_ROOT_DIR}\\{CHANNEL_NAME}\\Clips_Archive"
+folder_path = sys.argv[2]  # The directory containing the clip to upload
 
 # -----------------------------------------------------------------------------
-# 2. Configure Chrome options.
+# 2. Configure Chrome options using the mapped profile folder.
 # -----------------------------------------------------------------------------
-options = webdriver.ChromeOptions()
-options.add_argument("--log-level=3")
-options.add_argument(f"--user-data-dir={CHROME_BETA_USER_DATA_DIR}")
-options.add_argument("--profile-directory=Default")
-options.binary_location = CHROME_BETA_EXE_PATH
-
 def start_browser():
+    options = webdriver.ChromeOptions()
+    options.add_argument("--log-level=3")
+    options.add_argument(f"--user-data-dir={CHROME_BETA_USER_DATA_DIR}")
+    
+    profile_folder = get_profile_directory(CHANNEL_NAME)
+    if not profile_folder:
+        sys.exit(1)
+    options.add_argument(f"--profile-directory={profile_folder}")
+    options.binary_location = CHROME_BETA_EXE_PATH
+
     service = Service(CHROME_BETA_DRIVER_PATH)
     return webdriver.Chrome(service=service, options=options)
 
@@ -53,51 +76,38 @@ def close_popups(bot):
         print(f"Warning: Could not close pop-ups. {e}")
 
 # -----------------------------------------------------------------------------
-# 3. Get the earliest folder (by creation time) and select the MP4 file from it.
+# 3. From the provided folder, extract the latest MP4 file and its timestamp.
 # -----------------------------------------------------------------------------
-def get_earliest_video():
-    try:
-        # List all folders in INPUT_DIR.
-        folders = [f for f in os.listdir(INPUT_DIR) if os.path.isdir(os.path.join(INPUT_DIR, f))]
-    except Exception as e:
-        print(f"ERROR: Could not list directory {INPUT_DIR}: {e}")
-        sys.exit(1)
-    
-    if not folders:
-        print(f"ERROR: No folders found in {INPUT_DIR}")
-        sys.exit(1)
-    
-    # Select the folder with the earliest creation time.
-    earliest_folder = min(folders, key=lambda f: os.path.getctime(os.path.join(INPUT_DIR, f)))
-    folder_path = os.path.join(INPUT_DIR, earliest_folder)
-    
-    # Inside the folder, find MP4 file(s).
-    mp4_files = [f for f in os.listdir(folder_path) if f.endswith(".mp4")]
+def get_latest_video(folder_path):
+    # Filter MP4 files and ignore those that contain "tmp" (case-insensitive)
+    mp4_files = [
+        f for f in os.listdir(folder_path)
+        if f.endswith(".mp4") and "tmp" not in f.lower()
+    ]
     if not mp4_files:
         print(f"ERROR: No MP4 files found in folder {folder_path}")
         sys.exit(1)
     
-    # If more than one, select the MP4 file with the earliest creation time.
-    mp4_file = min(mp4_files, key=lambda f: os.path.getctime(os.path.join(folder_path, f)))
+    # Select the MP4 file with the latest creation time.
+    mp4_file = max(mp4_files, key=lambda f: os.path.getctime(os.path.join(folder_path, f)))
     video_path = os.path.join(folder_path, mp4_file)
     
-    # Get the creation time of the folder and format it as a timestamp.
+    # Use the folder's creation time as a timestamp.
     creation_time = os.path.getctime(folder_path)
     timestamp = time.strftime("%Y%m%d_%H%M%S", time.localtime(creation_time))
     
-    return folder_path, video_path, timestamp
+    return video_path, timestamp
+
 
 # -----------------------------------------------------------------------------
 # 4. Update title and description using the JSON file found in the folder.
 # -----------------------------------------------------------------------------
 def update_video_details(bot, folder_path):
-    # Find the JSON file inside the folder.
     json_files = [f for f in os.listdir(folder_path) if f.endswith(".json")]
     if not json_files:
         print(f"ERROR: No JSON file found in folder {folder_path}")
         return
     
-    # Choose the first JSON file (adjust if needed for your structure).
     json_file = json_files[0]
     json_path = os.path.join(folder_path, json_file)
     
@@ -109,7 +119,6 @@ def update_video_details(bot, folder_path):
     print("INFO: Updating video title and description...")
 
     try:
-        # Wait until both text boxes (for title and description) are present.
         text_boxes = WebDriverWait(bot, 60).until(
             EC.presence_of_all_elements_located((By.ID, "textbox"))
         )
@@ -117,7 +126,7 @@ def update_video_details(bot, folder_path):
             print("ERROR: Could not locate both title and description text boxes.")
             return
         
-        # Update Title (assumed to be the first textbox)
+        # Update Title (first textbox)
         title_box = text_boxes[0]
         title_box.click()
         time.sleep(1)
@@ -126,7 +135,7 @@ def update_video_details(bot, folder_path):
         title_box.send_keys(new_title)
         time.sleep(1)
 
-        # Update Description (assumed to be the second textbox)
+        # Update Description (second textbox)
         description_box = text_boxes[1]
         description_box.click()
         time.sleep(1)
@@ -194,10 +203,9 @@ def upload_video(bot, video_path, folder_path, timestamp):
         bot.quit()
         return
 
-    # Update the video details using the JSON file from the folder.
     update_video_details(bot, folder_path)
 
-    # Proceed by clicking "Next" three times.
+    # Click "Next" three times.
     for i in range(3):
         retry_count = 0
         while retry_count < 3:
@@ -234,14 +242,11 @@ def upload_video(bot, video_path, folder_path, timestamp):
 # Main routine
 # -----------------------------------------------------------------------------
 def main():
-    # Ensure the input directory exists.
-    if not os.path.exists(INPUT_DIR):
-        print(f"ERROR: Input directory not found: {INPUT_DIR}")
+    if not os.path.exists(folder_path):
+        print(f"ERROR: Provided folder not found: {folder_path}")
         sys.exit(1)
 
-    # Get the earliest folder containing the video and JSON file.
-    folder_path, video_path, timestamp = get_earliest_video()
-    print(f"INFO: Selected folder: {folder_path}")
+    video_path, timestamp = get_latest_video(folder_path)
     print(f"INFO: Video file: {video_path} (Timestamp: {timestamp})")
 
     bot = start_browser()
@@ -250,17 +255,7 @@ def main():
     finally:
         bot.quit()
 
-    # After a successful upload, move the entire folder to the archive directory.
-    try:
-        if not os.path.exists(ARCHIVE_DIR):
-            os.makedirs(ARCHIVE_DIR)
-        archive_path = os.path.join(ARCHIVE_DIR, os.path.basename(folder_path))
-        shutil.move(folder_path, archive_path)
-        print(f"INFO: Folder moved to archive: {archive_path}")
-    except Exception as e:
-        print(f"ERROR: Failed to move folder to archive: {e}")
-
-    print("INFO: Auto-upload process completed successfully.")
+    print("INFO: YouTube upload process completed successfully.")
 
 if __name__ == "__main__":
     main()

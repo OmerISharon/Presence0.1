@@ -1,0 +1,19 @@
+INFO: Log file created: D:\2025\Projects\Presence\Presence0.1\Uploader\Logs\20250225_181647.log
+
+
+INPUT: Available Channels:
+  1. God Mode Notes
+  2. RedNBlack
+  3. Third (not in use)
+
+INPUT: Enter a channel name or number (or type a new channel name): 
+INFO: Channel selected: RedNBlack
+INFO: Earliest folder found: D:\2025\Projects\Presence\Presence0.1\Channels\RedNBlack\Clips\20250225_175804
+
+INFO: YouTube AutoUpload for channel: 'RedNBlack', folder: 'D:\2025\Projects\Presence\Presence0.1\Channels\RedNBlack\Clips\20250225_175804'
+ERROR: 'AutoUploadYouTube.py' failed with exit code 1
+Traceback (most recent call last):
+  File "D:\2025\Projects\Presence\Presence0.1\Uploader\Youtube\AutoUpload - Youtube\Code\AutoUploadYouTube.py", line 14, in <module>
+    from chrome_config import *
+ModuleNotFoundError: No module named 'chrome_config'
+

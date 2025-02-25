@@ -1,0 +1,31 @@
+INFO: Log file created: D:\2025\Projects\Presence\Presence0.1\Uploader\Logs\20250225_184649.log
+
+
+INPUT: Available Channels:
+  1. God Mode Notes
+  2. RedNBlack
+  3. Third (not in use)
+
+INPUT: Enter a channel name or number (or type a new channel name): 
+INFO: Channel selected: God Mode Notes
+INFO: Earliest folder found: D:\2025\Projects\Presence\Presence0.1\Channels\God Mode Notes\Clips\20250225_130710
+
+INFO: YouTube AutoUpload for channel: 'God Mode Notes', folder: 'D:\2025\Projects\Presence\Presence0.1\Channels\God Mode Notes\Clips\20250225_130710'
+Traceback (most recent call last):
+  File "d:\2025\Projects\Presence\Presence0.1\Uploader\main.py", line 175, in <module>
+    main()
+  File "d:\2025\Projects\Presence\Presence0.1\Uploader\main.py", line 163, in main
+    run_script(uploader_script, channel_name, earliest_folder, description_text)
+  File "d:\2025\Projects\Presence\Presence0.1\Uploader\main.py", line 76, in run_script
+    result = subprocess.run(
+             ^^^^^^^^^^^^^^^
+  File "C:\Users\omers\AppData\Local\Programs\Python\Python311\Lib\subprocess.py", line 550, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\omers\AppData\Local\Programs\Python\Python311\Lib\subprocess.py", line 1194, in communicate
+    stdout = self.stdout.read()
+             ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\omers\AppData\Local\Programs\Python\Python311\Lib\encodings\cp1252.py", line 22, in decode
+    def decode(self, input, final=False):
+
+KeyboardInterrupt

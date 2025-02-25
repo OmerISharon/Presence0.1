@@ -77,7 +77,9 @@ def close_popups(bot):
 # 3. From the provided folder, extract the latest MP4 file and its timestamp.
 # -----------------------------------------------------------------------------
 def get_latest_video(folder_path):
-    mp4_files = [f for f in os.listdir(folder_path) if f.endswith(".mp4")]
+    # Filter MP4 files and ignore those that contain "tmp" (case-insensitive)
+    mp4_files = [f for f in os.listdir(folder_path)
+                 if f.endswith(".mp4") and "tmp" not in f.lower()]
     if not mp4_files:
         print(f"ERROR: No MP4 files found in folder {folder_path}")
         sys.exit(1)
@@ -87,6 +89,7 @@ def get_latest_video(folder_path):
     creation_time = os.path.getctime(folder_path)
     timestamp = time.strftime("%Y%m%d_%H%M%S", time.localtime(creation_time))
     return video_path, timestamp
+
 
 # -----------------------------------------------------------------------------
 # 4. Read the first JSON file in the folder to extract the description.

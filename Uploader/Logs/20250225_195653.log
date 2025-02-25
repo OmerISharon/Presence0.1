@@ -1,0 +1,44 @@
+INFO: Log file created: D:\2025\Projects\Presence\Presence0.1\Uploader\Logs\20250225_195653.log
+
+
+INPUT: Available Channels:
+  1. God Mode Notes
+  2. RedNBlack
+  3. Third (not in use)
+
+INPUT: Enter a channel name or number (or type a new channel name): 
+INFO: Channel selected: God Mode Notes
+INFO: Earliest folder found: D:\2025\Projects\Presence\Presence0.1\Channels\God Mode Notes\Clips\20250225_130710
+
+INFO: YouTube AutoUpload for channel: 'God Mode Notes', folder: 'D:\2025\Projects\Presence\Presence0.1\Channels\God Mode Notes\Clips\20250225_130710'
+INFO: Video file: D:\2025\Projects\Presence\Presence0.1\Channels\God Mode Notes\Clips\20250225_130710\20250225_130710.mp4 (Timestamp: 20250225_181134)
+INFO: Initiating upload for video: D:\2025\Projects\Presence\Presence0.1\Channels\God Mode Notes\Clips\20250225_130710\20250225_130710.mp4
+INFO: Video file selected for upload.
+INFO: Waiting for YouTube to finish processing the video...
+INFO: Video processing completed.
+INFO: Updating video title and description...
+INFO: Video details updated successfully.
+INFO: Clicked 'Next' button (1/3).
+INFO: Clicked 'Next' button (2/3).
+INFO: Clicked 'Next' button (3/3).
+INFO: 'Done' button clicked. Video upload finalized.
+INFO: YouTube upload process completed successfully.
+
+✅ YouTube AutoUpload completed successfully.
+
+
+INFO: TikTok AutoUpload for channel: 'God Mode Notes', folder: 'D:\2025\Projects\Presence\Presence0.1\Channels\God Mode Notes\Clips\20250225_130710'
+INFO: Video file: D:\2025\Projects\Presence\Presence0.1\Channels\God Mode Notes\Clips\20250225_130710\20250225_130710.mp4 (Timestamp: 20250225_181134)
+INFO: Description: You have the power to rewrite your story.
+INFO: Initiating TikTok upload for video: D:\2025\Projects\Presence\Presence0.1\Channels\God Mode Notes\Clips\20250225_130710\20250225_130710.mp4
+INFO: Video file selected for upload.
+INFO: Expected placeholder (current text) in description editor: '20250225_130710'
+INFO: Found description editor using placeholder match.
+INFO: Description updated with metadata.
+INFO: 'Post' button clicked. TikTok upload finalized.
+INFO: TikTok upload process completed successfully.
+
+✅ TikTok AutoUpload completed successfully.
+
+INFO: Moving folder 'D:\2025\Projects\Presence\Presence0.1\Channels\God Mode Notes\Clips\20250225_130710' to archive: D:\2025\Projects\Presence\Presence0.1\Channels\God Mode Notes\Clips_Archive\20250225_130710
+INFO: Process completed successfully.
