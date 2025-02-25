@@ -451,8 +451,17 @@ def main():
     time.sleep(5)
 
     # (g) Remove temp silent file
-    if os.path.exists(video_silent_path):
-        os.remove(video_silent_path)
+    max_attempts = 5
+    for attempt in range(max_attempts):
+        try:
+            if os.path.exists(video_silent_path):
+                os.remove(video_silent_path)
+            break  # Exit loop if removal succeeds
+        except Exception as e:
+            print(f"Attempt {attempt + 1} failed to remove silent file '{video_silent_path}': {e}")
+            time.sleep(1)  # Wait 1 second before retrying
+    else:
+        print(f"WARNING: Could not remove silent file '{video_silent_path}' after {max_attempts} attempts.")
 
     # 8) Save metadata.json
     with open(metadata_path, "w", encoding="utf-8") as f:
