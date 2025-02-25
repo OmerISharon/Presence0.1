@@ -1,317 +1,407 @@
 import os
 
-# Directory where the text files will be saved.
+# Directory where the text files will be saved
 OUTPUT_DIR = "D:\\2025\\Projects\\Presence\\Presence0.1\\Creator\\RedNBlack\\Resources\\Text"
 
-# Create the output directory if it does not exist.
+# Create the output directory if it does not exist
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 # List of 100 texts (each text is a cohesive message with delay markers)
 texts = [
-    """The most beautiful things in life [1]
-cannot be seen, only felt [1]
-deep inside your heart [1]""",
-    
-    """Forget the past [2]
-no one becomes successful by living there [2]""",
-    
-    """Learn from yesterday [1]
-live for today [1]
-hope for tomorrow [1]""",
-    
-    """Life is really simple [1]
-but we make it hard with our own thoughts [1]""",
-    
-    """A journey of a thousand miles [1]
-begins with a single step [1]""",
-    
-    """Be kind to those around you [1]
-for kindness opens many doors [1]""",
-    
-    """Respect your elders [1]
-their words are full of quiet wisdom [1]""",
-    
-    """Take time to enjoy a quiet moment [1]
-it refreshes your tired soul [1]""",
-    
-    """Listen to the soft voice within [1]
-it tells you the truth of your heart [1]""",
-    
-    """Work hard for your dreams [1]
-but never forget to rest [1]""",
-    
-    """Your heart holds the key to joy [1]
-unlock it with simple acts of love [1]""",
-    
-    """Do not fear failure [1]
-each mistake teaches you a lesson [1]""",
-    
-    """Hold your head high [1]
-and walk with a steady heart [1]""",
-    
-    """Patience is the friend of success [1]
-let time reveal your true worth [1]""",
-    
-    """Every day is a new beginning [1]
-embrace it with a hopeful mind [1]""",
-    
-    """Remember the warmth of a mother's love [1]
-it is a light that never fades [1]""",
-    
-    """Honor your father's guidance [1]
-carry his wisdom in your steps [1]""",
-    
-    """Take care of your inner self [1]
-for it is the source of all strength [1]""",
-    
-    """Face your fears with courage [1]
-and you will find true freedom [1]""",
-    
-    """Let sorrow teach you compassion [1]
-and pain guide you to growth [1]""",
-    
-    """Keep your words gentle [1]
-they can mend a broken heart [1]""",
-    
-    """Hold onto hope in dark times [1]
-it is the spark that lights your way [1]""",
-    
-    """Be true to yourself [1]
-even when the road is hard [1]""",
-    
-    """Embrace change with an open heart [1]
-it brings new chances to shine [1]""",
-    
-    """Let love be your constant guide [1]
-and truth be your firm foundation [1]""",
-    
-    """Small steps lead to big changes [1]
-start today with a clear mind [1]""",
-    
-    """Keep your life simple [1]
-and your heart will remain pure [1]""",
-    
-    """Take time to reflect on your journey [1]
-learn from every twist and turn [1]""",
-    
-    """Gratitude turns what you have into enough [1]
-speak thanks with every breath [1]""",
-    
-    """Hold fast to your dreams [1]
-and never let doubt overshadow them [1]""",
-    
-    """Let each sunrise remind you [1]
-that hope is reborn every day [1]""",
-    
-    """Trust in the path you walk [1]
-even when it is shrouded in mist [1]""",
-    
-    """Be brave in the face of challenge [1]
-for courage is born in struggle [1]""",
-    
-    """Quiet moments bring deep thoughts [1]
-and clear the clutter of the mind [1]""",
-    
-    """Speak with honesty and listen with care [1]
-for truth binds all great hearts [1]""",
-    
-    """Remember that time heals all wounds [1]
-patience is a friend in sorrow [1]""",
-    
-    """Let your actions speak louder than words [1]
-they reveal the truth of your spirit [1]""",
-    
-    """Be gentle with yourself [1]
-and forgive your own mistakes [1]""",
-    
-    """Life is a book [1]
-each day writes a new page [1]""",
-    
-    """Dream big but stay grounded [1]
-for reality and hope must blend [1]""",
-    
-    """Every heart has its story [1]
-let yours be one of quiet strength [1]""",
-    
-    """Show love to those who need it [1]
-a simple act can change a life [1]""",
-    
-    """Let your smile be a light [1]
-in the darkest corners of the world [1]""",
-    
-    """Stand firm in your beliefs [1]
-and let your soul be your guide [1]""",
-    
-    """Sometimes silence speaks the loudest [1]
-listen to what it has to say [1]""",
-    
-    """Take time to appreciate the little things [1]
-they build the foundation of a happy life [1]""",
-    
-    """Share your wisdom with the young [1]
-for they are the future of our dreams [1]""",
-    
-    """Be thankful for both joy and pain [1]
-each teaches you a valuable lesson [1]""",
-    
-    """Let the past be a lesson [1]
-and the future a canvas of hope [1]""",
-    
-    """Trust that you are enough [1]
-and the world will see your light [1]""",
-    
-    """Hold on to the truth in your heart [1]
-it will guide you through stormy times [1]""",
-    
-    """Every struggle is a chance to grow [1]
-embrace it with a willing spirit [1]""",
-    
-    """Keep your dreams close [1]
-and work steadily to make them real [1]""",
-    
-    """Honor the love you have known [1]
-and let it strengthen you each day [1]""",
-    
-    """Life is a journey of simple steps [1]
-take each one with care and joy [1]""",
-    
-    """Remember that hard times pass [1]
-and brighter days will come [1]""",
-    
-    """Let your heart be full of grace [1]
-and your mind free of fear [1]""",
-    
-    """Keep your focus on what matters [1]
-and let distractions fade away [1]""",
-    
-    """Find beauty in every moment [1]
-and let your spirit be uplifted [1]""",
-    
-    """Take a deep breath and move forward [1]
-one step at a time is enough [1]""",
-    
-    """Be mindful of the power of a kind word [1]
-it can heal more than you know [1]""",
-    
-    """Stay humble in times of success [1]
-and gracious in moments of loss [1]""",
-    
-    """Let each day bring a fresh start [1]
-and every night a time to reflect [1]""",
-    
-    """Hold your head high with quiet pride [1]
-and let your heart remain gentle [1]""",
-    
-    """Keep love as your guiding star [1]
-and truth as your constant companion [1]""",
-    
-    """Sometimes a simple prayer is enough [1]
-to lift the weight of your worries [1]""",
-    
-    """Listen to the lessons of the past [1]
-but do not dwell in sorrow [1]""",
-    
-    """Each day is a gift of chance [1]
-open it with gratitude and care [1]""",
-    
-    """Walk your path with steady purpose [1]
-and let your actions show your strength [1]""",
-    
-    """May your heart be full of hope [1]
-and your mind free of doubt [1]""",
-    
-    """Let each moment of struggle [1]
-be a stepping stone to wisdom [1]""",
-    
-    """Remember that you are never alone [1]
-kindness lives in every gentle act [1]""",
-    
-    """Be mindful of the beauty of life [1]
-even in the smallest of things [1]""",
-    
-    """Allow yourself to feel every emotion [1]
-for they make you deeply human [1]""",
-    
-    """Keep your spirit open and your heart kind [1]
-life will reward your gentle ways [1]""",
-    
-    """Be patient with your own progress [1]
-growth comes in quiet moments [1]""",
-    
-    """Let the simple truth guide you [1]
-and wisdom will follow your steps [1]""",
-    
-    """Trust that every day has its own purpose [1]
-and every night brings peace [1]""",
-    
-    """Find strength in the warmth of home [1]
-and love in the eyes of family [1]""",
-    
-    """Be aware of the power of your thoughts [1]
-they shape the path you walk [1]""",
-    
-    """Keep the light of hope burning [1]
-even when the road is dark [1]""",
-    
-    """Let your journey be one of quiet courage [1]
-and simple acts of kindness [1]""",
-    
-    """Stand firm in the face of life’s trials [1]
-and let each challenge build your character [1]""",
-    
-    """Take comfort in the gentle rhythm of time [1]
-each moment brings its own healing [1]""",
-    
-    """Let the peace of nature fill your soul [1]
-and the sound of life calm your mind [1]""",
-    
-    """Remember that every ending is a start [1]
-and every loss a chance to begin anew [1]""",
-    
-    """Embrace the quiet moments with care [1]
-they are the seeds of future joy [1]""",
-    
-    """Live with a heart that is open [1]
-and a mind that seeks truth [1]""",
-    
-    """May you always find a reason to smile [1]
-even in the simplest of days [1]""",
-    
-    """Let your actions be filled with gentle strength [1]
-and your words with honest hope [1]""",
-    
-    """Keep your soul light with grateful thoughts [1]
-and your steps sure on the path of life [1]""",
-    
-    """Every breath is a new beginning [1]
-and every moment a chance to shine [1]""",
-    
-    """Remember the lessons learned from each fall [1]
-and rise with renewed purpose [1]""",
-    
-    """Let your heart listen to the quiet truth [1]
-and your mind find peace in simple things [1]""",
-    
-    """Embrace your past with a forgiving heart [1]
-and look to the future with clear hope [1]""",
-    
-    """May you find strength in every small victory [1]
-and comfort in every shared smile [1]""",
-    
-    """Live with sincerity and a gentle spirit [1]
-for these are the marks of true wisdom [1]""",
-    
-    """Let each day be a step towards a better you [1]
-and every night a time to rest and dream [1]""",
-    
-    """Be brave, be kind, and stay true [1]
-for these simple truths will guide you [1]""",
-    
-    """May your life be filled with quiet grace [1]
-and your journey marked by gentle triumphs [1]"""
+"""be yourself everyone else is taken [1]
+many lack originality of lacking originality [2]
+most people are other people [3]""",
+
+"""i have a dream [1]
+faith is taking the first step [2]
+we shall overcome [3]""",
+
+"""to be or not to be [1]
+all the world’s a stage [2]
+brevity is the soul of wit [3]""",
+
+"""the only thing we have to fear [1]
+is fear itself [2]
+when you reach the end of your rope [3]""",
+
+"""imagination is more important than knowledge [1]
+in the middle of difficulty lies opportunity [2]
+strive not to be a success but [3]""",
+
+"""give me liberty or give me death [1]
+i know not what course others may take [2]
+is life so dear or peace so sweet [3]""",
+
+"""ask not what your country can do [1]
+for you but what you can do [2]
+for your country [3]""",
+
+"""i think therefore i am [1]
+the heart has its reasons [2]
+doubt is the origin of wisdom [3]""",
+
+"""in the middle of difficulty lies opportunity [1]
+anyone who has never made a mistake [2]
+has never tried anything new [3]""",
+
+"""the journey of a thousand miles [1]
+begins with one step [2]
+when the wind blows build walls [3]""",
+
+"""all men are created equal [1]
+government of the people by the people [2]
+a house divided against itself cannot stand [3]""",
+
+"""an eye for an eye makes [1]
+the whole world blind [2]
+where there is love there is life [3]""",
+
+"""life is what you make it [1]
+whatever you are be a good one [2]
+the best way to predict the future [3]""",
+
+"""i came i saw i conquered [1]
+divide and rule [2]
+fortune favors the bold [3]""",
+
+"""genius is one percent inspiration [1]
+ninety-nine percent perspiration [2]
+i have not failed just found [3]""",
+
+"""let them eat cake [1]
+after us the deluge [2]
+i was born at versailles [3]""",
+
+"""we shall overcome [1]
+injustice anywhere is a threat to justice [2]
+i have a dream that one day [3]""",
+
+"""carpe diem seize the day [1]
+you may delay but time will not [2]
+nothing is ours except time [3]""",
+
+"""the unexamined life is not worth living [1]
+i know nothing except my ignorance [2]
+the only true wisdom is knowing [3]""",
+
+"""time is money [1]
+early to bed early to rise [2]
+an investment in knowledge pays the best [3]""",
+
+"""i am the master of my fate [1]
+i am the captain of my soul [2]
+out of the night that covers me [3]""",
+
+"""where there is love there is life [1]
+we must be the change we wish [2]
+an eye for an eye makes [3]""",
+
+"""to thine own self be true [1]
+this above all else [2]
+neither a borrower nor a lender be [3]""",
+
+"""the best way to predict the future [1]
+is to create it [2]
+whatever you are be a good one [3]""",
+
+"""education is the most powerful weapon [1]
+it always seems impossible until it’s done [2]
+the greatest glory in living lies [3]""",
+
+"""do unto others as you would have [1]
+the truth will set you free [2]
+love your neighbor as yourself [3]""",
+
+"""a room without books is like [1]
+a body without a soul [2]
+the life of man is short [3]""",
+
+"""no man is an island [1]
+any man’s death diminishes me [2]
+ask not for whom the bell tolls [3]""",
+
+"""we must be the change we wish [1]
+the weak can never forgive forgiveness [2]
+freedom is not worth having if [3]""",
+
+"""i have not failed just found [1]
+ten thousand ways that won’t work [2]
+genius is one percent inspiration [3]""",
+
+"""the only way to do great work [1]
+is to love what you do [2]
+stay hungry stay foolish [3]""",
+
+"""give me a place to stand [1]
+and i will move the earth [2]
+necessity is the mother of invention [3]""",
+
+"""freedom is not worth having if [1]
+it does not include freedom to err [2]
+truth is powerful and will prevail [3]""",
+
+"""it always seems impossible until it’s done [1]
+the greatest glory in living lies [2]
+education is the most powerful weapon [3]""",
+
+"""whatever you are be a good one [1]
+i walk slowly but i never [2]
+life is what you make it [3]""",
+
+"""the truth will set you free [1]
+blessed are the peacemakers [2]
+love your enemies and pray [3]""",
+
+"""i disapprove of what you say [1]
+but defend your right to say it [2]
+man is born free [3]""",
+
+"""success is not final failure not fatal [1]
+never give in never give in [2]
+we shall fight on the beaches [3]""",
+
+"""life is either a daring adventure [1]
+or nothing at all [2]
+keep your face to the sunshine [3]""",
+
+"""knowledge is power [1]
+truth is the daughter of time [2]
+experience is the teacher of all [3]""",
+
+"""happiness is not something readymade [1]
+it comes from your own actions [2]
+be kind whenever possible [3]""",
+
+"""i know nothing except my ignorance [1]
+the unexamined life is not worth living [2]
+one thing only i know [3]""",
+
+"""you must be the change you wish [1]
+an eye for an eye makes [2]
+the best way out is always through [3]""",
+
+"""the greatest glory in living lies [1]
+not in never falling but rising [2]
+it always seems impossible until it’s done [3]""",
+
+"""when you reach the end of your rope [1]
+tie a knot and hang on [2]
+the only thing we have to fear [3]""",
+
+"""a journey of a thousand miles [1]
+begins with a single step [2]
+the way is not in the sky [3]""",
+
+"""i am not afraid of storms [1]
+for i am learning to sail [2]
+little women grow up strong [3]""",
+
+"""do what you can with what you have [1]
+where you are [2]
+believe you can and you’re halfway there [3]""",
+
+"""there is no path to happiness [1]
+happiness is the path [2]
+the mind is everything what you think [3]""",
+
+"""the pen is mightier than the sword [1]
+words are sharper than blades [2]
+truth cuts deeper than steel [3]""",
+
+"""i have a dream that one day [1]
+every valley shall be exalted [2]
+we shall overcome [3]""",
+
+"""float like a butterfly sting like a bee [1]
+don’t count the days make them count [2]
+impossible is just an opinion [3]""",
+
+"""it is never too late to be [1]
+what you might have been [2]
+the past is a stepping stone [3]""",
+
+"""we are what we repeatedly do [1]
+excellence then is not an act [2]
+but a habit [3]""",
+
+"""be the change you wish to see [1]
+in the world [2]
+an eye for an eye blinds all [3]""",
+
+"""what does not kill me makes me stronger [1]
+that which is hateful to you [2]
+do not impose on others [3]""",
+
+"""the future belongs to those who believe [1]
+in the beauty of their dreams [2]
+do one thing every day that scares [3]""",
+
+"""love your neighbor as yourself [1]
+blessed are the meek [2]
+the kingdom of heaven is within [3]""",
+
+"""a man who stands for nothing [1]
+will fall for anything [2]
+truth has no agenda [3]""",
+
+"""i walk slowly but i never [1]
+walk backward [2]
+whatever you are be a good one [3]""",
+
+"""if you can dream it you can [1]
+do it [2]
+all our dreams can come true [3]""",
+
+"""turn your wounds into wisdom [1]
+you get what you give [2]
+the big lesson in life is never [3]""",
+
+"""the mind is everything what you think [1]
+you become [2]
+there is no path to happiness [3]""",
+
+"""injustice anywhere is a threat to justice [1]
+everywhere [2]
+i have a dream that one day [3]""",
+
+"""you miss one hundred percent of shots [1]
+you don’t take [2]
+aim high even if you miss [3]""",
+
+"""i am because we are [1]
+forgiveness is not an occasional act [2]
+truth and love will always triumph [3]""",
+
+"""do one thing every day that scares [1]
+you [2]
+the future belongs to those who believe [3]""",
+
+"""the only limit to our realization [1]
+is our doubts of today [2]
+when you reach the end of your rope [3]""",
+
+"""peace begins with a smile [1]
+spread love everywhere you go [2]
+if you judge people you have no [3]""",
+
+"""i will prepare and someday my chance [1]
+will come [2]
+whatever you are be a good one [3]""",
+
+"""we are all in the gutter [1]
+but some look at the stars [2]
+be yourself everyone else is taken [3]""",
+
+"""life is really simple but we insist [1]
+on making it complicated [2]
+the wise man knows his limits [3]""",
+
+"""the best revenge is massive success [1]
+living well is the best revenge [2]
+success is the sweetest victory [3]""",
+
+"""if you judge people you have no [1]
+time to love them [2]
+peace begins with a smile [3]""",
+
+"""strive not to be a success but [1]
+rather to be of value [2]
+imagination is more important than knowledge [3]""",
+
+"""you only live once but if you [1]
+do it right once is enough [2]
+life is short make it count [3]""",
+
+"""to live is the rarest thing [1]
+in the world most people exist [2]
+we are all in the gutter [3]""",
+
+"""i refuse to accept despair as final [1]
+we shall overcome [2]
+faith is taking the first step [3]""",
+
+"""there is nothing permanent except change [1]
+the only constant is change [2]
+adapt or fade away [3]""",
+
+"""the greatest wealth is to live content [1]
+with little [2]
+wisdom is better than gold [3]""",
+
+"""spread love everywhere you go [1]
+peace begins with a smile [2]
+if you judge people you have no [3]""",
+
+"""believe you can and you’re halfway there [1]
+do what you can with what you have [2]
+the only limit to our realization [3]""",
+
+"""it’s not whether you get knocked down [1]
+it’s whether you get up [2]
+keep going no matter what [3]""",
+
+"""the only true wisdom is knowing [1]
+you know nothing [2]
+i know nothing except my ignorance [3]""",
+
+"""let us sacrifice our today so that [1]
+our children can have tomorrow [2]
+it always seems impossible until it’s done [3]""",
+
+"""everything you’ve ever wanted is on [1]
+the other side of fear [2]
+fear is the mind-killer [3]""",
+
+"""i alone cannot change the world [1]
+but i can cast a stone [2]
+spread love everywhere you go [3]""",
+
+"""don’t judge each day by the harvest [1]
+but by seeds you plant [2]
+small acts grow big futures [3]""",
+
+"""what we think we become [1]
+the mind is everything [2]
+happiness is the path [3]""",
+
+"""success is going from failure to failure [1]
+without losing enthusiasm [2]
+never give in never give in [3]""",
+
+"""the weak can never forgive forgiveness [1]
+is the attribute of the strong [2]
+we must be the change we wish [3]""",
+
+"""you can’t blame gravity for falling [1]
+in love [2]
+love is a force of nature [3]""",
+
+"""keep your face to the sunshine [1]
+and you cannot see a shadow [2]
+life is either a daring adventure [3]""",
+
+"""never give in never give in [1]
+never never never [2]
+success is not final failure not fatal [3]""",
+
+"""not everything that counts can be counted [1]
+imagination is more important than knowledge [2]
+strive not to be a success but [3]""",
+
+"""hate cannot drive out hate only love [1]
+can do that [2]
+i have a dream that one day [3]""",
+
+"""do what is right not what is easy [1]
+the truth will set you free [2]
+stand firm in your own light [3]""",
+
+"""life is 10 percent what happens [1]
+90 percent how you react [2]
+you control your own destiny [3]"""
 ]
 
-# Write each text to a separate file named "1.txt", "2.txt", ..., "100.txt".
+# Write each text to a separate file named "1.txt", "2.txt", ..., "100.txt"
 for index, text in enumerate(texts, start=1):
     file_name = f"{index}.txt"
     file_path = os.path.join(OUTPUT_DIR, file_name)

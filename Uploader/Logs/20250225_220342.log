@@ -1,0 +1,281 @@
+INFO: Log file created: D:\2025\Projects\Presence\Presence0.1\Uploader\Logs\20250225_220342.log
+
+
+INFO: Channel provided from command line: RedNBlack
+INFO: Earliest folder found: D:\2025\Projects\Presence\Presence0.1\Channels\RedNBlack\Clips\20250225_220333
+
+INFO: YouTube AutoUpload for channel: 'RedNBlack', folder: 'D:\2025\Projects\Presence\Presence0.1\Channels\RedNBlack\Clips\20250225_220333'
+INFO: Video file: D:\2025\Projects\Presence\Presence0.1\Channels\RedNBlack\Clips\20250225_220333\20250225_220333.mp4 (Timestamp: 20250225_220333)
+INFO: Initiating upload for video: D:\2025\Projects\Presence\Presence0.1\Channels\RedNBlack\Clips\20250225_220333\20250225_220333.mp4
+INFO: Video file selected for upload.
+INFO: Waiting for YouTube to finish processing the video...
+INFO: Video processing completed.
+INFO: Updating video title and description...
+ERROR: Failed to update video details: Message: element click intercepted: Element <div id="textbox" slot="input" contenteditable="true" class="style-scope ytcp-social-suggestions-textbox" aria-required="true" aria-label="Add a title that describes your video (type @ to mention a channel)" aria-invalid="false" style="display: inline-block;">...</div> is not clickable at point (796, 287). Other element would receive the click: <div class="dialog-scrim style-scope ytcp-uploads-dialog"></div>
+  (Session info: chrome=134.0.6998.23)
+Stacktrace:
+	GetHandleVerifier [0x00007FF70C23B405+3109445]
+	(No symbol) [0x00007FF70BEBB190]
+	(No symbol) [0x00007FF70BD58FDA]
+	(No symbol) [0x00007FF70BDB70F9]
+	(No symbol) [0x00007FF70BDB4AC2]
+	(No symbol) [0x00007FF70BDB1B61]
+	(No symbol) [0x00007FF70BDB0A81]
+	(No symbol) [0x00007FF70BDA2284]
+	(No symbol) [0x00007FF70BDD723A]
+	(No symbol) [0x00007FF70BDA1B36]
+	(No symbol) [0x00007FF70BDD7450]
+	(No symbol) [0x00007FF70BDFF704]
+	(No symbol) [0x00007FF70BDD7013]
+	(No symbol) [0x00007FF70BD9FF5E]
+	(No symbol) [0x00007FF70BDA11E3]
+	GetHandleVerifier [0x00007FF70C29B41D+3502685]
+	GetHandleVerifier [0x00007FF70C2B6993+3614675]
+	GetHandleVerifier [0x00007FF70C2ABD23+3570531]
+	GetHandleVerifier [0x00007FF70C00ECBA+830202]
+	(No symbol) [0x00007FF70BEC643F]
+	(No symbol) [0x00007FF70BEC2294]
+	(No symbol) [0x00007FF70BEC2436]
+	(No symbol) [0x00007FF70BEB1E89]
+	BaseThreadInitThunk [0x00007FFDBD30259D+29]
+	RtlUserThreadStart [0x00007FFDBDA8AF38+40]
+
+Warning: 'Next' button not clickable, retrying... (1/3). Error: Message: 
+
+Warning: 'Next' button not clickable, retrying... (2/3). Error: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF70C23B405+3109445]
+	(No symbol) [0x00007FF70BEBB190]
+	(No symbol) [0x00007FF70BD58FDA]
+	(No symbol) [0x00007FF70BDAF276]
+	(No symbol) [0x00007FF70BDAF4AC]
+	(No symbol) [0x00007FF70BE02A57]
+	(No symbol) [0x00007FF70BDD727F]
+	(No symbol) [0x00007FF70BDFF704]
+	(No symbol) [0x00007FF70BDD7013]
+	(No symbol) [0x00007FF70BD9FF5E]
+	(No symbol) [0x00007FF70BDA11E3]
+	GetHandleVerifier [0x00007FF70C29B41D+3502685]
+	GetHandleVerifier [0x00007FF70C2B6993+3614675]
+	GetHandleVerifier [0x00007FF70C2ABD23+3570531]
+	GetHandleVerifier [0x00007FF70C00ECBA+830202]
+	(No symbol) [0x00007FF70BEC643F]
+	(No symbol) [0x00007FF70BEC2294]
+	(No symbol) [0x00007FF70BEC2436]
+	(No symbol) [0x00007FF70BEB1E89]
+	BaseThreadInitThunk [0x00007FFDBD30259D+29]
+	RtlUserThreadStart [0x00007FFDBDA8AF38+40]
+
+Warning: 'Next' button not clickable, retrying... (3/3). Error: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF70C23B405+3109445]
+	(No symbol) [0x00007FF70BEBB190]
+	(No symbol) [0x00007FF70BD58FDA]
+	(No symbol) [0x00007FF70BDAF276]
+	(No symbol) [0x00007FF70BDAF4AC]
+	(No symbol) [0x00007FF70BE02A57]
+	(No symbol) [0x00007FF70BDD727F]
+	(No symbol) [0x00007FF70BDFF704]
+	(No symbol) [0x00007FF70BDD7013]
+	(No symbol) [0x00007FF70BD9FF5E]
+	(No symbol) [0x00007FF70BDA11E3]
+	GetHandleVerifier [0x00007FF70C29B41D+3502685]
+	GetHandleVerifier [0x00007FF70C2B6993+3614675]
+	GetHandleVerifier [0x00007FF70C2ABD23+3570531]
+	GetHandleVerifier [0x00007FF70C00ECBA+830202]
+	(No symbol) [0x00007FF70BEC643F]
+	(No symbol) [0x00007FF70BEC2294]
+	(No symbol) [0x00007FF70BEC2436]
+	(No symbol) [0x00007FF70BEB1E89]
+	BaseThreadInitThunk [0x00007FFDBD30259D+29]
+	RtlUserThreadStart [0x00007FFDBDA8AF38+40]
+
+Warning: 'Next' button not clickable, retrying... (1/3). Error: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF70C23B405+3109445]
+	(No symbol) [0x00007FF70BEBB190]
+	(No symbol) [0x00007FF70BD58FDA]
+	(No symbol) [0x00007FF70BDAF276]
+	(No symbol) [0x00007FF70BDAF4AC]
+	(No symbol) [0x00007FF70BE02A57]
+	(No symbol) [0x00007FF70BDD727F]
+	(No symbol) [0x00007FF70BDFF704]
+	(No symbol) [0x00007FF70BDD7013]
+	(No symbol) [0x00007FF70BD9FF5E]
+	(No symbol) [0x00007FF70BDA11E3]
+	GetHandleVerifier [0x00007FF70C29B41D+3502685]
+	GetHandleVerifier [0x00007FF70C2B6993+3614675]
+	GetHandleVerifier [0x00007FF70C2ABD23+3570531]
+	GetHandleVerifier [0x00007FF70C00ECBA+830202]
+	(No symbol) [0x00007FF70BEC643F]
+	(No symbol) [0x00007FF70BEC2294]
+	(No symbol) [0x00007FF70BEC2436]
+	(No symbol) [0x00007FF70BEB1E89]
+	BaseThreadInitThunk [0x00007FFDBD30259D+29]
+	RtlUserThreadStart [0x00007FFDBDA8AF38+40]
+
+Warning: 'Next' button not clickable, retrying... (2/3). Error: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF70C23B405+3109445]
+	(No symbol) [0x00007FF70BEBB190]
+	(No symbol) [0x00007FF70BD58FDA]
+	(No symbol) [0x00007FF70BDAF276]
+	(No symbol) [0x00007FF70BDAF4AC]
+	(No symbol) [0x00007FF70BE02A57]
+	(No symbol) [0x00007FF70BDD727F]
+	(No symbol) [0x00007FF70BDFF704]
+	(No symbol) [0x00007FF70BDD7013]
+	(No symbol) [0x00007FF70BD9FF5E]
+	(No symbol) [0x00007FF70BDA11E3]
+	GetHandleVerifier [0x00007FF70C29B41D+3502685]
+	GetHandleVerifier [0x00007FF70C2B6993+3614675]
+	GetHandleVerifier [0x00007FF70C2ABD23+3570531]
+	GetHandleVerifier [0x00007FF70C00ECBA+830202]
+	(No symbol) [0x00007FF70BEC643F]
+	(No symbol) [0x00007FF70BEC2294]
+	(No symbol) [0x00007FF70BEC2436]
+	(No symbol) [0x00007FF70BEB1E89]
+	BaseThreadInitThunk [0x00007FFDBD30259D+29]
+	RtlUserThreadStart [0x00007FFDBDA8AF38+40]
+
+Warning: 'Next' button not clickable, retrying... (3/3). Error: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF70C23B405+3109445]
+	(No symbol) [0x00007FF70BEBB190]
+	(No symbol) [0x00007FF70BD58FDA]
+	(No symbol) [0x00007FF70BDAF276]
+	(No symbol) [0x00007FF70BDAF4AC]
+	(No symbol) [0x00007FF70BE02A57]
+	(No symbol) [0x00007FF70BDD727F]
+	(No symbol) [0x00007FF70BDFF704]
+	(No symbol) [0x00007FF70BDD7013]
+	(No symbol) [0x00007FF70BD9FF5E]
+	(No symbol) [0x00007FF70BDA11E3]
+	GetHandleVerifier [0x00007FF70C29B41D+3502685]
+	GetHandleVerifier [0x00007FF70C2B6993+3614675]
+	GetHandleVerifier [0x00007FF70C2ABD23+3570531]
+	GetHandleVerifier [0x00007FF70C00ECBA+830202]
+	(No symbol) [0x00007FF70BEC643F]
+	(No symbol) [0x00007FF70BEC2294]
+	(No symbol) [0x00007FF70BEC2436]
+	(No symbol) [0x00007FF70BEB1E89]
+	BaseThreadInitThunk [0x00007FFDBD30259D+29]
+	RtlUserThreadStart [0x00007FFDBDA8AF38+40]
+
+Warning: 'Next' button not clickable, retrying... (1/3). Error: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF70C23B405+3109445]
+	(No symbol) [0x00007FF70BEBB190]
+	(No symbol) [0x00007FF70BD58FDA]
+	(No symbol) [0x00007FF70BDAF276]
+	(No symbol) [0x00007FF70BDAF4AC]
+	(No symbol) [0x00007FF70BE02A57]
+	(No symbol) [0x00007FF70BDD727F]
+	(No symbol) [0x00007FF70BDFF704]
+	(No symbol) [0x00007FF70BDD7013]
+	(No symbol) [0x00007FF70BD9FF5E]
+	(No symbol) [0x00007FF70BDA11E3]
+	GetHandleVerifier [0x00007FF70C29B41D+3502685]
+	GetHandleVerifier [0x00007FF70C2B6993+3614675]
+	GetHandleVerifier [0x00007FF70C2ABD23+3570531]
+	GetHandleVerifier [0x00007FF70C00ECBA+830202]
+	(No symbol) [0x00007FF70BEC643F]
+	(No symbol) [0x00007FF70BEC2294]
+	(No symbol) [0x00007FF70BEC2436]
+	(No symbol) [0x00007FF70BEB1E89]
+	BaseThreadInitThunk [0x00007FFDBD30259D+29]
+	RtlUserThreadStart [0x00007FFDBDA8AF38+40]
+
+Warning: 'Next' button not clickable, retrying... (2/3). Error: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF70C23B405+3109445]
+	(No symbol) [0x00007FF70BEBB190]
+	(No symbol) [0x00007FF70BD58FDA]
+	(No symbol) [0x00007FF70BDAF276]
+	(No symbol) [0x00007FF70BDAF4AC]
+	(No symbol) [0x00007FF70BE02A57]
+	(No symbol) [0x00007FF70BDD727F]
+	(No symbol) [0x00007FF70BDFF704]
+	(No symbol) [0x00007FF70BDD7013]
+	(No symbol) [0x00007FF70BD9FF5E]
+	(No symbol) [0x00007FF70BDA11E3]
+	GetHandleVerifier [0x00007FF70C29B41D+3502685]
+	GetHandleVerifier [0x00007FF70C2B6993+3614675]
+	GetHandleVerifier [0x00007FF70C2ABD23+3570531]
+	GetHandleVerifier [0x00007FF70C00ECBA+830202]
+	(No symbol) [0x00007FF70BEC643F]
+	(No symbol) [0x00007FF70BEC2294]
+	(No symbol) [0x00007FF70BEC2436]
+	(No symbol) [0x00007FF70BEB1E89]
+	BaseThreadInitThunk [0x00007FFDBD30259D+29]
+	RtlUserThreadStart [0x00007FFDBDA8AF38+40]
+
+Warning: 'Next' button not clickable, retrying... (3/3). Error: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF70C23B405+3109445]
+	(No symbol) [0x00007FF70BEBB190]
+	(No symbol) [0x00007FF70BD58FDA]
+	(No symbol) [0x00007FF70BDAF276]
+	(No symbol) [0x00007FF70BDAF4AC]
+	(No symbol) [0x00007FF70BE02A57]
+	(No symbol) [0x00007FF70BDD727F]
+	(No symbol) [0x00007FF70BDFF704]
+	(No symbol) [0x00007FF70BDD7013]
+	(No symbol) [0x00007FF70BD9FF5E]
+	(No symbol) [0x00007FF70BDA11E3]
+	GetHandleVerifier [0x00007FF70C29B41D+3502685]
+	GetHandleVerifier [0x00007FF70C2B6993+3614675]
+	GetHandleVerifier [0x00007FF70C2ABD23+3570531]
+	GetHandleVerifier [0x00007FF70C00ECBA+830202]
+	(No symbol) [0x00007FF70BEC643F]
+	(No symbol) [0x00007FF70BEC2294]
+	(No symbol) [0x00007FF70BEC2436]
+	(No symbol) [0x00007FF70BEB1E89]
+	BaseThreadInitThunk [0x00007FFDBD30259D+29]
+	RtlUserThreadStart [0x00007FFDBDA8AF38+40]
+
+ERROR: Unable to click 'Done' button: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=134.0.6998.23)
+Stacktrace:
+	GetHandleVerifier [0x00007FF70C23B405+3109445]
+	(No symbol) [0x00007FF70BEBB190]
+	(No symbol) [0x00007FF70BD58FDA]
+	(No symbol) [0x00007FF70BD44DC5]
+	(No symbol) [0x00007FF70BD6975A]
+	(No symbol) [0x00007FF70BDDEFBF]
+	(No symbol) [0x00007FF70BDFF002]
+	(No symbol) [0x00007FF70BDD7013]
+	(No symbol) [0x00007FF70BD9FF5E]
+	(No symbol) [0x00007FF70BDA11E3]
+	GetHandleVerifier [0x00007FF70C29B41D+3502685]
+	GetHandleVerifier [0x00007FF70C2B6993+3614675]
+	GetHandleVerifier [0x00007FF70C2ABD23+3570531]
+	GetHandleVerifier [0x00007FF70C00ECBA+830202]
+	(No symbol) [0x00007FF70BEC643F]
+	(No symbol) [0x00007FF70BEC2294]
+	(No symbol) [0x00007FF70BEC2436]
+	(No symbol) [0x00007FF70BEB1E89]
+	BaseThreadInitThunk [0x00007FFDBD30259D+29]
+	RtlUserThreadStart [0x00007FFDBDA8AF38+40]
+
+INFO: YouTube upload process completed successfully.
+
+✅ YouTube AutoUpload completed successfully.
+
+
+INFO: TikTok AutoUpload for channel: 'RedNBlack', folder: 'D:\2025\Projects\Presence\Presence0.1\Channels\RedNBlack\Clips\20250225_220333'
+INFO: Video file: D:\2025\Projects\Presence\Presence0.1\Channels\RedNBlack\Clips\20250225_220333\20250225_220333.mp4 (Timestamp: 20250225_220333)
+INFO: Description: i have a dream. faith is taking the first step. we shall overcome
+INFO: Initiating TikTok upload for video: D:\2025\Projects\Presence\Presence0.1\Channels\RedNBlack\Clips\20250225_220333\20250225_220333.mp4
+INFO: Video file selected for upload.
+INFO: Expected placeholder (current text) in description editor: '20250225_220333'
+INFO: Found description editor using placeholder match.
+INFO: Description updated with metadata.
+INFO: 'Post' button clicked. TikTok upload finalized.
+INFO: TikTok upload process completed successfully.
+
+✅ TikTok AutoUpload completed successfully.
+
+INFO: Moving folder 'D:\2025\Projects\Presence\Presence0.1\Channels\RedNBlack\Clips\20250225_220333' to archive: D:\2025\Projects\Presence\Presence0.1\Channels\RedNBlack\Clips_Archive\20250225_220333
+INFO: Process completed successfully.
