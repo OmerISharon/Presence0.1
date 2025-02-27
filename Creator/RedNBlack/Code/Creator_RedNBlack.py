@@ -6,9 +6,13 @@ from PIL import Image, ImageDraw, ImageFont
 from config import *  # uses variables: DIR_OFFLINE_TEXT, DIR_OFFLINE_TEXT_ARCHIVE, OUT_BASE_FOLDER, FONT_PATH, FONT_SIZE, TYPING_SOUNDS_DIR, FPS
 import numpy as np
 
+# New fade out duration (in seconds)
+FADE_OUT_DURATION = 1.0
+
 def compute_timestamps(text, base_delay, variation_range):
     """
     Compute per-character delays with random variation.
+    Adds extra delay for punctuation and spaces to simulate human typing.
     Returns:
       - timestamps: list of cumulative delays for each character.
       - total_duration: total time required.
@@ -17,14 +21,18 @@ def compute_timestamps(text, base_delay, variation_range):
     cumulative = 0
     for char in text:
         delay = base_delay * random.uniform(*variation_range)
+        if char in ".!?":
+            delay *= random.uniform(1.5, 2.0)
+        elif char == " ":
+            delay *= random.uniform(1.2, 1.5)
         cumulative += delay
         timestamps.append(cumulative)
     return timestamps, cumulative
 
-def build_timeline(sentences, base_delay, initial_pause, gap_pause):
+def build_timeline(sentences, base_delay, initial_pause, gap_pause, fade_duration):
     """
-    Build the timeline for typing and (if applicable) backspacing.
-    For each sentence (except the final one), backspacing events are computed.
+    Build the timeline for typing and fade out.
+    For each sentence (except the final one), a fade-out event is computed.
     Returns a list of timeline segments and the total duration.
     """
     timeline = []
@@ -32,39 +40,32 @@ def build_timeline(sentences, base_delay, initial_pause, gap_pause):
     for i, item in enumerate(sentences):
         text = item['text']
         pause_time = item['delay']
-        # Compute human-like typing timestamps with a variation (80%-120% of base delay)
-        typing_timestamps, type_duration = compute_timestamps(text, base_delay, (0.8, 1.2))
-        # For non-final sentences, compute backspacing timestamps (base_delay/2 for 2x faster)
-        if i < len(sentences) - 1:
-            back_timestamps, back_duration = compute_timestamps(text, base_delay/2, (0.7, 1.0))
-        else:
-            back_timestamps, back_duration = [], 0
-
+        # Use a very tight variation range for smooth, consistent timing.
+        typing_timestamps, type_duration = compute_timestamps(text, base_delay, (0.98, 1.02))
         segment = {
             'sentence': text,
             'start_typing': current_time,
             'typing_timestamps': typing_timestamps,
             'end_typing': current_time + type_duration,
             'pause': pause_time,
-            'start_back': current_time + type_duration + pause_time,
-            'backspacing_timestamps': back_timestamps,
-            'end_back': current_time + type_duration + pause_time + back_duration,
         }
-        timeline.append(segment)
-
-        # Update current_time for next segment.
         if i < len(sentences) - 1:
-            current_time += type_duration + pause_time + back_duration + gap_pause
+            segment['start_fade'] = current_time + type_duration + pause_time
+            segment['fade_duration'] = fade_duration
+            segment['end_fade'] = segment['start_fade'] + fade_duration
+        timeline.append(segment)
+        if i < len(sentences) - 1:
+            current_time += type_duration + pause_time + fade_duration + gap_pause
         else:
-            # For the final sentence, ensure the pause is at least 3 seconds.
             final_pause = max(pause_time, 3)
             current_time += type_duration + final_pause
     return timeline, current_time
 
 def create_audio_events(timeline, base_delay):
     """
-    Create a list of audio events for typing and backspacing.
+    Create a list of audio events for typing sounds.
     For a less intense sound, we trigger a sound for every second character.
+    (Fade-out has no associated sound.)
     """
     typing_audio_dir = Path(TYPING_SOUNDS_DIR)
     audio_files = list(typing_audio_dir.glob("*.mp3"))
@@ -72,90 +73,147 @@ def create_audio_events(timeline, base_delay):
         return random.choice(audio_files)
     
     audio_events = []
-    # Typing sound events
     for segment in timeline:
         sentence = segment['sentence']
-        # For every second character
         for i in range(0, len(sentence), 2):
-            # Use the computed per-character timestamp for more natural timing
             event_time = segment['start_typing'] + segment['typing_timestamps'][i]
             sound_file = get_random_sound()
             sound_clip_full = AudioFileClip(str(sound_file))
-            # Use a duration equal to base_delay (or the clip's duration, whichever is shorter)
             clip_duration = min(base_delay, sound_clip_full.duration)
             sound_clip = sound_clip_full.subclipped(0, clip_duration).with_start(event_time)
             audio_events.append(sound_clip)
-        # Backspacing sound events (if applicable)
-        if segment['backspacing_timestamps']:
-            for i in range(0, len(sentence), 2):
-                event_time = segment['start_back'] + segment['backspacing_timestamps'][i]
-                sound_file = get_random_sound()
-                sound_clip_full = AudioFileClip(str(sound_file))
-                clip_duration = min(base_delay, sound_clip_full.duration)
-                sound_clip = sound_clip_full.subclipped(0, clip_duration).with_start(event_time)
-                audio_events.append(sound_clip)
     return audio_events
+
+def wrap_text(text, font, draw, max_width):
+    """
+    Break text into multiple lines so that each line fits within max_width.
+    """
+    words = text.split()
+    lines = []
+    current_line = ""
+    for word in words:
+        test_line = word if not current_line else current_line + " " + word
+        bbox = draw.textbbox((0, 0), test_line, font=font)
+        line_width = bbox[2] - bbox[0]
+        if line_width <= max_width:
+            current_line = test_line
+        else:
+            if current_line:
+                lines.append(current_line)
+            current_line = word
+    if current_line:
+        lines.append(current_line)
+    return lines
 
 def make_frame(t, timeline, const_y, width):
     """
     Render the frame at time t using the timeline.
-    The vertical position (y) is fixed to the constant value computed from the font metrics.
+    Instead of re-centering partial text on every frame, we pre-calculate
+    the final wrapped lines and their left margins (for centering). Then we
+    reveal the text progressively over those fixed positions.
     """
-    # Create a blank image (black background)
     img = Image.new('RGB', (width, height), color='black')
     draw = ImageDraw.Draw(img)
-    displayed_text = ""
     
-    # Determine which timeline segment applies
-    for i, segment in enumerate(timeline):
+    # Determine which timeline segment applies and the current state.
+    selected_segment = None
+    branch = None  # "typing", "hold", or "fade"
+    fade_factor = 1.0
+    progress = 0
+    for segment in timeline:
         if t < segment['start_typing']:
-            # Not reached this sentence yet.
-            break
+            break  # Not reached this sentence yet.
         elif segment['start_typing'] <= t < segment['end_typing']:
-            # Typing in progress
-            offset = t - segment['start_typing']
-            num_chars = sum(1 for ts in segment['typing_timestamps'] if ts <= offset)
-            displayed_text = segment['sentence'][:num_chars]
-            break
-        elif segment['end_typing'] <= t < segment['start_back']:
-            # Finished typing, holding full sentence
-            displayed_text = segment['sentence']
-            break
-        elif segment['backspacing_timestamps'] and segment['start_back'] <= t < segment['end_back']:
-            # Backspacing in progress
-            offset = t - segment['start_back']
-            num_chars_removed = sum(1 for ts in segment['backspacing_timestamps'] if ts <= offset)
-            remaining_chars = len(segment['sentence']) - num_chars_removed
-            displayed_text = segment['sentence'][:remaining_chars]
-            break
-        elif t >= segment['end_back']:
-            # After backspacing for non-final sentences, show nothing
-            if i < len(timeline) - 1:
-                displayed_text = ""
+            selected_segment = segment
+            branch = "typing"
+            progress = (t - segment['start_typing']) / (segment['end_typing'] - segment['start_typing'])
+        elif t < segment.get('start_fade', float('inf')):
+            selected_segment = segment
+            branch = "hold"
+        elif 'start_fade' in segment and segment['start_fade'] <= t < segment['end_fade']:
+            selected_segment = segment
+            branch = "fade"
+            fade_factor = 1 - ((t - segment['start_fade']) / segment['fade_duration'])
+        elif t >= segment.get('end_fade', segment['end_typing']):
+            if timeline.index(segment) < len(timeline) - 1:
+                selected_segment = segment
+                branch = "none"
             else:
-                displayed_text = segment['sentence']
-    # Center horizontally using the current text width, but use constant y position
-    if displayed_text:
-        bbox = draw.textbbox((0, 0), displayed_text, font=font)
-        text_width = bbox[2] - bbox[0]
+                selected_segment = segment
+                branch = "hold"
+    if not selected_segment or branch == "none":
+        return np.array(img)
+    
+    full_text = selected_segment['sentence']
+    max_text_width = int(width * 0.9)
+    final_lines = wrap_text(full_text, font, draw, max_text_width)
+    
+    # Compute vertical metrics.
+    ascent, descent = font.getmetrics()
+    line_height = ascent + descent
+    total_text_height = line_height * len(final_lines)
+    y_start = (height - total_text_height) / 2
+    
+    # Determine how many characters to reveal.
+    if branch == "typing":
+        revealed_count = int(progress * len(full_text))
     else:
-        text_width = 0
-    x = (width - text_width) / 2
-    draw.text((x, const_y), displayed_text, font=font, fill='red')
+        revealed_count = len(full_text)
+    
+    # Distribute revealed characters over the final wrapped lines.
+    remaining = revealed_count
+    drawn_lines = []
+    for line in final_lines:
+        if remaining >= len(line):
+            drawn_lines.append(line)
+            remaining -= len(line)
+        else:
+            drawn_lines.append(line[:remaining])
+            remaining = 0
+
+    # Draw each line at its fixed left margin (computed from full line width).
+    for i, line in enumerate(final_lines):
+        bbox_full = draw.textbbox((0, 0), line, font=font)
+        full_line_width = bbox_full[2] - bbox_full[0]
+        left_x = (width - full_line_width) / 2
+        y = y_start + i * line_height
+        text_to_draw = drawn_lines[i] if i < len(drawn_lines) else ""
+        if branch == "fade":
+            text_color = (int(255 * fade_factor), 0, 0)
+        else:
+            text_color = (255, 0, 0)
+        draw.text((left_x, y), text_to_draw, font=font, fill=text_color)
+    
+    # The blinking caret has been removed.
+    
     return np.array(img)
 
+
 def main():
-    # --- 1. File handling: find the oldest txt file ---
+    # --- 1. File handling: choose the lowest-numbered txt file ---
     input_dir = Path(DIR_OFFLINE_TEXT)
     archive_dir = Path(DIR_OFFLINE_TEXT_ARCHIVE)
     output_dir = Path(OUT_BASE_FOLDER)
     
-    txt_files = sorted(input_dir.glob("*.txt"), key=lambda f: f.stat().st_ctime)
+    txt_files = sorted(input_dir.glob("*.txt"), key=lambda f: int(f.stem) if f.stem.isdigit() else float('inf'))
     if not txt_files:
         raise FileNotFoundError("No txt file found in input directory")
     txt_file = txt_files[0]
     
-    # --- 2. Parse the text file for sentences and delays ---
+    # --- 2. Initialize video parameters ---
+    global width, height, font  # used in make_frame below
+    width, height = 1080, 1920
+    font_path = Path(FONT_PATH)
+    font_size = int(FONT_SIZE)
+    font = ImageFont.truetype(str(font_path), font_size)
+    const_y = None  # Not used because we center the text block.
+    
+    # Typing animation parameters
+    base_char_time = 0.05  # Adjust this for slower typing if needed.
+    initial_pause = 1
+    gap_pause = 1
+
+    # --- 3. Parse the text file for sentences and delays ---
     with open(txt_file, 'r', encoding='utf-8') as f:
         lines = [line.strip().strip('"') for line in f if line.strip()]
     
@@ -170,23 +228,8 @@ def main():
             sentence = line.strip().strip('"')
         sentences.append({'text': sentence, 'delay': delay})
     
-    # --- 3. Video parameters ---
-    global width, height, font  # used in make_frame below
-    width, height = 1080, 1920
-    font_path = Path(FONT_PATH)
-    font_size = int(FONT_SIZE)
-    font = ImageFont.truetype(str(font_path), font_size)
-    # Fix the vertical centering using font metrics (so y remains constant)
-    ascent, descent = font.getmetrics()
-    const_y = (height - (ascent + descent)) / 2
-
-    # Typing animation parameters
-    base_char_time = 0.05  # base delay per character
-    initial_pause = 1
-    gap_pause = 1
-
     # --- 4. Build timeline ---
-    timeline, total_duration = build_timeline(sentences, base_char_time, initial_pause, gap_pause)
+    timeline, total_duration = build_timeline(sentences, base_char_time, initial_pause, gap_pause, FADE_OUT_DURATION)
     
     # --- 5. Audio integration ---
     audio_events = create_audio_events(timeline, base_char_time)
@@ -194,19 +237,19 @@ def main():
     
     # --- 6. Create video clip ---
     clip = VideoClip(lambda t: make_frame(t, timeline, const_y, width), duration=total_duration)
-    clip = clip.with_fps(FPS)
+    clip = clip.with_fps(FPS)  # Using FPS from your config.
     clip = clip.with_audio(composite_audio)
     
     # --- 7. Write video output ---
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    output_folder = output_dir / timestamp
+    output_folder = output_dir / f"{txt_file.stem}_{timestamp}"
     output_folder.mkdir(parents=True, exist_ok=True)
-    video_output_path = output_folder / f"{timestamp}.mp4"
+    video_output_path = output_folder / f"{txt_file.stem}_{timestamp}.mp4"
     clip.write_videofile(str(video_output_path))
     
     # --- 8. Save metadata as JSON ---
     metadata = {
-        "title": sentences[0]['text'],
+        "title": sentences[0]['text'] if sentences else "",
         "description": ". ".join([s['text'] for s in sentences]),
         "creation_timestamp": timestamp,
     }
