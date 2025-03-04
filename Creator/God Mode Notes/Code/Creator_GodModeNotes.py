@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import os
 import time
 import cv2
@@ -242,7 +244,6 @@ def render_frame(typed_text, font, brand_logo, frame_count, cursor_blink_rate):
     
     return frame_bgr
 
-
 # -----------------------------------------------------------------
 # Extract Offline Title
 # -----------------------------------------------------------------
@@ -353,19 +354,17 @@ def main():
         if line.strip() == "":
             # It's a forced newline
             typed_text += "\n"
-            # Render just 1 char
+            # Render just 1 char (for newline)
             c = "\n"
             hold = char_hold_frames(c, None)
             for _ in range(hold):
                 frame_bgr = render_frame(typed_text, font, brand_logo, frame_count, cursor_blink_rate)
                 out.write(frame_bgr)
-                # Log keystroke event => beginning of these frames
-                if INCLUDE_TYPING_SOUNDS:
-                    keystroke_times.append(frame_count / FPS)
+                # (Optional) Trigger sound for newline if desired
                 frame_count += 1
             continue
 
-        # Else type out each char
+        # Else type out each character in the line
         for i, char in enumerate(line):
             next_char = line[i+1] if i+1 < len(line) else None
             hold = char_hold_frames(char, next_char)
@@ -373,8 +372,8 @@ def main():
             for _ in range(hold):
                 frame_bgr = render_frame(typed_text, font, brand_logo, frame_count, cursor_blink_rate)
                 out.write(frame_bgr)
-                # Mark the first frame of the typed char as the key time
-                if _ == 0 and INCLUDE_TYPING_SOUNDS:
+                # Trigger typing sound only for every second character (i.e. when i is odd)
+                if _ == 0 and INCLUDE_TYPING_SOUNDS and (i % 2 == 1):
                     keystroke_times.append(frame_count / FPS)
                 frame_count += 1
 
@@ -385,8 +384,7 @@ def main():
         for _ in range(hold):
             frame_bgr = render_frame(typed_text, font, brand_logo, frame_count, cursor_blink_rate)
             out.write(frame_bgr)
-            if _ == 0 and INCLUDE_TYPING_SOUNDS:
-                keystroke_times.append(frame_count / FPS)
+            # (Optional) Trigger sound for newline if needed:
             frame_count += 1
 
     # Hold final screen for 1 second
@@ -469,7 +467,6 @@ def main():
 
     print(f"✅ Done! Final video: {final_video_path}")
     print(f"   Metadata JSON: {metadata_path}")
-
 
 if __name__ == "__main__":
     main()
