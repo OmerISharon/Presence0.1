@@ -3,8 +3,8 @@
 # -----------------------------------------------------------------
 
 CHANNEL_NAME = "The Science Of Getting Rich"
-DEBUG_MODE = True
-USE_KEYWORDS_BOLT_EFFECT = False
+DEBUG_MODE = False
+USE_KEYWORDS_BOLT_EFFECT = True
 
 # -----------------------------------------------------------------
 # GLOBAL DIRECTORIES & PATHS
@@ -48,7 +48,6 @@ FONT_SIZE = 60
 FONT_PATH_AUTHOR = r"C:\\Users\\omers\\AppData\\Local\\Microsoft\\Windows\\Fonts\\Backstreet.ttf"
 FONT_SIZE_AUTHOR = 50
 
-
 # -----------------------------------------------------------------
 # AUDIO
 # -----------------------------------------------------------------
@@ -60,6 +59,16 @@ OVERLAY_MUSIC_DURATION = 2
 OVERLAY_FADEOUT_DURATION = 1
 OVERLAY_MUSIC_OFFSET = 0
 OVERLAY_MUSIC_START_AT = 1
+
+# -----------------------------------------------------------------
+# TTS AUDIO
+# -----------------------------------------------------------------
+
+MODEL_NAME = "tts_models/en/vctk/vits"
+SPEAKER_TYPE = "p267"
+TTS_SPEED = 1
+TTS_VOLUME = -10
+TTS_ECHO_INTENSITY = 0.2
 
 # -----------------------------------------------------------------
 # CONTENT VARIABLES
@@ -75,10 +84,10 @@ KEYWORD_COLOR = (187, 32, 36)
 # SCENES DURATIOS
 DURATION_BOOK_COVER = 1       # Display book cover
 DURATION_TRANSITION = 1       # Cross-fade duration from cover to blank page
-DURATION_BLANK_FREEZE = 1     # Freeze on blank page
+DURATION_BLANK_FREEZE = 2     # Freeze on blank page
 DURATION_TEXT_FREEZE = 3     # Freeze after text is complete
 
-TYPING_CPS = 15  # characters per second
+TYPING_CPS = 20  # characters per second
 
 # Text placement settings
 LEFT_MARGIN = 100
