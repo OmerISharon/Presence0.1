@@ -1,0 +1,38 @@
+INFO: Log file created: D:\2025\Projects\Presence\Presence0.1\Uploader\Logs\20250305_020237.log
+
+
+INFO: Channel provided from command line: RedNBlack
+INFO: Earliest folder found: D:\2025\Projects\Presence\Presence0.1\Channels\RedNBlack\Clips\6_20250305_020226
+
+INFO: YouTube AutoUpload for channel: 'RedNBlack', folder: 'D:\2025\Projects\Presence\Presence0.1\Channels\RedNBlack\Clips\6_20250305_020226'
+INFO: Video file: D:\2025\Projects\Presence\Presence0.1\Channels\RedNBlack\Clips\6_20250305_020226\6_20250305_020226.mp4 (Timestamp: 20250305_020226)
+INFO: Initiating upload for video: D:\2025\Projects\Presence\Presence0.1\Channels\RedNBlack\Clips\6_20250305_020226\6_20250305_020226.mp4
+INFO: Video file selected for upload.
+INFO: Waiting for YouTube to finish processing the video...
+INFO: Video processing completed.
+INFO: Updating video title and description...
+INFO: Video details updated successfully.
+INFO: Clicked 'Next' button (1/3).
+INFO: Clicked 'Next' button (2/3).
+INFO: Clicked 'Next' button (3/3).
+INFO: 'Done' button clicked. Video upload finalized.
+INFO: YouTube upload process completed successfully.
+
+✅ YouTube AutoUpload completed successfully.
+
+
+INFO: TikTok AutoUpload for channel: 'RedNBlack', folder: 'D:\2025\Projects\Presence\Presence0.1\Channels\RedNBlack\Clips\6_20250305_020226'
+INFO: Video file: D:\2025\Projects\Presence\Presence0.1\Channels\RedNBlack\Clips\6_20250305_020226\6_20250305_020226.mp4 (Timestamp: 20250305_020226)
+INFO: Description: give me liberty or give me death. i know not what course others may take. is life so dear or peace so sweet
+INFO: Initiating TikTok upload for video: D:\2025\Projects\Presence\Presence0.1\Channels\RedNBlack\Clips\6_20250305_020226\6_20250305_020226.mp4
+INFO: Video file selected for upload.
+INFO: Expected placeholder (current text) in description editor: '6_20250305_020226'
+INFO: Found description editor using placeholder match.
+INFO: Description updated with metadata.
+INFO: 'Post' button clicked. TikTok upload finalized.
+INFO: TikTok upload process completed successfully.
+
+✅ TikTok AutoUpload completed successfully.
+
+INFO: Moving folder 'D:\2025\Projects\Presence\Presence0.1\Channels\RedNBlack\Clips\6_20250305_020226' to archive: D:\2025\Projects\Presence\Presence0.1\Channels\RedNBlack\Clips_Archive\6_20250305_020226
+INFO: Process completed successfully.

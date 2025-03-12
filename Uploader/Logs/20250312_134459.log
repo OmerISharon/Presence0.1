@@ -1,0 +1,75 @@
+INFO: Log file created: D:\2025\Projects\Presence\Presence0.1\Uploader\Logs\20250312_134459.log
+
+
+INFO: Channel provided from command line: The Science Of Getting Rich
+INFO: Earliest folder found: D:\2025\Projects\Presence\Presence0.1\Channels\The Science Of Getting Rich\Clips\Dreaming_of_Home__A_Vision_for_Improvement
+
+INFO: YouTube AutoUpload for channel: 'The Science Of Getting Rich', folder: 'D:\2025\Projects\Presence\Presence0.1\Channels\The Science Of Getting Rich\Clips\Dreaming_of_Home__A_Vision_for_Improvement'
+INFO: Video file: D:\2025\Projects\Presence\Presence0.1\Channels\The Science Of Getting Rich\Clips\Dreaming_of_Home__A_Vision_for_Improvement\Dreaming_of_Home__A_Vision_for_Improvement.mp4 (Timestamp: 20250312_134113)
+INFO: Initiating upload for video: D:\2025\Projects\Presence\Presence0.1\Channels\The Science Of Getting Rich\Clips\Dreaming_of_Home__A_Vision_for_Improvement\Dreaming_of_Home__A_Vision_for_Improvement.mp4
+INFO: Video file selected for upload.
+INFO: Waiting for YouTube to finish processing the video...
+INFO: Video processing completed.
+INFO: Updating video title and description...
+INFO: Video details updated successfully.
+INFO: Clicked 'Next' button (1/3).
+INFO: Clicked 'Next' button (2/3).
+INFO: Clicked 'Next' button (3/3).
+INFO: 'Done' button clicked. Video upload finalized.
+INFO: YouTube upload process completed successfully.
+
+✅ YouTube AutoUpload completed successfully.
+
+
+INFO: TikTok AutoUpload for channel: 'The Science Of Getting Rich', folder: 'D:\2025\Projects\Presence\Presence0.1\Channels\The Science Of Getting Rich\Clips\Dreaming_of_Home__A_Vision_for_Improvement'
+ERROR: 'AutoUploadTikTok.py' failed with exit code 1
+INFO: Video file: D:\2025\Projects\Presence\Presence0.1\Channels\The Science Of Getting Rich\Clips\Dreaming_of_Home__A_Vision_for_Improvement\Dreaming_of_Home__A_Vision_for_Improvement.mp4 (Timestamp: 20250312_134113)
+INFO: Description: He went through the house in which he lived, and planned all the improvements he would like to make in it. he mentally added a bay window here and a room there, until it was complete in his mind as his ideal home. and then he planned its furnishings.
+INFO: Initiating TikTok upload for video: D:\2025\Projects\Presence\Presence0.1\Channels\The Science Of Getting Rich\Clips\Dreaming_of_Home__A_Vision_for_Improvement\Dreaming_of_Home__A_Vision_for_Improvement.mp4
+Traceback (most recent call last):
+  File "D:\2025\Projects\Presence\Presence0.1\Uploader\Tiktok\AutoUpload - Tiktok\Code\AutoUploadTikTok.py", line 212, in <module>
+    main()
+  File "D:\2025\Projects\Presence\Presence0.1\Uploader\Tiktok\AutoUpload - Tiktok\Code\AutoUploadTikTok.py", line 205, in main
+    upload_video(bot, video_path, folder_path, timestamp, description)
+  File "D:\2025\Projects\Presence\Presence0.1\Uploader\Tiktok\AutoUpload - Tiktok\Code\AutoUploadTikTok.py", line 117, in upload_video
+    file_input = WebDriverWait(bot, 60).until(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\omers\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\support\wait.py", line 137, in until
+    value = method(self._driver)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\omers\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 110, in _predicate
+    return driver.find_element(*locator)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\omers\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 898, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\omers\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 429, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\omers\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=135.0.7049.3)
+Stacktrace:
+	GetHandleVerifier [0x00007FF717C541A5+77221]
+	GetHandleVerifier [0x00007FF717C54200+77312]
+	(No symbol) [0x00007FF717A0918A]
+	(No symbol) [0x00007FF7179F4EF5]
+	(No symbol) [0x00007FF717A19F0A]
+	(No symbol) [0x00007FF717A8EC9F]
+	(No symbol) [0x00007FF717AAEAF2]
+	(No symbol) [0x00007FF717A86E63]
+	(No symbol) [0x00007FF717A503A8]
+	(No symbol) [0x00007FF717A51113]
+	GetHandleVerifier [0x00007FF717F02A1D+2889245]
+	GetHandleVerifier [0x00007FF717EFD3BD+2867133]
+	GetHandleVerifier [0x00007FF717F19E43+2984515]
+	GetHandleVerifier [0x00007FF717C6E8BA+185530]
+	GetHandleVerifier [0x00007FF717C76BFF+219135]
+	GetHandleVerifier [0x00007FF717C5BF64+109412]
+	GetHandleVerifier [0x00007FF717C5C112+109842]
+	GetHandleVerifier [0x00007FF717C42919+5401]
+	BaseThreadInitThunk [0x00007FFFAF1DE8D7+23]
+	RtlUserThreadStart [0x00007FFFAFCFBF6C+44]
+
+
