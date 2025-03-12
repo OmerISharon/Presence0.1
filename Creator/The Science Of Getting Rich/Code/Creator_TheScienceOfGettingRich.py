@@ -12,7 +12,9 @@ from moviepy import (ImageClip, VideoClip, concatenate_videoclips,
                      AudioFileClip, CompositeAudioClip)
 from moviepy.audio.fx.AudioFadeOut import AudioFadeOut
 from PIL import Image, ImageDraw, ImageFont
+from TTS.api import TTS             # Coqui TTS
 from config import *
+from pydub import AudioSegment      # For audio processing (echo effect)
 
 def load_openai_key():
     try:
@@ -96,6 +98,66 @@ def get_keywords_from_gpt(quote):
     except Exception as e:
         print(f"Error retrieving keywords: {e}")
         return []
+
+# ---------------------------
+# New TTS Function using Coqui TTS (with echo effect)
+# ---------------------------
+import soundfile as sf
+
+def generate_tts_audio(text, output_path, model=MODEL_NAME, speaker=SPEAKER_TYPE, 
+                       echo_intensity=TTS_ECHO_INTENSITY, slowdown_factor=TTS_SPEED, volume=TTS_VOLUME):
+    """
+    Generate TTS audio from text using Coqui TTS with a wise-sounding voice.
+    Then apply an echo effect, slow down the audio, and lower its volume.
+    Finally, export a single MP3 file (final with echo, slowdown, and reduced volume).
+
+    Parameters:
+      text           : The text to synthesize.
+      output_path    : Path to save the final MP3 audio file.
+      model          : TTS model name.
+      speaker        : Speaker ID for the TTS model.
+      echo_intensity : Float (0 to 1) controlling the echo intensity.
+      slowdown_factor: Factor to slow down the audio (e.g. 0.9 slows it by 10%).
+      volume         : Volume adjustment in dB.
+    """
+    # Generate raw TTS audio (as a numpy waveform) with a slower speaking rate using length_scale
+    temp_path = output_path.replace(".mp3", "_temp.wav")
+    tts = TTS(model_name=model, progress_bar=False, gpu=False)
+    # Generate waveform with length_scale set to 1.5 (adjust as desired)
+    wav = tts.tts(text, length_scale=5, speaker=speaker)
+    
+    # Attempt to obtain sample rate from the synthesizer config, fallback to 22050 Hz if unavailable.
+    try:
+        sample_rate = tts.synthesizer.config.audio["sample_rate"]
+    except Exception:
+        sample_rate = 22050
+
+    # Save waveform to temporary WAV file using the determined sample rate
+    sf.write(temp_path, wav, samplerate=sample_rate)
+    
+    # Load the generated audio using pydub
+    audio = AudioSegment.from_file(temp_path)
+    
+    # Apply echo effect
+    delay_ms = 100  # echo delay in milliseconds
+    attenuation_db = 20 * (1 - echo_intensity)
+    echo = audio - attenuation_db
+    audio_with_echo = audio.overlay(echo, position=delay_ms)
+    
+    # Slow down the audio using pydub (by adjusting the frame rate)
+    slowed_audio = audio_with_echo._spawn(
+        audio_with_echo.raw_data,
+        overrides={"frame_rate": int(audio_with_echo.frame_rate * slowdown_factor)}
+    ).set_frame_rate(audio_with_echo.frame_rate)
+    
+    # Adjust volume according to the provided volume (in dB)
+    adjusted_audio = slowed_audio.apply_gain(volume)
+    
+    # Export the final processed audio as a single MP3 file
+    adjusted_audio.export(output_path, format="mp3")
+    
+    # Remove the temporary WAV file
+    os.remove(temp_path)
 
 # ---------------------------
 # New Functionality: Random Quote Selection and Update
@@ -192,9 +254,9 @@ def wrap_text_to_lines(text, font, max_width):
 # New helper: Draw progressive text based on final token segmentation.
 def draw_progressive_text(background, tokens, num_chars, font, position, max_width, line_spacing=30):
     opacity = int(0.85 * 255)
-    default_color = TEXT_COLOR + (opacity,) if isinstance(TEXT_COLOR, tuple) and len(TEXT_COLOR) == 3 else (0,0,0,opacity)
+    default_color = TEXT_COLOR + (opacity,) if isinstance(TEXT_COLOR, tuple) and len(TEXT_COLOR) == 3 else (0, 0, 0, opacity)
     image_pil = Image.fromarray(background).convert("RGBA")
-    txt_overlay = Image.new("RGBA", image_pil.size, (255,255,255,0))
+    txt_overlay = Image.new("RGBA", image_pil.size, (255, 255, 255, 0))
     draw = ImageDraw.Draw(txt_overlay)
     x, y = position
     cumulative = 0
@@ -513,7 +575,7 @@ def main():
     
     final_clip_processed = VideoClip(final_make_frame, duration=final_clip.duration).with_fps(FPS)
     
-    print("Adding sound effects and background music...")
+    print("Adding sound effects, background music, and TTS narration...")
     T_typing_start = DURATION_BOOK_COVER + DURATION_TRANSITION + DURATION_BLANK_FREEZE
     typing_sound_clips = []
     max_text_width = VIDEO_WIDTH - LEFT_MARGIN - RIGHT_MARGIN
@@ -602,20 +664,27 @@ def main():
                     except Exception as e:
                         print(f"Error loading sound {sound_file}: {e}")
     
-    # Load background music from config and combine with typing sounds.
+    # NEW: Generate final TTS narration audio (with echo and slowdown) as a single MP3 file.
+    tts_audio_path = os.path.join(output_folder, "tts_audio.mp3")
+    generate_tts_audio(TEXT_TO_TYPE, tts_audio_path, model=MODEL_NAME, speaker=SPEAKER_TYPE, echo_intensity=TTS_ECHO_INTENSITY, slowdown_factor=TTS_SPEED)
+    try:
+        tts_audio_clip = AudioFileClip(tts_audio_path).with_start(T_typing_start)
+    except Exception as e:
+        print(f"Error processing TTS audio: {e}")
+        tts_audio_clip = None
+
     overlay_music = None
     if OVERLAY_MUSIC_PATH and os.path.exists(OVERLAY_MUSIC_PATH):
         try:
             bg_duration = OVERLAY_MUSIC_DURATION if OVERLAY_MUSIC_DURATION != 0 else final_clip_processed.duration
-            overlay_music = AudioFileClip(OVERLAY_MUSIC_PATH).subclipped(
-                OVERLAY_MUSIC_OFFSET,
-                OVERLAY_MUSIC_OFFSET + bg_duration
-            )
+            overlay_music = AudioFileClip(OVERLAY_MUSIC_PATH).with_duration(bg_duration)
             overlay_music = overlay_music.with_start(OVERLAY_MUSIC_START_AT)
             fadeout_effect = AudioFadeOut(OVERLAY_FADEOUT_DURATION) 
             overlay_music = fadeout_effect.apply(overlay_music)
         except Exception as e:
-            print(f"Error loading background music from {OVERLAY_MUSIC_PATH}: {e}")
+            print(f"Error loading overlay music from {OVERLAY_MUSIC_PATH}: {e}")
+    else:
+        print(f"OVERLAY_MUSIC_PATH not found: {OVERLAY_MUSIC_PATH}")
 
 
     # Load permanent background music if specified.
@@ -624,11 +693,12 @@ def main():
         try:
             bg_music = AudioFileClip(BACKGROUND_MUSIC_PATH)
         except Exception as e:
-            print(f"Error loading permanent background music from {BACKGROUND_MUSIC_PATH}: {e}")
-
+            print(f"Error loading background music from {BACKGROUND_MUSIC_PATH}: {e}")
 
     # Build a list of audio clips to combine.
     audio_clips = []
+    if tts_audio_clip:
+        audio_clips.append(tts_audio_clip)
     if typing_sound_clips:
         typing_audio = CompositeAudioClip(typing_sound_clips).with_duration(final_clip_processed.duration)
         audio_clips.append(typing_audio)
@@ -642,9 +712,10 @@ def main():
     else:
         composite_audio = None
 
-
     if composite_audio:
+        # Now attach the combined composite audio to the final video.
         final_clip_processed = final_clip_processed.with_audio(composite_audio)
+
     
     print("Writing video file...")
     final_clip_processed.write_videofile(
