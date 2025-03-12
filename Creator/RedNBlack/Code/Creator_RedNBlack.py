@@ -3,11 +3,8 @@ from pathlib import Path
 from datetime import datetime
 from moviepy import VideoClip, AudioFileClip, CompositeAudioClip 
 from PIL import Image, ImageDraw, ImageFont
-from config import *  # uses variables: DIR_OFFLINE_TEXT, DIR_OFFLINE_TEXT_ARCHIVE, OUT_BASE_FOLDER, FONT_PATH, FONT_SIZE, TYPING_SOUNDS_DIR, FPS
+from config import *
 import numpy as np
-
-# New fade out duration (in seconds)
-FADE_OUT_DURATION = 1.0
 
 def compute_timestamps(text, base_delay, variation_range):
     """
@@ -31,8 +28,8 @@ def compute_timestamps(text, base_delay, variation_range):
 
 def build_timeline(sentences, base_delay, initial_pause, gap_pause, fade_duration):
     """
-    Build the timeline for typing and fade out.
-    For each sentence (except the final one), a fade-out event is computed.
+    Build the timeline for typing and either fade out or backspace animation.
+    For each sentence (except the final one), an animation event is computed.
     Returns a list of timeline segments and the total duration.
     """
     timeline = []
@@ -50,21 +47,32 @@ def build_timeline(sentences, base_delay, initial_pause, gap_pause, fade_duratio
             'pause': pause_time,
         }
         if i < len(sentences) - 1:
-            segment['start_fade'] = current_time + type_duration + pause_time
-            segment['fade_duration'] = fade_duration
-            segment['end_fade'] = segment['start_fade'] + fade_duration
-        timeline.append(segment)
-        if i < len(sentences) - 1:
-            current_time += type_duration + pause_time + fade_duration + gap_pause
+            if USE_BACKSPACE_STYLE:
+                # Backspace animation: each char is removed at half the delay of typing.
+                backspace_delay_per_char = base_delay / 2
+                backspace_duration = len(text) * backspace_delay_per_char
+                segment['start_backspace'] = current_time + type_duration + pause_time
+                segment['backspace_duration'] = backspace_duration
+                segment['end_backspace'] = segment['start_backspace'] + backspace_duration
+                current_time += type_duration + pause_time + backspace_duration + gap_pause
+            else:
+                # Fade-out animation.
+                segment['start_fade'] = current_time + type_duration + pause_time
+                segment['fade_duration'] = fade_duration
+                segment['end_fade'] = segment['start_fade'] + fade_duration
+                current_time += type_duration + pause_time + fade_duration + gap_pause
         else:
+            # For the final sentence, just hold the text.
             final_pause = max(pause_time, 3)
             current_time += type_duration + final_pause
+        timeline.append(segment)
     return timeline, current_time
 
 def create_audio_events(timeline, base_delay):
     """
     Create a list of audio events for typing sounds.
-    For a less intense sound, we trigger a sound for every second character.
+    For typing, trigger a sound for every second character.
+    For backspace animation, trigger a sound for every third character erased.
     (Fade-out has no associated sound.)
     """
     typing_audio_dir = Path(TYPING_SOUNDS_DIR)
@@ -73,6 +81,7 @@ def create_audio_events(timeline, base_delay):
         return random.choice(audio_files)
     
     audio_events = []
+    # Typing sounds (every 2nd character during typing)
     for segment in timeline:
         sentence = segment['sentence']
         for i in range(0, len(sentence), 2):
@@ -82,6 +91,20 @@ def create_audio_events(timeline, base_delay):
             clip_duration = min(base_delay, sound_clip_full.duration)
             sound_clip = sound_clip_full.subclipped(0, clip_duration).with_start(event_time)
             audio_events.append(sound_clip)
+    
+    # Backspace sounds (every 3rd character during backspace) if enabled.
+    if USE_BACKSPACE_STYLE:
+        for segment in timeline:
+            if 'start_backspace' in segment:
+                sentence = segment['sentence']
+                backspace_delay = base_delay / 2
+                for i in range(2, len(sentence)+1, 2):
+                    event_time = segment['start_backspace'] + i * backspace_delay
+                    sound_file = get_random_sound()
+                    sound_clip_full = AudioFileClip(str(sound_file))
+                    clip_duration = min(backspace_delay, sound_clip_full.duration)
+                    sound_clip = sound_clip_full.subclipped(0, clip_duration).with_start(event_time)
+                    audio_events.append(sound_clip)
     return audio_events
 
 def wrap_text(text, font, draw, max_width):
@@ -108,39 +131,58 @@ def wrap_text(text, font, draw, max_width):
 def make_frame(t, timeline, const_y, width):
     """
     Render the frame at time t using the timeline.
-    Instead of re-centering partial text on every frame, we pre-calculate
-    the final wrapped lines and their left margins (for centering). Then we
-    reveal the text progressively over those fixed positions.
+    Pre-calculate the final wrapped lines and their left margins for centering,
+    then reveal the text progressively.
     """
     img = Image.new('RGB', (width, height), color='black')
     draw = ImageDraw.Draw(img)
     
     # Determine which timeline segment applies and the current state.
     selected_segment = None
-    branch = None  # "typing", "hold", or "fade"
+    branch = None  # "typing", "hold", "fade", "backspace", or "none"
     fade_factor = 1.0
     progress = 0
     for segment in timeline:
         if t < segment['start_typing']:
             break  # Not reached this sentence yet.
-        elif segment['start_typing'] <= t < segment['end_typing']:
+        # During typing phase.
+        if segment['start_typing'] <= t < segment['end_typing']:
             selected_segment = segment
             branch = "typing"
             progress = (t - segment['start_typing']) / (segment['end_typing'] - segment['start_typing'])
-        elif t < segment.get('start_fade', float('inf')):
-            selected_segment = segment
-            branch = "hold"
-        elif 'start_fade' in segment and segment['start_fade'] <= t < segment['end_fade']:
-            selected_segment = segment
-            branch = "fade"
-            fade_factor = 1 - ((t - segment['start_fade']) / segment['fade_duration'])
-        elif t >= segment.get('end_fade', segment['end_typing']):
-            if timeline.index(segment) < len(timeline) - 1:
-                selected_segment = segment
-                branch = "none"
+        else:
+            # After typing phase.
+            if USE_BACKSPACE_STYLE:
+                if t < segment.get('start_backspace', float('inf')):
+                    selected_segment = segment
+                    branch = "hold"
+                elif segment.get('start_backspace') is not None and segment['start_backspace'] <= t < segment['end_backspace']:
+                    selected_segment = segment
+                    branch = "backspace"
+                    progress = (t - segment['start_backspace']) / segment['backspace_duration']
+                else:
+                    if timeline.index(segment) < len(timeline) - 1:
+                        selected_segment = segment
+                        branch = "none"
+                    else:
+                        selected_segment = segment
+                        branch = "hold"
             else:
-                selected_segment = segment
-                branch = "hold"
+                if t < segment.get('start_fade', float('inf')):
+                    selected_segment = segment
+                    branch = "hold"
+                elif 'start_fade' in segment and segment['start_fade'] <= t < segment['end_fade']:
+                    selected_segment = segment
+                    branch = "fade"
+                    fade_factor = 1 - ((t - segment['start_fade']) / segment['fade_duration'])
+                else:
+                    if timeline.index(segment) < len(timeline) - 1:
+                        selected_segment = segment
+                        branch = "none"
+                    else:
+                        selected_segment = segment
+                        branch = "hold"
+    
     if not selected_segment or branch == "none":
         return np.array(img)
     
@@ -154,13 +196,16 @@ def make_frame(t, timeline, const_y, width):
     total_text_height = line_height * len(final_lines)
     y_start = (height - total_text_height) / 2
     
-    # Determine how many characters to reveal.
+    # Determine how many characters to reveal based on the branch.
     if branch == "typing":
         revealed_count = int(progress * len(full_text))
+    elif branch == "backspace":
+        # In backspace mode, characters are removed from the end.
+        revealed_count = len(full_text) - int(progress * len(full_text))
     else:
         revealed_count = len(full_text)
     
-    # Distribute revealed characters over the final wrapped lines.
+    # Distribute the revealed characters over the wrapped lines.
     remaining = revealed_count
     drawn_lines = []
     for line in final_lines:
@@ -171,7 +216,7 @@ def make_frame(t, timeline, const_y, width):
             drawn_lines.append(line[:remaining])
             remaining = 0
 
-    # Draw each line at its fixed left margin (computed from full line width).
+    # Draw each line centered.
     for i, line in enumerate(final_lines):
         bbox_full = draw.textbbox((0, 0), line, font=font)
         full_line_width = bbox_full[2] - bbox_full[0]
@@ -184,10 +229,7 @@ def make_frame(t, timeline, const_y, width):
             text_color = (255, 0, 0)
         draw.text((left_x, y), text_to_draw, font=font, fill=text_color)
     
-    # The blinking caret has been removed.
-    
     return np.array(img)
-
 
 def main():
     # --- 1. File handling: choose the lowest-numbered txt file ---
@@ -260,4 +302,5 @@ def main():
     shutil.move(str(txt_file), str(archive_dir / txt_file.name))
 
 if __name__ == '__main__':
+    print("Starts Creator_RedNBlack.py")
     main()

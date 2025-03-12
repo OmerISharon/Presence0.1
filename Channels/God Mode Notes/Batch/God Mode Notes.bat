@@ -1,4 +1,4 @@
 @echo off
 
 cd /d "D:\2025\Projects\Presence\Presence0.1\Creator\God Mode Notes\Code"
-py Creator_GodModeNotes.py
+"C:\Users\omers\AppData\Local\Programs\Python\Python311\python.exe" Creator_GodModeNotes.py

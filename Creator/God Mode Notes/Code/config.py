@@ -18,7 +18,7 @@ DIR_OFFLINE_TEXT_ARCHIVE = f"{ROOT_DIR}\\Resources\\Text - Archive"
 PATH_PROMPT = f"{ROOT_DIR}\\Resources\\Prompt\\Main_Prompt.txt"
 
 INCLUDE_TYPING_SOUNDS = True
-TYPING_SOUNDS_DIR = f"{GLOBAL_RESOURCES_DIR}\\Audio\\Typing_Sounds"
+TYPING_SOUNDS_DIR = f"{GLOBAL_RESOURCES_DIR}\\Audio\\Typing_Sounds\\Typing_Sounds_v3"
 BACKGROUND_AUDIO = f"{ROOT_DIR}\\Resources\\Audio\\Background_Audio\\Root\\v1\\Full Audio.mp3"
 
 OUT_BASE_FOLDER = f"{ROOT_DIR}\\Debug_Output" if DEBUG_MODE else f"{BASE_DIR}\\Channels\\{CHANNEL_NAME}\\Clips"

@@ -469,4 +469,5 @@ def main():
     print(f"   Metadata JSON: {metadata_path}")
 
 if __name__ == "__main__":
+    print("Starts Creator_GodModeNotes.py")
     main()

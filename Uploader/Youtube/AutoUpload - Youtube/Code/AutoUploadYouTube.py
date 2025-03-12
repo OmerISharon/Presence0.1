@@ -4,7 +4,6 @@ import time
 import json
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
@@ -57,8 +56,8 @@ def start_browser():
     options.add_argument(f"--profile-directory={profile_folder}")
     options.binary_location = CHROME_BETA_EXE_PATH
 
-    service = Service(CHROME_BETA_DRIVER_PATH)
-    return webdriver.Chrome(service=service, options=options)
+    # Let Selenium Manager automatically manage the driver without an explicit Service.
+    return webdriver.Chrome(options=options)
 
 # -----------------------------------------------------------------------------
 # Helper functions
