@@ -42,9 +42,9 @@ def get_clip_title_using_chatgpt(quote):
         "Content-Type": "application/json",
         "Authorization": f"Bearer {openai_api_key}"
     }
-    prompt = f"Generate a simple, short, and clear title for the following quote:\n\n\"{quote}\""
+    prompt = f"Generate a simple, short, and clear title for the following quote (dont use quotes):\n\n\"{quote}\""
     data = {
-        "model": "gpt-3.5-turbo",
+        "model": GPT_MODULE,
         "messages": [{"role": "user", "content": prompt}],
         "temperature": 0.5,
         "max_tokens": 10

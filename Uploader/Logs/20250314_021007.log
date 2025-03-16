@@ -1,0 +1,204 @@
+INFO: Log file created: D:\2025\Projects\Presence\Presence0.1\Uploader\Logs\20250314_021007.log
+
+
+INFO: Channel provided from command line: The Science Of Getting Rich
+INFO: Earliest folder found: D:\2025\Projects\Presence\Presence0.1\Channels\The Science Of Getting Rich\Clips\_Abundance_in_America__A_Vision_of_Prosper
+
+INFO: YouTube AutoUpload for channel: 'The Science Of Getting Rich', folder: 'D:\2025\Projects\Presence\Presence0.1\Channels\The Science Of Getting Rich\Clips\_Abundance_in_America__A_Vision_of_Prosper'
+INFO: Video file: D:\2025\Projects\Presence\Presence0.1\Channels\The Science Of Getting Rich\Clips\_Abundance_in_America__A_Vision_of_Prosper\_Abundance_in_America__A_Vision_of_Prosper.mp4 (Timestamp: 20250314_020437)
+INFO: Initiating upload for video: D:\2025\Projects\Presence\Presence0.1\Channels\The Science Of Getting Rich\Clips\_Abundance_in_America__A_Vision_of_Prosper\_Abundance_in_America__A_Vision_of_Prosper.mp4
+INFO: Video file selected for upload.
+INFO: Waiting for YouTube to finish processing the video...
+INFO: Video processing completed.
+INFO: Updating video title and description...
+INFO: Video details updated successfully.
+INFO: Clicked 'Next' button (1/3).
+Warning: 'Next' button not clickable, retrying... (1/3). Error: Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=135.0.7049.3); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF77AC5BAB5+76533]
+	GetHandleVerifier [0x00007FF77AC5BB10+76624]
+	(No symbol) [0x00007FF77AA291CA]
+	(No symbol) [0x00007FF77AA30AEC]
+	(No symbol) [0x00007FF77AA33EA1]
+	(No symbol) [0x00007FF77AAD0478]
+	(No symbol) [0x00007FF77AAA70EA]
+	(No symbol) [0x00007FF77AACF1D8]
+	(No symbol) [0x00007FF77AAA6EC3]
+	(No symbol) [0x00007FF77AA70308]
+	(No symbol) [0x00007FF77AA71073]
+	GetHandleVerifier [0x00007FF77AF1FE7D+2977469]
+	GetHandleVerifier [0x00007FF77AF1A61D+2954845]
+	GetHandleVerifier [0x00007FF77AF37CD3+3075347]
+	GetHandleVerifier [0x00007FF77AC75FBA+184314]
+	GetHandleVerifier [0x00007FF77AC7DF8F+217039]
+	GetHandleVerifier [0x00007FF77AC63724+108388]
+	GetHandleVerifier [0x00007FF77AC638D2+108818]
+	GetHandleVerifier [0x00007FF77AC4A4D9+5401]
+	BaseThreadInitThunk [0x00007FFFAF1DE8D7+23]
+	RtlUserThreadStart [0x00007FFFAFCFBF6C+44]
+
+Warning: 'Next' button not clickable, retrying... (2/3). Error: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF77AC5BAB5+76533]
+	GetHandleVerifier [0x00007FF77AC5BB10+76624]
+	(No symbol) [0x00007FF77AA291CA]
+	(No symbol) [0x00007FF77AA7F139]
+	(No symbol) [0x00007FF77AA7F3EC]
+	(No symbol) [0x00007FF77AAD23F7]
+	(No symbol) [0x00007FF77AAA712F]
+	(No symbol) [0x00007FF77AACF1D8]
+	(No symbol) [0x00007FF77AAA6EC3]
+	(No symbol) [0x00007FF77AA70308]
+	(No symbol) [0x00007FF77AA71073]
+	GetHandleVerifier [0x00007FF77AF1FE7D+2977469]
+	GetHandleVerifier [0x00007FF77AF1A61D+2954845]
+	GetHandleVerifier [0x00007FF77AF37CD3+3075347]
+	GetHandleVerifier [0x00007FF77AC75FBA+184314]
+	GetHandleVerifier [0x00007FF77AC7DF8F+217039]
+	GetHandleVerifier [0x00007FF77AC63724+108388]
+	GetHandleVerifier [0x00007FF77AC638D2+108818]
+	GetHandleVerifier [0x00007FF77AC4A4D9+5401]
+	BaseThreadInitThunk [0x00007FFFAF1DE8D7+23]
+	RtlUserThreadStart [0x00007FFFAFCFBF6C+44]
+
+Warning: 'Next' button not clickable, retrying... (3/3). Error: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF77AC5BAB5+76533]
+	GetHandleVerifier [0x00007FF77AC5BB10+76624]
+	(No symbol) [0x00007FF77AA291CA]
+	(No symbol) [0x00007FF77AA7F139]
+	(No symbol) [0x00007FF77AA7F3EC]
+	(No symbol) [0x00007FF77AAD23F7]
+	(No symbol) [0x00007FF77AAA712F]
+	(No symbol) [0x00007FF77AACF1D8]
+	(No symbol) [0x00007FF77AAA6EC3]
+	(No symbol) [0x00007FF77AA70308]
+	(No symbol) [0x00007FF77AA71073]
+	GetHandleVerifier [0x00007FF77AF1FE7D+2977469]
+	GetHandleVerifier [0x00007FF77AF1A61D+2954845]
+	GetHandleVerifier [0x00007FF77AF37CD3+3075347]
+	GetHandleVerifier [0x00007FF77AC75FBA+184314]
+	GetHandleVerifier [0x00007FF77AC7DF8F+217039]
+	GetHandleVerifier [0x00007FF77AC63724+108388]
+	GetHandleVerifier [0x00007FF77AC638D2+108818]
+	GetHandleVerifier [0x00007FF77AC4A4D9+5401]
+	BaseThreadInitThunk [0x00007FFFAF1DE8D7+23]
+	RtlUserThreadStart [0x00007FFFAFCFBF6C+44]
+
+Warning: 'Next' button not clickable, retrying... (1/3). Error: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF77AC5BAB5+76533]
+	GetHandleVerifier [0x00007FF77AC5BB10+76624]
+	(No symbol) [0x00007FF77AA291CA]
+	(No symbol) [0x00007FF77AA7F139]
+	(No symbol) [0x00007FF77AA7F3EC]
+	(No symbol) [0x00007FF77AAD23F7]
+	(No symbol) [0x00007FF77AAA712F]
+	(No symbol) [0x00007FF77AACF1D8]
+	(No symbol) [0x00007FF77AAA6EC3]
+	(No symbol) [0x00007FF77AA70308]
+	(No symbol) [0x00007FF77AA71073]
+	GetHandleVerifier [0x00007FF77AF1FE7D+2977469]
+	GetHandleVerifier [0x00007FF77AF1A61D+2954845]
+	GetHandleVerifier [0x00007FF77AF37CD3+3075347]
+	GetHandleVerifier [0x00007FF77AC75FBA+184314]
+	GetHandleVerifier [0x00007FF77AC7DF8F+217039]
+	GetHandleVerifier [0x00007FF77AC63724+108388]
+	GetHandleVerifier [0x00007FF77AC638D2+108818]
+	GetHandleVerifier [0x00007FF77AC4A4D9+5401]
+	BaseThreadInitThunk [0x00007FFFAF1DE8D7+23]
+	RtlUserThreadStart [0x00007FFFAFCFBF6C+44]
+
+Warning: 'Next' button not clickable, retrying... (2/3). Error: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF77AC5BAB5+76533]
+	GetHandleVerifier [0x00007FF77AC5BB10+76624]
+	(No symbol) [0x00007FF77AA291CA]
+	(No symbol) [0x00007FF77AA7F139]
+	(No symbol) [0x00007FF77AA7F3EC]
+	(No symbol) [0x00007FF77AAD23F7]
+	(No symbol) [0x00007FF77AAA712F]
+	(No symbol) [0x00007FF77AACF1D8]
+	(No symbol) [0x00007FF77AAA6EC3]
+	(No symbol) [0x00007FF77AA70308]
+	(No symbol) [0x00007FF77AA71073]
+	GetHandleVerifier [0x00007FF77AF1FE7D+2977469]
+	GetHandleVerifier [0x00007FF77AF1A61D+2954845]
+	GetHandleVerifier [0x00007FF77AF37CD3+3075347]
+	GetHandleVerifier [0x00007FF77AC75FBA+184314]
+	GetHandleVerifier [0x00007FF77AC7DF8F+217039]
+	GetHandleVerifier [0x00007FF77AC63724+108388]
+	GetHandleVerifier [0x00007FF77AC638D2+108818]
+	GetHandleVerifier [0x00007FF77AC4A4D9+5401]
+	BaseThreadInitThunk [0x00007FFFAF1DE8D7+23]
+	RtlUserThreadStart [0x00007FFFAFCFBF6C+44]
+
+Warning: 'Next' button not clickable, retrying... (3/3). Error: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF77AC5BAB5+76533]
+	GetHandleVerifier [0x00007FF77AC5BB10+76624]
+	(No symbol) [0x00007FF77AA291CA]
+	(No symbol) [0x00007FF77AA7F139]
+	(No symbol) [0x00007FF77AA7F3EC]
+	(No symbol) [0x00007FF77AAD23F7]
+	(No symbol) [0x00007FF77AAA712F]
+	(No symbol) [0x00007FF77AACF1D8]
+	(No symbol) [0x00007FF77AAA6EC3]
+	(No symbol) [0x00007FF77AA70308]
+	(No symbol) [0x00007FF77AA71073]
+	GetHandleVerifier [0x00007FF77AF1FE7D+2977469]
+	GetHandleVerifier [0x00007FF77AF1A61D+2954845]
+	GetHandleVerifier [0x00007FF77AF37CD3+3075347]
+	GetHandleVerifier [0x00007FF77AC75FBA+184314]
+	GetHandleVerifier [0x00007FF77AC7DF8F+217039]
+	GetHandleVerifier [0x00007FF77AC63724+108388]
+	GetHandleVerifier [0x00007FF77AC638D2+108818]
+	GetHandleVerifier [0x00007FF77AC4A4D9+5401]
+	BaseThreadInitThunk [0x00007FFFAF1DE8D7+23]
+	RtlUserThreadStart [0x00007FFFAFCFBF6C+44]
+
+ERROR: Unable to click 'Done' button: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF77AC5BAB5+76533]
+	GetHandleVerifier [0x00007FF77AC5BB10+76624]
+	(No symbol) [0x00007FF77AA291CA]
+	(No symbol) [0x00007FF77AA7F139]
+	(No symbol) [0x00007FF77AA7F3EC]
+	(No symbol) [0x00007FF77AAD23F7]
+	(No symbol) [0x00007FF77AAA712F]
+	(No symbol) [0x00007FF77AACF1D8]
+	(No symbol) [0x00007FF77AAA6EC3]
+	(No symbol) [0x00007FF77AA70308]
+	(No symbol) [0x00007FF77AA71073]
+	GetHandleVerifier [0x00007FF77AF1FE7D+2977469]
+	GetHandleVerifier [0x00007FF77AF1A61D+2954845]
+	GetHandleVerifier [0x00007FF77AF37CD3+3075347]
+	GetHandleVerifier [0x00007FF77AC75FBA+184314]
+	GetHandleVerifier [0x00007FF77AC7DF8F+217039]
+	GetHandleVerifier [0x00007FF77AC63724+108388]
+	GetHandleVerifier [0x00007FF77AC638D2+108818]
+	GetHandleVerifier [0x00007FF77AC4A4D9+5401]
+	BaseThreadInitThunk [0x00007FFFAF1DE8D7+23]
+	RtlUserThreadStart [0x00007FFFAFCFBF6C+44]
+
+INFO: YouTube upload process completed successfully.
+
+✅ YouTube AutoUpload completed successfully.
+
+
+INFO: TikTok AutoUpload for channel: 'The Science Of Getting Rich', folder: 'D:\2025\Projects\Presence\Presence0.1\Channels\The Science Of Getting Rich\Clips\_Abundance_in_America__A_Vision_of_Prosper'
+INFO: Video file: D:\2025\Projects\Presence\Presence0.1\Channels\The Science Of Getting Rich\Clips\_Abundance_in_America__A_Vision_of_Prosper\_Abundance_in_America__A_Vision_of_Prosper.mp4 (Timestamp: 20250314_020437)
+INFO: Description: A palace as large as the capitol at Washington might be built for every family on earth from the building material in the United States alone. and under intensive cultivation, this country would produce wool, cotton, linen, and silk enough to cloth each person in the world finer than Solomon was arrayed in all his glory. together with food enough to feed them all luxuriously.
+INFO: Initiating TikTok upload for video: D:\2025\Projects\Presence\Presence0.1\Channels\The Science Of Getting Rich\Clips\_Abundance_in_America__A_Vision_of_Prosper\_Abundance_in_America__A_Vision_of_Prosper.mp4
+INFO: Video file selected for upload.
+INFO: Expected placeholder (current text) in description editor: '_Abundance_in_America__A_Vision_of_Prosper'
+INFO: Found description editor using placeholder match.
+INFO: Description updated with metadata.
+INFO: 'Post' button clicked. TikTok upload finalized.
+INFO: TikTok upload process completed successfully.
+
+✅ TikTok AutoUpload completed successfully.
+
+INFO: Moving folder 'D:\2025\Projects\Presence\Presence0.1\Channels\The Science Of Getting Rich\Clips\_Abundance_in_America__A_Vision_of_Prosper' to archive: D:\2025\Projects\Presence\Presence0.1\Channels\The Science Of Getting Rich\Clips_Archive\_Abundance_in_America__A_Vision_of_Prosper
+INFO: Process completed successfully.

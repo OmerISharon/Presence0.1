@@ -155,6 +155,9 @@ def main():
         elif media == "tiktok":
             uploader_script = UPLOADER_SCRIPT_TIKTOK
             description_text = "TikTok AutoUpload"
+        elif media == "instagram":
+            uploader_script = UPLOADER_SCRIPT_INSTAGRAM
+            description_text = "Instagram AutoUpload"
         else:
             print(f"WARNING: Unknown media '{media}', skipping.")
             continue
