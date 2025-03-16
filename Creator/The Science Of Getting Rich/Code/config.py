@@ -20,6 +20,7 @@ GLOBAL_RESOURCES_DIR = f"{BASE_DIR}\\Resources\\Media_Resources"
 
 OPENAI_API_KEY_PATH = f"{BASE_DIR}\\..\\GlobalResources\\OPENAI_API_KEY.txt"
 OPENAI_API_KEY = "OPENAI_API_KEY"
+GPT_MODULE = "gpt-4.5-preview"
 
 # -----------------------------------------------------------------
 # CONTENT DIRECTORIES & PATHS

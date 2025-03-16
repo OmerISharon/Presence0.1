@@ -52,7 +52,7 @@ def get_inspiration():
 
     headers = {"Authorization": f"Bearer {OPENAI_API_KEY}", "Content-Type": "application/json"}
     data = {
-        "model": "gpt-4o",  # or "gpt-3.5-turbo"
+        "model": GPT_MODULE,
         "messages": [
             {"role": "system", "content": prompt_content}
         ]
