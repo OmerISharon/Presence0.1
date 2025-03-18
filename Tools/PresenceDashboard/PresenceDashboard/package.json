@@ -1,14 +1,20 @@
 {
-    "name": "presence-dashboard",
-    "version": "1.0.0",
-    "description": "YouTube channel dashboard for viewing analytics",
-    "main": "main.js",
-    "scripts": {
-      "start": "electron ."
-    },
-    "author": "",
-    "license": "ISC",
-    "devDependencies": {
-      "electron": "^29.1.0"
-    }
+  "name": "presence-dashboard",
+  "version": "1.0.0",
+  "description": "YouTube channel dashboard for viewing analytics",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "echo 'No build step needed for static site'",
+    "vercel-build": "echo 'Static site deployment'"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^29.1.0",
+    "serve": "^14.2.1"
+  },
+  "dependencies": {
+    "serve": "^14.2.1"
   }
+}
