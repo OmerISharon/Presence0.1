@@ -1,0 +1,8 @@
+{
+    "buildCommand": "npm run build",
+    "outputDirectory": ".",
+    "framework": "static",
+    "routes": [
+      { "src": "/(.*)", "dest": "/index.html" }
+    ]
+  }
