@@ -1,7 +1,0 @@
-{
-    "python.analysis.extraPaths": [
-        "./Uploader/Resources",
-        "D:\\2025\\Projects\\Presence\\Presence0.1\\Creator\\Configs",
-        "D:\\2025\\Projects\\Presence\\Presence0.1\\Uploader\\Code"
-    ]
-}
