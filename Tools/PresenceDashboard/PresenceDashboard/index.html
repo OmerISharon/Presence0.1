@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presence Dashboard</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/channel.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar / Left Menu -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h1>Presence Dashboard</h1>
+            </div>
+            <div class="sidebar-content">
+                <nav class="channel-menu">
+                    <ul id="channel-list">
+                        <!-- Channel list will be loaded dynamically -->
+                        <li class="loading-item">Loading channels...</li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="content" id="content">
+            <div id="welcome-screen" class="welcome-screen">
+                <h2>Welcome to Presence Dashboard</h2>
+                <p>Select a channel from the sidebar to view its statistics and posts.</p>
+                <div class="welcome-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+            </div>
+
+            <!-- Channel Content (Hidden initially, shown when a channel is selected) -->
+            <div id="channel-content" class="channel-content hidden">
+                <!-- Channel Info Section -->
+                <section id="channel-info" class="channel-info-section">
+                    <h2>Channel Info</h2>
+                    <div class="channel-info-content">
+                        <div class="channel-thumbnail">
+                            <img id="channel-thumbnail" src="" alt="Channel Thumbnail">
+                        </div>
+                        <div class="channel-details">
+                            <h3 id="channel-title"></h3>
+                            <p id="channel-description"></p>
+                            <a id="channel-url" href="#" target="_blank">Visit Channel</a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Global Statistics Section -->
+                <section id="global-statistics" class="statistics-section">
+                    <h2>Global Statistics</h2>
+                    <div class="statistics-grid">
+                        <!-- Statistics will be populated dynamically -->
+                    </div>
+                </section>
+
+                <!-- Most Popular Posts Section -->
+                <section id="popular-posts" class="popular-posts-section">
+                    <h2>Most Popular Posts</h2>
+                    <div class="post-cards-row">
+                        <!-- Popular posts will be populated dynamically -->
+                    </div>
+                </section>
+
+                <!-- All Posts Section -->
+                <section id="all-posts" class="all-posts-section">
+                    <h2>All Posts</h2>
+                    <div class="post-cards-list">
+                        <!-- All posts will be populated dynamically -->
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Loading indicator -->
+    <div id="loading-overlay" class="loading-overlay hidden">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Error message -->
+    <div id="error-message" class="error-message hidden">
+        <div class="error-content">
+            <h3>Error</h3>
+            <p id="error-text"></p>
+            <button id="error-close">Close</button>
+        </div>
+    </div>
+
+    <!-- JavaScript - Order is important! -->
+    <!-- First load file handler and utilities -->
+    <script src="js/fileHandler.js"></script>
+    <script src="js/externalLinks.js"></script>
+    <script src="js/logoHandler.js"></script>
+    <script src="js/themeEnhancements.js"></script>
+    
+    <!-- Enhanced video modal styles -->
+    <script src="js/videoModalStyles.js"></script>
+    
+    <!-- Then load utility modules -->
+    <script src="js/statistics.js"></script>
+    <script src="js/postCards.js"></script>
+    
+    <!-- Then load UI component modules -->
+    <script src="js/sidebar.js"></script>
+    <script src="js/channelInfo.js"></script>
+    <script src="js/globalStats.js"></script>
+    <script src="js/popularPosts.js"></script>
+    <script src="js/allPosts.js"></script>
+    <script src="js/channelRenderer.js"></script>
+    
+    <!-- Load main app last -->
+    <script src="js/main.js"></script>
+</body>
+</html>

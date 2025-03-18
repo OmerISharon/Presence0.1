@@ -1,0 +1,5 @@
+BASE_DIR = "D:\\2025\\Projects\\Presence\\Presence0.1"
+CREATOR_ROOT_DIR = f"{BASE_DIR}\\Creator"
+CREATOR_CHANNELS_DIR = f"{BASE_DIR}\\Creator\\Channels"
+CHANNELS_DIR = f"{BASE_DIR}\\Channels"
+GLOBAL_RESOURCES_DIR = f"{BASE_DIR}\\Resources\\Media_Resources"
