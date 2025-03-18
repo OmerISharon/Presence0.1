@@ -1,0 +1,31 @@
+INFO: Log file created: D:\2025\Projects\Presence\Presence0.1\Uploader\Logs\All_Uploader_Logs\20250317_163744.log
+
+
+INFO: Channel provided from command line: RedNBlack
+INFO: Earliest folder found: D:\2025\Projects\Presence\Presence0.1\Channels\RedNBlack\Clips\16_20250312_124426
+WARNING: Unknown media '#youtube', skipping.
+WARNING: Unknown media '#tiktok', skipping.
+
+ACTION: Instagram Uploader
+CHANNEL: 'RedNBlack',
+INPUT: 'D:\2025\Projects\Presence\Presence0.1\Channels\RedNBlack\Clips\16_20250312_124426'
+INFO: Clicked 'Create'.
+INFO: Clicked 'Select from computer'.
+INFO: Selected file: D:\2025\Projects\Presence\Presence0.1\Channels\RedNBlack\Clips\16_20250312_124426\16_20250312_124426.mp4
+INFO: Clicked the first 'Next' in the crop dialog.
+INFO: Clicked the 'Next' button in Edit dialog.
+INFO: Pasting description into caption: let them eat cake. after us the deluge. i was born at versailles
+INFO: Description pasted successfully.
+INFO: Discard popup detected.
+INFO: Discard popup canceled.
+INFO: Retrying 'Share' click after discard popup was canceled.
+INFO: Discard popup detected.
+INFO: Discard popup canceled.
+INFO: Retrying 'Share' click after discard popup was canceled.
+INFO: Upload process finished within 2 minutes. Quitting browser.
+INFO: Done.
+
+✅ Instagram Uploader completed successfully.
+
+INFO: Moving folder 'D:\2025\Projects\Presence\Presence0.1\Channels\RedNBlack\Clips\16_20250312_124426' to archive: D:\2025\Projects\Presence\Presence0.1\Channels\RedNBlack\Clips_Archive\16_20250312_124426
+INFO: Process completed successfully.

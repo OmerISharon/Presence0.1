@@ -1,0 +1,10 @@
+INFO: Log file created: D:\2025\Projects\Presence\Presence0.1\Uploader\Logs\20250317_020212.log
+
+
+INFO: Channel provided from command line: God Mode Notes
+INFO: Earliest folder found: D:\2025\Projects\Presence\Presence0.1\Channels\God Mode Notes\Clips\20250312_125242
+
+INFO: YouTube AutoUpload for channel: 'God Mode Notes', folder: 'D:\2025\Projects\Presence\Presence0.1\Channels\God Mode Notes\Clips\20250312_125242'
+ERROR: 'AutoUploadYouTube.py' failed with exit code 1
+ERROR: No MP4 files found in folder D:\2025\Projects\Presence\Presence0.1\Channels\God Mode Notes\Clips\20250312_125242
+

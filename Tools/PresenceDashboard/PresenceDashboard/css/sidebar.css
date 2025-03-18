@@ -1,0 +1,167 @@
+/* sidebar.css - Styles for the dashboard sidebar */
+
+.sidebar {
+    width: 280px;
+    background-color: var(--sidebar-bg);
+    color: var(--sidebar-text);
+    height: 100vh;
+    overflow-y: auto;
+    position: sticky;
+    top: 0;
+    transition: transform 0.3s ease;
+    z-index: 950; /* Higher z-index for sidebar layer */
+}
+
+.sidebar-header {
+    padding: var(--spacing-md);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+.sidebar-header h1 {
+    font-size: var(--font-lg);
+    color: var(--sidebar-text);
+    margin: 0;
+}
+
+.sidebar-content {
+    padding: var(--spacing-md) 0;
+}
+
+/* Channel menu */
+.channel-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.channel-menu li {
+    padding: 0;
+    transition: background-color 0.2s ease;
+}
+
+.channel-menu li a {
+    display: block;
+    padding: var(--spacing-md) var(--spacing-lg);
+    color: var(--sidebar-text);
+    text-decoration: none;
+    border-left: 3px solid transparent;
+    transition: all 0.2s ease;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+    font-size: 1.05rem;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+}
+
+.channel-menu li a:hover {
+    background-color: rgba(138, 79, 255, 0.2);
+    border-left-color: var(--primary-color);
+}
+
+.channel-menu li.active a {
+    background-color: rgba(138, 79, 255, 0.15);
+    border-left-color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* Channel menu item with thumbnail */
+.channel-menu-item {
+    display: flex;
+    align-items: center;
+}
+
+.channel-menu-item .channel-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin-right: var(--spacing-sm);
+    object-fit: cover;
+}
+
+/* Loading indicator in sidebar */
+.loading-item {
+    padding: var(--spacing-md) var(--spacing-lg);
+    color: rgba(255, 255, 255, 0.6);
+    font-style: italic;
+}
+
+/* Toggle button for mobile */
+.sidebar-toggle {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Higher than sidebar to be on top */
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.sidebar-toggle:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Overlay for sidebar */
+.sidebar-overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 940; /* Just below sidebar but above content */
+    transition: background-color 0.3s ease;
+    pointer-events: none;
+}
+
+.sidebar-overlay.visible {
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .sidebar {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 250px;
+        z-index: 950;
+        transform: translateX(-100%);
+    }
+    
+    .sidebar.open {
+        transform: translateX(0);
+    }
+}
+
+/* Desktop specific */
+@media (min-width: 769px) {
+    .sidebar {
+        transform: translateX(0);
+    }
+    
+    .sidebar.closed {
+        transform: translateX(-100%);
+        position: fixed;
+    }
+    
+    /* Add padding to the main content to accommodate for the toggle button */
+    .content {
+        padding-top: 60px;
+    }
+}

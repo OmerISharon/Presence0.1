@@ -1,0 +1,14 @@
+{
+    "name": "presence-dashboard",
+    "version": "1.0.0",
+    "description": "YouTube channel dashboard for viewing analytics",
+    "main": "main.js",
+    "scripts": {
+      "start": "electron ."
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+      "electron": "^29.1.0"
+    }
+  }

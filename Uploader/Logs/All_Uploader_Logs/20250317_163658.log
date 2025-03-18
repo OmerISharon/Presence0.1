@@ -1,0 +1,28 @@
+INFO: Log file created: D:\2025\Projects\Presence\Presence0.1\Uploader\Logs\All_Uploader_Logs\20250317_163658.log
+
+
+INFO: Channel provided from command line: God Mode Notes
+INFO: Earliest folder found: D:\2025\Projects\Presence\Presence0.1\Channels\God Mode Notes\Clips\20250316_020007
+WARNING: Unknown media '#youtube', skipping.
+WARNING: Unknown media '#tiktok', skipping.
+
+ACTION: Instagram Uploader
+CHANNEL: 'God Mode Notes',
+INPUT: 'D:\2025\Projects\Presence\Presence0.1\Channels\God Mode Notes\Clips\20250316_020007'
+INFO: Clicked 'Create'.
+INFO: Clicked 'Select from computer'.
+INFO: Selected file: D:\2025\Projects\Presence\Presence0.1\Channels\God Mode Notes\Clips\20250316_020007\20250316_020007.mp4
+INFO: Clicked the first 'Next' in the crop dialog.
+INFO: Clicked the 'Next' button in Edit dialog.
+INFO: Pasting description into caption: The best way out is always through.
+INFO: Description pasted successfully.
+INFO: Clicked 'Share'.
+INFO: Share confirmation detected.
+INFO: Upload confirmed; post upload process completed.
+INFO: Upload process finished within 2 minutes. Quitting browser.
+INFO: Done.
+
+✅ Instagram Uploader completed successfully.
+
+INFO: Moving folder 'D:\2025\Projects\Presence\Presence0.1\Channels\God Mode Notes\Clips\20250316_020007' to archive: D:\2025\Projects\Presence\Presence0.1\Channels\God Mode Notes\Clips_Archive\20250316_020007
+INFO: Process completed successfully.

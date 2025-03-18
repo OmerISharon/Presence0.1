@@ -1,0 +1,27 @@
+INFO: Log file created: D:\2025\Projects\Presence\Presence0.1\Uploader\Logs\All_Uploader_Logs\20250317_162400.log
+
+
+INFO: Channel provided from command line: The Science Of Getting Rich
+INFO: Earliest folder found: D:\2025\Projects\Presence\Presence0.1\Channels\The Science Of Getting Rich\Clips\Think_and_Act_with_Purpose
+WARNING: Unknown media '#youtube', skipping.
+WARNING: Unknown media '#tiktok', skipping.
+
+ACTION: Instagram Uploader
+CHANNEL: 'The Science Of Getting Rich',
+INPUT: 'D:\2025\Projects\Presence\Presence0.1\Channels\The Science Of Getting Rich\Clips\Think_and_Act_with_Purpose'
+INFO: Clicked 'Create'.
+INFO: Clicked 'Select from computer'.
+INFO: Selected file: D:\2025\Projects\Presence\Presence0.1\Channels\The Science Of Getting Rich\Clips\Think_and_Act_with_Purpose\Think_and_Act_with_Purpose.mp4
+INFO: Clicked the first 'Next' in the crop dialog.
+INFO: Clicked the 'Next' button in Edit dialog.
+INFO: Pasting description into caption: Begin this way of thinking and acting, and your faith and purpose will make you quick to see any opportunity to better your condition.
+INFO: Description pasted successfully.
+INFO: Clicked 'Share'.
+INFO: Share confirmation detected.
+INFO: Upload confirmed; post upload process completed.
+INFO: Done.
+
+✅ Instagram Uploader completed successfully.
+
+INFO: Moving folder 'D:\2025\Projects\Presence\Presence0.1\Channels\The Science Of Getting Rich\Clips\Think_and_Act_with_Purpose' to archive: D:\2025\Projects\Presence\Presence0.1\Channels\The Science Of Getting Rich\Clips_Archive\Think_and_Act_with_Purpose
+INFO: Process completed successfully.
