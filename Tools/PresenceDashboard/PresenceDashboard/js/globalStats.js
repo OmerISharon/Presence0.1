@@ -87,19 +87,8 @@ const GlobalStats = (() => {
                 'CommentCount'
             ];
             
-            // Calculate total views from posts
-            if (Array.isArray(window.currentChannelData?.posts)) {
-                let totalViews = 0;
-                window.currentChannelData.posts.forEach(post => {
-                    if (post.PostStatistics && post.PostStatistics.ViewCount) {
-                        const views = parseInt(post.PostStatistics.ViewCount, 10);
-                        if (!isNaN(views)) {
-                            totalViews += views;
-                        }
-                    }
-                });
-                allStats.TotalViews = totalViews;
-            }
+            // Set TotalViews from AccountStatistics.ViewCount
+            allStats.TotalViews = statistics.ViewCount;
 
             // Add additional stats if available in the data
             if (statistics.LikeCount !== undefined) {

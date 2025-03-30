@@ -13,6 +13,18 @@ from selenium.webdriver.support import expected_conditions as EC
 from config import *
 sys.path.insert(0, RESOURCES_DIR)
 from chrome_config import *
+sys.path.insert(0, INTERNAL_MODULES_DIR)
+
+# First, set keyboard layout to English - before any other operations
+try:
+    from keyboard_switcher import keyboard
+    print("INFO: Setting keyboard layout to English...")
+    if keyboard.set_english():
+        print("INFO: Keyboard layout successfully set to English.")
+    else:
+        print("WARNING: Failed to set keyboard layout to English. Continuing anyway...")
+except Exception as e:
+    print(f"WARNING: Could not set keyboard to English: {e}")
 
 def get_profile_directory(profile_name):
     """Map the display profile name to the actual Chrome profile folder."""
@@ -227,6 +239,73 @@ def click_share(bot, timeout=30):
             return False
     return False
 
+def click_select_crop(bot, timeout=30):
+    """Click the 'Select crop' button in the crop interface, with discard-popup detection."""
+    # Use only the successful CSS selector approach
+    css_selector = "div[class*='x9f619'] > svg[aria-label='Select crop']"
+    
+    for attempt in range(2):
+        try:
+            # Find the SVG element first
+            svg_el = WebDriverWait(bot, timeout).until(
+                EC.presence_of_element_located((By.CSS_SELECTOR, css_selector))
+            )
+            # Then get its parent div for clicking
+            select_crop_el = svg_el.find_element(By.XPATH, "./..")
+            
+            if try_click(bot, select_crop_el):
+                time.sleep(1)
+                if check_and_cancel_discard_popup(bot, timeout=5):
+                    print("INFO: Retrying 'Select crop' click after discard popup was canceled.")
+                    continue
+                print("INFO: Clicked 'Select crop' element.")
+                return True
+            else:
+                if check_and_cancel_discard_popup(bot, timeout=5):
+                    print("INFO: Retrying 'Select crop' click after discard popup was canceled.")
+                    continue
+                print("ERROR: Could not click the 'Select crop' element.")
+                return False
+        except Exception as e:
+            print(f"ERROR: 'Select crop' element not found/clickable: {e}")
+            return False
+    
+    return False
+
+def click_crop_portrait(bot, timeout=30):
+    """Click the 'Crop portrait' icon, with discard-popup detection.
+    Uses the CSS selector approach that targets the SVG directly and navigates to the clickable parent.
+    """
+    for attempt in range(2):
+        try:
+            # Find the SVG element using CSS selector
+            css_selector = "svg[aria-label='Crop portrait icon']"
+            svg_el = WebDriverWait(bot, timeout).until(
+                EC.presence_of_element_located((By.CSS_SELECTOR, css_selector))
+            )
+            
+            # Get the containing div (go up to the clickable parent)
+            crop_portrait_el = svg_el.find_element(By.XPATH, "./../../..")
+            
+            if try_click(bot, crop_portrait_el):
+                time.sleep(1)
+                if check_and_cancel_discard_popup(bot, timeout=5):
+                    print("INFO: Retrying 'Crop portrait icon' click after discard popup was canceled.")
+                    continue
+                print("INFO: Clicked 'Crop portrait icon' element.")
+                return True
+            else:
+                if check_and_cancel_discard_popup(bot, timeout=5):
+                    print("INFO: Retrying 'Crop portrait icon' click after discard popup was canceled.")
+                    continue
+                print("ERROR: Could not click the 'Crop portrait icon' element.")
+                return False
+        except Exception as e:
+            print(f"ERROR: 'Crop portrait icon' element not found/clickable: {e}")
+            return False
+            
+    return False
+
 def wait_for_share_confirmation(bot, timeout=120):
     """Wait until 'Your reel has been shared.' is detected."""
     try:
@@ -240,7 +319,7 @@ def wait_for_share_confirmation(bot, timeout=120):
         return False
 
 def upload_video(bot, folder_path):
-    """Process: Create -> Select -> OS dialog -> Next(crop) -> Next(preview) -> Caption -> Share -> Confirm."""
+    """Process: Create -> Select -> OS dialog -> [New events] -> Next(crop) -> Next(preview) -> Caption -> Share -> Confirm."""
     bot.get(PLATFORM_URL)
     time.sleep(1)
     
@@ -279,9 +358,18 @@ def upload_video(bot, folder_path):
     print(f"INFO: Selected file: {video_file}")
     time.sleep(1)
     
+    if not click_select_crop(bot, 30):
+        return
+    time.sleep(1)
+
+    if not click_crop_portrait(bot, 30):
+        return
+    time.sleep(1)
+    
     # First "Next" (crop dialog)
     if not click_next_crop(bot, 30):
         return
+    time.sleep(1)
 
     # Second "Next" (preview dialog)
     if not click_next_preview(bot, 30):

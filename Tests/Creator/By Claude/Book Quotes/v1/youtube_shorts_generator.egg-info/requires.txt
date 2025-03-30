@@ -1,0 +1,8 @@
+manim>=0.17.2
+moviepy>=1.0.3
+numpy>=1.23.0
+scipy>=1.8.0
+Pillow>=9.0.0
+matplotlib>=3.5.0
+tqdm>=4.64.0
+pydub>=0.25.1

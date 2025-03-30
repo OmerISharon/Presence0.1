@@ -1,0 +1,59 @@
+🔁 Script Execution Flow:
+Main script --> CLI args --> Text Preprocessing --> Beat Analysis --> Token Timing Assignment --> Video Clip Generation --> Final Composition + Export
+1. Input Parsing & CLI
+Accepts raw input text and optional flags (--uppercase)
+
+Text is sanitized via regex to only keep valid characters, including special effect triggers
+
+2. Tokenization & Special Character Analysis
+Input text is split into words (“tokens”)
+
+Each token is analyzed for:
+
+Special characters (., *, &, !, ^, etc.)
+
+Effects to apply (pop_in, side_slide, rotate, etc.)
+
+Dynamic beat skip value using SPECIAL_BEAT_SKIP_VALUES
+
+Final token object includes:
+text, skip_beats, text_color, bg_color, effect_flags
+
+3. Beat Detection
+BPM is calculated from the audio file
+
+A list of beat timestamps is returned (real-time, in seconds)
+
+Beat times are adjusted with WORD_SPEED_FACTOR to allow faster/slower word delivery
+
+4. Token Timing Calculation
+For each token:
+
+start_time = beat_times[current_index]
+
+duration = beat_times[current_index + skip_beats + 1] - start_time
+
+This ensures accurate placement of words in rhythm with the music
+
+current_index is advanced by 1 + skip_beats after each token
+
+5. Clip Creation & Effects Assignment
+Each token becomes a TextClip with:
+
+Custom font, colors, size, start time, and duration
+
+Effect functions (if applicable) applied dynamically:
+
+E.g. apply_pop_in_effect(), apply_rotation_effect(), etc.
+
+Each effect is animated over the first beat interval, and the token remains on screen for any additional beat skips (creating the illusion of pauses)
+
+6. Video Composition
+All text clips are combined via CompositeVideoClip
+
+Video duration is automatically set to the last clip’s start + duration
+
+7. Audio Synchronization
+Background audio is trimmed or looped to match video duration
+
+Final audio is added to the video and exported

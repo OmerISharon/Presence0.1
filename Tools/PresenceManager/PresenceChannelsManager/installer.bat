@@ -5,10 +5,12 @@ setlocal
 set "TARGET_FOLDER=D:\2025\Projects\Presence\Presence0.1\Tools\PresenceManager\PresenceChannelsManager"
 :: Name of the Python script.
 set "SCRIPT_NAME=PresenceChannelsManager.py"
-:: Full path to your Python interpreter.
-set "PYTHON_PATH=C:\Users\omers\AppData\Local\Programs\Python\Python311\python.exe"
+:: Full path to your Python interpreter (using pythonw.exe instead).
+set "PYTHON_PATH=C:\Users\omers\AppData\Local\Programs\Python\Python311\pythonw.exe"
 :: Shortcut file name.
 set "SHORTCUT_NAME=PresenceChannelsManager.lnk"
+:: Custom icon path.
+set "ICON_PATH=D:\2025\Projects\Presence\Presence0.1\Resources\Brand_Resources\Brand Logo\v1\Presence Icon v1.ico"
 
 :: Create the shortcut using PowerShell.
 powershell -NoProfile -Command ^

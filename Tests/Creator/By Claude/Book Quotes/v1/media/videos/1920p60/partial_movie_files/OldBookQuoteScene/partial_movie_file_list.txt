@@ -1,0 +1,5 @@
+# This file is used internally by FFMPEG.
+file 'file:D:/2025/Projects/Presence/Presence0.1/Tests/Creator/By Claude/Book Quotes/v1/media/videos/1920p60/partial_movie_files/OldBookQuoteScene/3386420677_2546256107_223132457.mp4'
+file 'file:D:/2025/Projects/Presence/Presence0.1/Tests/Creator/By Claude/Book Quotes/v1/media/videos/1920p60/partial_movie_files/OldBookQuoteScene/1465510708_1481710754_1268580472.mp4'
+file 'file:D:/2025/Projects/Presence/Presence0.1/Tests/Creator/By Claude/Book Quotes/v1/media/videos/1920p60/partial_movie_files/OldBookQuoteScene/1465510708_2237365492_1305259655.mp4'
+file 'file:D:/2025/Projects/Presence/Presence0.1/Tests/Creator/By Claude/Book Quotes/v1/media/videos/1920p60/partial_movie_files/OldBookQuoteScene/1465510708_2552855209_323265330.mp4'

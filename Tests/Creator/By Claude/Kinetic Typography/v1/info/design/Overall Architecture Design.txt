@@ -1,0 +1,43 @@
+🧩 Overall Architecture Design:
+The script is organized into five modular components, each with a dedicated responsibility:
+
+config.py
+Stores global constants and configuration variables such as:
+
+Video dimensions, font settings, color presets
+
+Paths for input/output directories
+
+Frame rate and default audio track path
+
+bpm_detector.py
+Handles BPM detection using the provided audio file:
+
+Returns both the estimated tempo (BPM) and a list of beat timestamps
+
+Enables precise timing alignment between the music rhythm and text animations
+
+effects_config.py
+Centralized configuration for all supported text effects:
+
+Defines animation durations, initial scaling, rotation angles, overshoot values
+
+Contains a SPECIAL_BEAT_SKIP_VALUES map that declares how many beats each effect "skips" to simulate pauses or transitions
+
+Supports easy customization and scalability of effect parameters
+
+typographic_effects.py
+Implements visual effects logic for individual tokens:
+
+Includes side-slide, pop-in, rotation, and any future effects
+
+Accepts MoviePy text clips and applies transformations using position, rotation, resizing, or fade transitions
+
+get_content.py
+Reserved for future GPT integration:
+
+Will dynamically generate text to match available beats
+
+Must support a target word count that adapts to available beat count minus the number of special character skips
+
+Will allow the entire script to be run in one command without manual input

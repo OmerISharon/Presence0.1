@@ -1,0 +1,17 @@
+# Core dependencies
+manim>=0.17.2
+moviepy>=1.0.3
+numpy>=1.23.0
+scipy>=1.8.0
+Pillow>=9.0.0
+
+# Support libraries
+matplotlib>=3.5.0
+tqdm>=4.64.0
+pydub>=0.25.1  # For audio processing if needed
+
+# Development dependencies
+pytest>=7.0.0
+black>=22.3.0
+isort>=5.10.1
+flake8>=5.0.0

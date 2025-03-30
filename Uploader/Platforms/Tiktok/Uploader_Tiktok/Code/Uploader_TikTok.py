@@ -11,6 +11,18 @@ from selenium.webdriver.common.keys import Keys
 from config import *
 sys.path.insert(0, RESOURCES_DIR)
 from chrome_config import *
+sys.path.insert(0, INTERNAL_MODULES_DIR)
+
+# First, set keyboard layout to English - before any other operations
+try:
+    from keyboard_switcher import keyboard
+    print("INFO: Setting keyboard layout to English...")
+    if keyboard.set_english():
+        print("INFO: Keyboard layout successfully set to English.")
+    else:
+        print("WARNING: Failed to set keyboard layout to English. Continuing anyway...")
+except Exception as e:
+    print(f"WARNING: Could not set keyboard to English: {e}")
 
 # -----------------------------------------------------------------------------
 # Function to map the display profile name (e.g. "God Mode Notes") to the actual

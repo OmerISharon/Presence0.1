@@ -1,0 +1,2 @@
+[console_scripts]
+generate-shorts = shorts_generator.main:cli_main

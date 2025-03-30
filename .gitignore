@@ -59,3 +59,5 @@ Thumbs.db
 # Specific Project Exclusions
 **/Clips/
 **/Logs/
+
+**/Important_Backups/
