@@ -1,0 +1,907 @@
+{
+  "Account": {
+    "PlatformId": "UCnDi_2X4pnhaMTPEc1PU40g",
+    "Platform": "YouTube",
+    "AccountProfile": {
+      "Title": "The Science Of Getting Rich",
+      "Description": "💰 Unlock wealth with timeless wisdom! Daily inspiring quotes from Wallace D. Wattles' classic book, \"The Science of Getting Rich\". Learn the universal principles of abundance, prosperity mindset, and wealth attraction. Subscribe now—start building your path to riches!",
+      "PublishedAt": "2025-03-04T10:14:00.854333+00:00",
+      "CustomUrl": "@thescienceofgettingrich-p",
+      "ThumbnailUrl": "https://yt3.ggpht.com/EicRiVc_MdZj06_c5OPDXQAIjsFCos2EidDfH2nb0ssnp-e-hhnnl4oNo2Wvfacm6RavOPWzxg=s800-c-k-c0x00ffffff-no-rj",
+      "BannerUrl": "",
+      "LocalizedInfo": {
+        "LocalizedTitle": "The Science Of Getting Rich",
+        "LocalizedDescription": "💰 Unlock wealth with timeless wisdom! Daily inspiring quotes from Wallace D. Wattles' classic book, \"The Science of Getting Rich\". Learn the universal principles of abundance, prosperity mindset, and wealth attraction. Subscribe now—start building your path to riches!"
+      },
+      "Country": null,
+      "Language": null,
+      "ETag": null
+    },
+    "AccountStatistics": {
+      "ViewCount": 607,
+      "SubscriberCount": 2,
+      "IsSubscriberCountHidden": false,
+      "VideoCount": 26
+    },
+    "BrandingSettings": {
+      "ChannelKeywords": null,
+      "IsModerateCommentsEnabled": false,
+      "FeaturedChannels": [],
+      "FeaturedChannelsTitle": "",
+      "BannerImageUrl": "",
+      "UnsubscribedTrailer": "",
+      "DefaultTab": "",
+      "ShowBrowseView": false,
+      "ShowRelatedChannels": false,
+      "ProfileColor": ""
+    },
+    "AccountStatus": {
+      "PrivacyStatus": "public",
+      "IsLinked": true,
+      "LongUploadsStatus": "eligible",
+      "IsMadeForKids": false,
+      "IsSelfDeclaredMadeForKids": false
+    },
+    "TopicCategories": [
+      "https://en.wikipedia.org/wiki/Music",
+      "https://en.wikipedia.org/wiki/Religion",
+      "https://en.wikipedia.org/wiki/Society"
+    ]
+  },
+  "Posts": [
+    {
+      "PlatformId": "kol1Ts3UfXY",
+      "PostProfile": {
+        "PublishedAt": "2025-04-11T01:07:55+00:00",
+        "Title": "Do All You Can Today",
+        "Description": "Do, every day, ALL that can be done that day.",
+        "ThumbnailUrl": "https://i.ytimg.com/vi/kol1Ts3UfXY/sddefault.jpg",
+        "Tags": null,
+        "CategoryId": "22",
+        "LocalizedInfo": {
+          "LocalizedTitle": "Do All You Can Today",
+          "LocalizedDescription": "Do, every day, ALL that can be done that day."
+        },
+        "ETag": null
+      },
+      "PostStatistics": {
+        "ViewCount": 1,
+        "LikeCount": 0,
+        "DislikeCount": 0,
+        "CommentCount": 0
+      },
+      "ContentDetails": {
+        "Duration": "00:00:17",
+        "Dimension": "2d",
+        "Definition": "hd",
+        "Caption": "false",
+        "IsLicensedContent": false,
+        "RegionRestriction": null
+      },
+      "PostStatusInfo": {
+        "PrivacyStatus": "public",
+        "License": "youtube",
+        "IsEmbeddable": true,
+        "UploadStatus": "processed"
+      },
+      "Player": {
+        "EmbedHtml": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/kol1Ts3UfXY\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+      },
+      "TopicDetails": {
+        "TopicIds": null,
+        "RelevantTopicIds": null,
+        "TopicCategories": [
+          "https://en.wikipedia.org/wiki/Religion"
+        ]
+      }
+    },
+    {
+      "PlatformId": "1Nb8c6hqOlc",
+      "PostProfile": {
+        "PublishedAt": "2025-04-09T01:07:53+00:00",
+        "Title": "The Path to Wealth and Change",
+        "Description": "Individuals may enter upon the Certain Way at any time, and under any government, and make themselves rich. and when any considerable number of individuals do so under any government, they will cause the system to be so modified as to open the way for others.",
+        "ThumbnailUrl": "https://i.ytimg.com/vi/1Nb8c6hqOlc/sddefault.jpg",
+        "Tags": null,
+        "CategoryId": "22",
+        "LocalizedInfo": {
+          "LocalizedTitle": "The Path to Wealth and Change",
+          "LocalizedDescription": "Individuals may enter upon the Certain Way at any time, and under any government, and make themselves rich. and when any considerable number of individuals do so under any government, they will cause the system to be so modified as to open the way for others."
+        },
+        "ETag": null
+      },
+      "PostStatistics": {
+        "ViewCount": 55,
+        "LikeCount": 0,
+        "DislikeCount": 0,
+        "CommentCount": 0
+      },
+      "ContentDetails": {
+        "Duration": "00:00:28",
+        "Dimension": "2d",
+        "Definition": "hd",
+        "Caption": "false",
+        "IsLicensedContent": false,
+        "RegionRestriction": null
+      },
+      "PostStatusInfo": {
+        "PrivacyStatus": "public",
+        "License": "youtube",
+        "IsEmbeddable": true,
+        "UploadStatus": "processed"
+      },
+      "Player": {
+        "EmbedHtml": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/1Nb8c6hqOlc\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+      },
+      "TopicDetails": null
+    },
+    {
+      "PlatformId": "aQEhzHhBHrE",
+      "PostProfile": {
+        "PublishedAt": "2025-04-08T13:53:28+00:00",
+        "Title": "Three Steps to Universal Abundance",
+        "Description": "First, you believe that there is one Intelligent Substance, from which all things proceed. second, you believe that this Substance gives you everything you desire. and third, you relate yourself to it by a feeling of deep and profound gratitude.",
+        "ThumbnailUrl": "https://i.ytimg.com/vi/aQEhzHhBHrE/sddefault.jpg",
+        "Tags": null,
+        "CategoryId": "22",
+        "LocalizedInfo": {
+          "LocalizedTitle": "Three Steps to Universal Abundance",
+          "LocalizedDescription": "First, you believe that there is one Intelligent Substance, from which all things proceed. second, you believe that this Substance gives you everything you desire. and third, you relate yourself to it by a feeling of deep and profound gratitude."
+        },
+        "ETag": null
+      },
+      "PostStatistics": {
+        "ViewCount": 25,
+        "LikeCount": 0,
+        "DislikeCount": 0,
+        "CommentCount": 0
+      },
+      "ContentDetails": {
+        "Duration": "00:00:28",
+        "Dimension": "2d",
+        "Definition": "hd",
+        "Caption": "false",
+        "IsLicensedContent": false,
+        "RegionRestriction": null
+      },
+      "PostStatusInfo": {
+        "PrivacyStatus": "public",
+        "License": "youtube",
+        "IsEmbeddable": true,
+        "UploadStatus": "processed"
+      },
+      "Player": {
+        "EmbedHtml": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/aQEhzHhBHrE\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+      },
+      "TopicDetails": null
+    },
+    {
+      "PlatformId": "a7bX61eqLDg",
+      "PostProfile": {
+        "PublishedAt": "2025-04-06T01:07:36+00:00",
+        "Title": "Face Challenges as They Come",
+        "Description": "Give no anxious thought to possible disasters, obstacles, panics, or unfavorable combinations of circumstances. it is time enough to meet such things when they present themselves before you in the immediate present, and you will find that every difficulty carries with it the wherewithal for its overcoming.",
+        "ThumbnailUrl": "https://i.ytimg.com/vi/a7bX61eqLDg/sddefault.jpg",
+        "Tags": null,
+        "CategoryId": "22",
+        "LocalizedInfo": {
+          "LocalizedTitle": "Face Challenges as They Come",
+          "LocalizedDescription": "Give no anxious thought to possible disasters, obstacles, panics, or unfavorable combinations of circumstances. it is time enough to meet such things when they present themselves before you in the immediate present, and you will find that every difficulty carries with it the wherewithal for its overcoming."
+        },
+        "ETag": null
+      },
+      "PostStatistics": {
+        "ViewCount": 54,
+        "LikeCount": 0,
+        "DislikeCount": 0,
+        "CommentCount": 0
+      },
+      "ContentDetails": {
+        "Duration": "00:00:31",
+        "Dimension": "2d",
+        "Definition": "hd",
+        "Caption": "false",
+        "IsLicensedContent": false,
+        "RegionRestriction": null
+      },
+      "PostStatusInfo": {
+        "PrivacyStatus": "public",
+        "License": "youtube",
+        "IsEmbeddable": true,
+        "UploadStatus": "processed"
+      },
+      "Player": {
+        "EmbedHtml": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/a7bX61eqLDg\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+      },
+      "TopicDetails": {
+        "TopicIds": null,
+        "RelevantTopicIds": null,
+        "TopicCategories": [
+          "https://en.wikipedia.org/wiki/Health"
+        ]
+      }
+    },
+    {
+      "PlatformId": "nrN6iDgJChY",
+      "PostProfile": {
+        "PublishedAt": "2025-04-05T01:07:04+00:00",
+        "Title": "Cultivate Continuous Gratitude",
+        "Description": "It is necessary, then, to cultivate the habit of being grateful for every good thing that comes to you. and to give thanks continuously.",
+        "ThumbnailUrl": "https://i.ytimg.com/vi/nrN6iDgJChY/sddefault.jpg",
+        "Tags": null,
+        "CategoryId": "22",
+        "LocalizedInfo": {
+          "LocalizedTitle": "Cultivate Continuous Gratitude",
+          "LocalizedDescription": "It is necessary, then, to cultivate the habit of being grateful for every good thing that comes to you. and to give thanks continuously."
+        },
+        "ETag": null
+      },
+      "PostStatistics": {
+        "ViewCount": 46,
+        "LikeCount": 0,
+        "DislikeCount": 0,
+        "CommentCount": 0
+      },
+      "ContentDetails": {
+        "Duration": "00:00:22",
+        "Dimension": "2d",
+        "Definition": "hd",
+        "Caption": "false",
+        "IsLicensedContent": false,
+        "RegionRestriction": null
+      },
+      "PostStatusInfo": {
+        "PrivacyStatus": "public",
+        "License": "youtube",
+        "IsEmbeddable": true,
+        "UploadStatus": "processed"
+      },
+      "Player": {
+        "EmbedHtml": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/nrN6iDgJChY\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+      },
+      "TopicDetails": {
+        "TopicIds": null,
+        "RelevantTopicIds": null,
+        "TopicCategories": [
+          "https://en.wikipedia.org/wiki/Religion"
+        ]
+      }
+    },
+    {
+      "PlatformId": "vYhxkqcFUf8",
+      "PostProfile": {
+        "PublishedAt": "2025-04-04T01:07:15+00:00",
+        "Title": "And behind this purpose must",
+        "Description": "And behind this purpose must be an invincible and unwavering FAITH that the thing is already yours. that it is \"at hand\" and you have only to take possession of it.",
+        "ThumbnailUrl": "https://i.ytimg.com/vi/vYhxkqcFUf8/sddefault.jpg",
+        "Tags": null,
+        "CategoryId": "22",
+        "LocalizedInfo": {
+          "LocalizedTitle": "And behind this purpose must",
+          "LocalizedDescription": "And behind this purpose must be an invincible and unwavering FAITH that the thing is already yours. that it is \"at hand\" and you have only to take possession of it."
+        },
+        "ETag": null
+      },
+      "PostStatistics": {
+        "ViewCount": 92,
+        "LikeCount": 0,
+        "DislikeCount": 0,
+        "CommentCount": 0
+      },
+      "ContentDetails": {
+        "Duration": "00:00:23",
+        "Dimension": "2d",
+        "Definition": "hd",
+        "Caption": "false",
+        "IsLicensedContent": false,
+        "RegionRestriction": null
+      },
+      "PostStatusInfo": {
+        "PrivacyStatus": "public",
+        "License": "youtube",
+        "IsEmbeddable": true,
+        "UploadStatus": "processed"
+      },
+      "Player": {
+        "EmbedHtml": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/vYhxkqcFUf8\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+      },
+      "TopicDetails": {
+        "TopicIds": null,
+        "RelevantTopicIds": null,
+        "TopicCategories": [
+          "https://en.wikipedia.org/wiki/Religion"
+        ]
+      }
+    },
+    {
+      "PlatformId": "7d2iO2gZZtM",
+      "PostProfile": {
+        "PublishedAt": "2025-04-03T01:07:14+00:00",
+        "Title": "Gratitude Guides Creative Harmony",
+        "Description": "Gratitude will lead your mind out along the ways by which things come. and it will keep you in close harmony with creative thought and prevent you from falling into competitive thought.",
+        "ThumbnailUrl": "https://i.ytimg.com/vi/7d2iO2gZZtM/sddefault.jpg",
+        "Tags": null,
+        "CategoryId": "22",
+        "LocalizedInfo": {
+          "LocalizedTitle": "Gratitude Guides Creative Harmony",
+          "LocalizedDescription": "Gratitude will lead your mind out along the ways by which things come. and it will keep you in close harmony with creative thought and prevent you from falling into competitive thought."
+        },
+        "ETag": null
+      },
+      "PostStatistics": {
+        "ViewCount": 28,
+        "LikeCount": 0,
+        "DislikeCount": 0,
+        "CommentCount": 0
+      },
+      "ContentDetails": {
+        "Duration": "00:00:24",
+        "Dimension": "2d",
+        "Definition": "hd",
+        "Caption": "false",
+        "IsLicensedContent": false,
+        "RegionRestriction": null
+      },
+      "PostStatusInfo": {
+        "PrivacyStatus": "public",
+        "License": "youtube",
+        "IsEmbeddable": true,
+        "UploadStatus": "processed"
+      },
+      "Player": {
+        "EmbedHtml": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/7d2iO2gZZtM\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+      },
+      "TopicDetails": null
+    },
+    {
+      "PlatformId": "OP6N-J7EG8Y",
+      "PostProfile": {
+        "PublishedAt": "2025-04-02T01:07:44+00:00",
+        "Title": "Rise Above Your Circumstances",
+        "Description": "There is nothing in your circumstances or in the industrial situation that can keep you down.",
+        "ThumbnailUrl": "https://i.ytimg.com/vi/OP6N-J7EG8Y/sddefault.jpg",
+        "Tags": null,
+        "CategoryId": "22",
+        "LocalizedInfo": {
+          "LocalizedTitle": "Rise Above Your Circumstances",
+          "LocalizedDescription": "There is nothing in your circumstances or in the industrial situation that can keep you down."
+        },
+        "ETag": null
+      },
+      "PostStatistics": {
+        "ViewCount": 111,
+        "LikeCount": 0,
+        "DislikeCount": 0,
+        "CommentCount": 0
+      },
+      "ContentDetails": {
+        "Duration": "00:00:20",
+        "Dimension": "2d",
+        "Definition": "hd",
+        "Caption": "false",
+        "IsLicensedContent": false,
+        "RegionRestriction": null
+      },
+      "PostStatusInfo": {
+        "PrivacyStatus": "public",
+        "License": "youtube",
+        "IsEmbeddable": true,
+        "UploadStatus": "processed"
+      },
+      "Player": {
+        "EmbedHtml": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/OP6N-J7EG8Y\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+      },
+      "TopicDetails": {
+        "TopicIds": null,
+        "RelevantTopicIds": null,
+        "TopicCategories": [
+          "https://en.wikipedia.org/wiki/Religion"
+        ]
+      }
+    },
+    {
+      "PlatformId": "jdjuoS_Paos",
+      "PostProfile": {
+        "PublishedAt": "2025-04-01T01:07:08+00:00",
+        "Title": "Daily Success Leads to Wealth",
+        "Description": "If everyday is a failure, you can never get rich. while if every day is a success, you cannot fail to get rich.",
+        "ThumbnailUrl": "https://i.ytimg.com/vi/jdjuoS_Paos/sddefault.jpg",
+        "Tags": null,
+        "CategoryId": "22",
+        "LocalizedInfo": {
+          "LocalizedTitle": "Daily Success Leads to Wealth",
+          "LocalizedDescription": "If everyday is a failure, you can never get rich. while if every day is a success, you cannot fail to get rich."
+        },
+        "ETag": null
+      },
+      "PostStatistics": {
+        "ViewCount": 45,
+        "LikeCount": 0,
+        "DislikeCount": 0,
+        "CommentCount": 0
+      },
+      "ContentDetails": {
+        "Duration": "00:00:21",
+        "Dimension": "2d",
+        "Definition": "hd",
+        "Caption": "false",
+        "IsLicensedContent": false,
+        "RegionRestriction": null
+      },
+      "PostStatusInfo": {
+        "PrivacyStatus": "public",
+        "License": "youtube",
+        "IsEmbeddable": true,
+        "UploadStatus": "processed"
+      },
+      "Player": {
+        "EmbedHtml": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/jdjuoS_Paos\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+      },
+      "TopicDetails": null
+    },
+    {
+      "PlatformId": "bseqVNuaIj8",
+      "PostProfile": {
+        "PublishedAt": "2025-03-28T01:06:23+00:00",
+        "Title": "Embrace Desired Thoughts Immediately",
+        "Description": "In the mental realm, enter at once into full enjoyment of the things you want.",
+        "ThumbnailUrl": "https://i.ytimg.com/vi/bseqVNuaIj8/sddefault.jpg",
+        "Tags": null,
+        "CategoryId": "22",
+        "LocalizedInfo": {
+          "LocalizedTitle": "Embrace Desired Thoughts Immediately",
+          "LocalizedDescription": "In the mental realm, enter at once into full enjoyment of the things you want."
+        },
+        "ETag": null
+      },
+      "PostStatistics": {
+        "ViewCount": 14,
+        "LikeCount": 0,
+        "DislikeCount": 0,
+        "CommentCount": 0
+      },
+      "ContentDetails": {
+        "Duration": "00:00:19",
+        "Dimension": "2d",
+        "Definition": "hd",
+        "Caption": "false",
+        "IsLicensedContent": false,
+        "RegionRestriction": null
+      },
+      "PostStatusInfo": {
+        "PrivacyStatus": "public",
+        "License": "youtube",
+        "IsEmbeddable": true,
+        "UploadStatus": "processed"
+      },
+      "Player": {
+        "EmbedHtml": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/bseqVNuaIj8\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+      },
+      "TopicDetails": null
+    },
+    {
+      "PlatformId": "bPUhxPY2zTc",
+      "PostProfile": {
+        "PublishedAt": "2025-03-27T02:05:03+00:00",
+        "Title": "Clarity Before Achievement",
+        "Description": "You must have it before you can give it. and many people fail to impress Thinking Substance because they have themselves only a vague and misty concept of the things they want to do, to have, or to become.",
+        "ThumbnailUrl": "https://i.ytimg.com/vi/bPUhxPY2zTc/sddefault.jpg",
+        "Tags": null,
+        "CategoryId": "22",
+        "LocalizedInfo": {
+          "LocalizedTitle": "Clarity Before Achievement",
+          "LocalizedDescription": "You must have it before you can give it. and many people fail to impress Thinking Substance because they have themselves only a vague and misty concept of the things they want to do, to have, or to become."
+        },
+        "ETag": null
+      },
+      "PostStatistics": {
+        "ViewCount": 17,
+        "LikeCount": 0,
+        "DislikeCount": 0,
+        "CommentCount": 0
+      },
+      "ContentDetails": {
+        "Duration": "00:00:25",
+        "Dimension": "2d",
+        "Definition": "hd",
+        "Caption": "false",
+        "IsLicensedContent": false,
+        "RegionRestriction": null
+      },
+      "PostStatusInfo": {
+        "PrivacyStatus": "public",
+        "License": "youtube",
+        "IsEmbeddable": true,
+        "UploadStatus": "processed"
+      },
+      "Player": {
+        "EmbedHtml": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/bPUhxPY2zTc\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+      },
+      "TopicDetails": null
+    },
+    {
+      "PlatformId": "QcCRKDyz5mo",
+      "PostProfile": {
+        "PublishedAt": "2025-03-25T02:06:14+00:00",
+        "Title": "Visualize Your Dream Home",
+        "Description": "Live in the new house, mentally, until it takes form around you physically.",
+        "ThumbnailUrl": "https://i.ytimg.com/vi/QcCRKDyz5mo/sddefault.jpg",
+        "Tags": null,
+        "CategoryId": "22",
+        "LocalizedInfo": {
+          "LocalizedTitle": "Visualize Your Dream Home",
+          "LocalizedDescription": "Live in the new house, mentally, until it takes form around you physically."
+        },
+        "ETag": null
+      },
+      "PostStatistics": {
+        "ViewCount": 6,
+        "LikeCount": 0,
+        "DislikeCount": 0,
+        "CommentCount": 0
+      },
+      "ContentDetails": {
+        "Duration": "00:00:19",
+        "Dimension": "2d",
+        "Definition": "hd",
+        "Caption": "false",
+        "IsLicensedContent": false,
+        "RegionRestriction": null
+      },
+      "PostStatusInfo": {
+        "PrivacyStatus": "public",
+        "License": "youtube",
+        "IsEmbeddable": true,
+        "UploadStatus": "processed"
+      },
+      "Player": {
+        "EmbedHtml": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/QcCRKDyz5mo\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+      },
+      "TopicDetails": null
+    },
+    {
+      "PlatformId": "rbLlqY4i48w",
+      "PostProfile": {
+        "PublishedAt": "2025-03-24T02:05:13+00:00",
+        "Title": "Visualize Your Dream Home",
+        "Description": "Live in the new house, mentally, until it takes form around you physically.",
+        "ThumbnailUrl": "https://i.ytimg.com/vi/rbLlqY4i48w/sddefault.jpg",
+        "Tags": null,
+        "CategoryId": "22",
+        "LocalizedInfo": {
+          "LocalizedTitle": "Visualize Your Dream Home",
+          "LocalizedDescription": "Live in the new house, mentally, until it takes form around you physically."
+        },
+        "ETag": null
+      },
+      "PostStatistics": {
+        "ViewCount": 19,
+        "LikeCount": 2,
+        "DislikeCount": 0,
+        "CommentCount": 0
+      },
+      "ContentDetails": {
+        "Duration": "00:00:19",
+        "Dimension": "2d",
+        "Definition": "hd",
+        "Caption": "false",
+        "IsLicensedContent": false,
+        "RegionRestriction": null
+      },
+      "PostStatusInfo": {
+        "PrivacyStatus": "public",
+        "License": "youtube",
+        "IsEmbeddable": true,
+        "UploadStatus": "processed"
+      },
+      "Player": {
+        "EmbedHtml": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/rbLlqY4i48w\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+      },
+      "TopicDetails": null
+    },
+    {
+      "PlatformId": "Y1GOCWyCHlg",
+      "PostProfile": {
+        "PublishedAt": "2025-03-23T02:04:34+00:00",
+        "Title": "Desire Reflects Power",
+        "Description": "Desire is a manifestation of power.",
+        "ThumbnailUrl": "https://i.ytimg.com/vi/Y1GOCWyCHlg/sddefault.jpg",
+        "Tags": null,
+        "CategoryId": "22",
+        "LocalizedInfo": {
+          "LocalizedTitle": "Desire Reflects Power",
+          "LocalizedDescription": "Desire is a manifestation of power."
+        },
+        "ETag": null
+      },
+      "PostStatistics": {
+        "ViewCount": 11,
+        "LikeCount": 0,
+        "DislikeCount": 0,
+        "CommentCount": 0
+      },
+      "ContentDetails": {
+        "Duration": "00:00:17",
+        "Dimension": "2d",
+        "Definition": "hd",
+        "Caption": "false",
+        "IsLicensedContent": false,
+        "RegionRestriction": null
+      },
+      "PostStatusInfo": {
+        "PrivacyStatus": "public",
+        "License": "youtube",
+        "IsEmbeddable": true,
+        "UploadStatus": "processed"
+      },
+      "Player": {
+        "EmbedHtml": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/Y1GOCWyCHlg\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+      },
+      "TopicDetails": {
+        "TopicIds": null,
+        "RelevantTopicIds": null,
+        "TopicCategories": [
+          "https://en.wikipedia.org/wiki/Religion"
+        ]
+      }
+    },
+    {
+      "PlatformId": "bdbuVAZXjdM",
+      "PostProfile": {
+        "PublishedAt": "2025-03-22T02:05:02+00:00",
+        "Title": "Fair Pay",
+        "Description": "You do not need to let any man work for you for less than he earns.",
+        "ThumbnailUrl": "https://i.ytimg.com/vi/bdbuVAZXjdM/sddefault.jpg",
+        "Tags": null,
+        "CategoryId": "22",
+        "LocalizedInfo": {
+          "LocalizedTitle": "Fair Pay",
+          "LocalizedDescription": "You do not need to let any man work for you for less than he earns."
+        },
+        "ETag": null
+      },
+      "PostStatistics": {
+        "ViewCount": 1,
+        "LikeCount": 0,
+        "DislikeCount": 0,
+        "CommentCount": 0
+      },
+      "ContentDetails": {
+        "Duration": "00:00:18",
+        "Dimension": "2d",
+        "Definition": "hd",
+        "Caption": "false",
+        "IsLicensedContent": false,
+        "RegionRestriction": null
+      },
+      "PostStatusInfo": {
+        "PrivacyStatus": "public",
+        "License": "youtube",
+        "IsEmbeddable": true,
+        "UploadStatus": "processed"
+      },
+      "Player": {
+        "EmbedHtml": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/bdbuVAZXjdM\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+      },
+      "TopicDetails": null
+    },
+    {
+      "PlatformId": "WMd5b38-xjE",
+      "PostProfile": {
+        "PublishedAt": "2025-03-21T02:07:31+00:00",
+        "Title": "Essentials for an Intellectual Life",
+        "Description": "He cannot live fully in mind without books and time to study them, without opportunity for travel and observation, or without intellectual companionship.",
+        "ThumbnailUrl": "https://i.ytimg.com/vi/WMd5b38-xjE/sddefault.jpg",
+        "Tags": null,
+        "CategoryId": "22",
+        "LocalizedInfo": {
+          "LocalizedTitle": "Essentials for an Intellectual Life",
+          "LocalizedDescription": "He cannot live fully in mind without books and time to study them, without opportunity for travel and observation, or without intellectual companionship."
+        },
+        "ETag": null
+      },
+      "PostStatistics": {
+        "ViewCount": 4,
+        "LikeCount": 0,
+        "DislikeCount": 0,
+        "CommentCount": 0
+      },
+      "ContentDetails": {
+        "Duration": "00:00:23",
+        "Dimension": "2d",
+        "Definition": "hd",
+        "Caption": "false",
+        "IsLicensedContent": false,
+        "RegionRestriction": null
+      },
+      "PostStatusInfo": {
+        "PrivacyStatus": "public",
+        "License": "youtube",
+        "IsEmbeddable": true,
+        "UploadStatus": "processed"
+      },
+      "Player": {
+        "EmbedHtml": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/WMd5b38-xjE\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+      },
+      "TopicDetails": {
+        "TopicIds": null,
+        "RelevantTopicIds": null,
+        "TopicCategories": [
+          "https://en.wikipedia.org/wiki/Knowledge"
+        ]
+      }
+    },
+    {
+      "PlatformId": "ANhAvTMsh-o",
+      "PostProfile": {
+        "PublishedAt": "2025-03-20T02:05:21+00:00",
+        "Title": "From Competition to Creation",
+        "Description": "In order to do this, man must pass from the competitive to the creative mind. he must form a clear mental picture of the things he wants, and do, with faith and purpose, all that can be done each day, doing each separate thing in an efficient manner.",
+        "ThumbnailUrl": "https://i.ytimg.com/vi/ANhAvTMsh-o/sddefault.jpg",
+        "Tags": null,
+        "CategoryId": "22",
+        "LocalizedInfo": {
+          "LocalizedTitle": "From Competition to Creation",
+          "LocalizedDescription": "In order to do this, man must pass from the competitive to the creative mind. he must form a clear mental picture of the things he wants, and do, with faith and purpose, all that can be done each day, doing each separate thing in an efficient manner."
+        },
+        "ETag": null
+      },
+      "PostStatistics": {
+        "ViewCount": 4,
+        "LikeCount": 1,
+        "DislikeCount": 0,
+        "CommentCount": 0
+      },
+      "ContentDetails": {
+        "Duration": "00:00:28",
+        "Dimension": "2d",
+        "Definition": "hd",
+        "Caption": "false",
+        "IsLicensedContent": false,
+        "RegionRestriction": null
+      },
+      "PostStatusInfo": {
+        "PrivacyStatus": "public",
+        "License": "youtube",
+        "IsEmbeddable": true,
+        "UploadStatus": "processed"
+      },
+      "Player": {
+        "EmbedHtml": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/ANhAvTMsh-o\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+      },
+      "TopicDetails": {
+        "TopicIds": null,
+        "RelevantTopicIds": null,
+        "TopicCategories": [
+          "https://en.wikipedia.org/wiki/Religion"
+        ]
+      }
+    },
+    {
+      "PlatformId": "BdmEQb5uNDs",
+      "PostProfile": {
+        "PublishedAt": "2025-03-19T02:04:30+00:00",
+        "Title": "Embracing Unwanted Tasks for Future Success",
+        "Description": "If there are past mistakes whose consequences have placed you in an undesirable business or environment, you may be obliged for some time to do what you do not like to do. but you can make the doing of it pleasant by knowing that it is making it possible for you to come to the doing of what you want to do.",
+        "ThumbnailUrl": "https://i.ytimg.com/vi/BdmEQb5uNDs/sddefault.jpg",
+        "Tags": null,
+        "CategoryId": "22",
+        "LocalizedInfo": {
+          "LocalizedTitle": "Embracing Unwanted Tasks for Future Success",
+          "LocalizedDescription": "If there are past mistakes whose consequences have placed you in an undesirable business or environment, you may be obliged for some time to do what you do not like to do. but you can make the doing of it pleasant by knowing that it is making it possible for you to come to the doing of what you want to do."
+        },
+        "ETag": null
+      },
+      "PostStatistics": {
+        "ViewCount": 11,
+        "LikeCount": 0,
+        "DislikeCount": 0,
+        "CommentCount": 0
+      },
+      "ContentDetails": {
+        "Duration": "00:00:30",
+        "Dimension": "2d",
+        "Definition": "hd",
+        "Caption": "false",
+        "IsLicensedContent": false,
+        "RegionRestriction": null
+      },
+      "PostStatusInfo": {
+        "PrivacyStatus": "public",
+        "License": "youtube",
+        "IsEmbeddable": true,
+        "UploadStatus": "processed"
+      },
+      "Player": {
+        "EmbedHtml": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/BdmEQb5uNDs\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+      },
+      "TopicDetails": null
+    },
+    {
+      "PlatformId": "fuZOJtb1fFY",
+      "PostProfile": {
+        "PublishedAt": "2025-03-18T02:03:01+00:00",
+        "Title": "The Power of Self-Belief",
+        "Description": "When we realize this, we lose all doubt and fear, for we know that we can create what we want to create. we can get what we want to have, and can become what we want to be.",
+        "ThumbnailUrl": "https://i.ytimg.com/vi/fuZOJtb1fFY/sddefault.jpg",
+        "Tags": null,
+        "CategoryId": "22",
+        "LocalizedInfo": {
+          "LocalizedTitle": "The Power of Self-Belief",
+          "LocalizedDescription": "When we realize this, we lose all doubt and fear, for we know that we can create what we want to create. we can get what we want to have, and can become what we want to be."
+        },
+        "ETag": null
+      },
+      "PostStatistics": {
+        "ViewCount": 15,
+        "LikeCount": 0,
+        "DislikeCount": 0,
+        "CommentCount": 0
+      },
+      "ContentDetails": {
+        "Duration": "00:00:24",
+        "Dimension": "2d",
+        "Definition": "hd",
+        "Caption": "false",
+        "IsLicensedContent": false,
+        "RegionRestriction": null
+      },
+      "PostStatusInfo": {
+        "PrivacyStatus": "public",
+        "License": "youtube",
+        "IsEmbeddable": true,
+        "UploadStatus": "processed"
+      },
+      "Player": {
+        "EmbedHtml": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/fuZOJtb1fFY\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+      },
+      "TopicDetails": null
+    },
+    {
+      "PlatformId": "BlNAUuqirsk",
+      "PostProfile": {
+        "PublishedAt": "2025-03-17T14:01:44+00:00",
+        "Title": "Think and Act with Purpose",
+        "Description": "Begin this way of thinking and acting, and your faith and purpose will make you quick to see any opportunity to better your condition.",
+        "ThumbnailUrl": "https://i.ytimg.com/vi/BlNAUuqirsk/sddefault.jpg",
+        "Tags": null,
+        "CategoryId": "22",
+        "LocalizedInfo": {
+          "LocalizedTitle": "Think and Act with Purpose",
+          "LocalizedDescription": "Begin this way of thinking and acting, and your faith and purpose will make you quick to see any opportunity to better your condition."
+        },
+        "ETag": null
+      },
+      "PostStatistics": {
+        "ViewCount": 5,
+        "LikeCount": 0,
+        "DislikeCount": 0,
+        "CommentCount": 0
+      },
+      "ContentDetails": {
+        "Duration": "00:00:22",
+        "Dimension": "2d",
+        "Definition": "hd",
+        "Caption": "false",
+        "IsLicensedContent": false,
+        "RegionRestriction": null
+      },
+      "PostStatusInfo": {
+        "PrivacyStatus": "public",
+        "License": "youtube",
+        "IsEmbeddable": true,
+        "UploadStatus": "processed"
+      },
+      "Player": {
+        "EmbedHtml": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/BlNAUuqirsk\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+      },
+      "TopicDetails": {
+        "TopicIds": null,
+        "RelevantTopicIds": null,
+        "TopicCategories": [
+          "https://en.wikipedia.org/wiki/Religion"
+        ]
+      }
+    }
+  ]
+}

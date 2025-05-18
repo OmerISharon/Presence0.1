@@ -925,25 +925,6 @@ class ChannelManagerWidget(QWidget):
                 check=True
             )
             
-            # Show success message
-            QMessageBox.information(
-                self,
-                "Upload Complete",
-                f"Successfully uploaded to {platform}.\n\nClip will be archived."
-            )
-            
-            # Archive the clip after successful upload
-            if not os.path.exists(archive_path):
-                os.makedirs(archive_path)
-            
-            dst_path = os.path.join(archive_path, self.selected_clip_folder)
-            shutil.move(clip_path, dst_path)
-            
-            # Refresh tables
-            clips_path = os.path.join(channel_path, "Clips")
-            self.load_clips_table(clips_path)
-            self.load_archive_table(archive_path)
-            
             # Disable upload buttons
             for button in self.upload_buttons.values():
                 button.setEnabled(False)

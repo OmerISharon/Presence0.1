@@ -1,0 +1,332 @@
+{
+  "Account": {
+    "PlatformId": "UCUjekS1QXErLdYhRNivxuog",
+    "Platform": "YouTube",
+    "AccountProfile": {
+      "Title": "Zoonami",
+      "Description": "🐾 Dive into the ZOONAMI! 🌊https://www.instagram.com/zoonami.presenc/\n\nRide the wave of daily cuteness and hilarious moments featuring dogs, cats, bunnies, horses & more! 🐶🐱🐰🐴\nIf you love animals, jump aboard the fluffiest and funniest channel on YouTube! 💥\n\nHit subscribe—don’t miss a single splash of joy! 🐾\n",
+      "PublishedAt": "2025-04-15T16:34:28.165889+00:00",
+      "CustomUrl": "@zoonamiclips",
+      "ThumbnailUrl": "https://yt3.ggpht.com/wjiR7q-2UZKHk1m8634xqI1VE7aRnyii5YlwckwRsGNl_pvey_Jk5VRBxGsn70rNg_fWG5OH=s800-c-k-c0x00ffffff-no-rj",
+      "BannerUrl": "https://yt3.googleusercontent.com/KBvl9F_xyI9c8aXuywD2JUWOEF_4VXFKIbXZYJHMuo0uk-9zVCm1PN5rjFWETqMX2rvYojBs",
+      "LocalizedInfo": {
+        "LocalizedTitle": "Zoonami",
+        "LocalizedDescription": "🐾 Dive into the ZOONAMI! 🌊https://www.instagram.com/zoonami.presenc/\n\nRide the wave of daily cuteness and hilarious moments featuring dogs, cats, bunnies, horses & more! 🐶🐱🐰🐴\nIf you love animals, jump aboard the fluffiest and funniest channel on YouTube! 💥\n\nHit subscribe—don’t miss a single splash of joy! 🐾\n"
+      },
+      "Country": null,
+      "Language": null,
+      "ETag": null
+    },
+    "AccountStatistics": {
+      "ViewCount": 0,
+      "SubscriberCount": 0,
+      "IsSubscriberCountHidden": false,
+      "VideoCount": 6
+    },
+    "BrandingSettings": {
+      "ChannelKeywords": null,
+      "IsModerateCommentsEnabled": false,
+      "FeaturedChannels": [],
+      "FeaturedChannelsTitle": "",
+      "BannerImageUrl": "https://yt3.googleusercontent.com/KBvl9F_xyI9c8aXuywD2JUWOEF_4VXFKIbXZYJHMuo0uk-9zVCm1PN5rjFWETqMX2rvYojBs",
+      "UnsubscribedTrailer": "",
+      "DefaultTab": "",
+      "ShowBrowseView": false,
+      "ShowRelatedChannels": false,
+      "ProfileColor": ""
+    },
+    "AccountStatus": {
+      "PrivacyStatus": "public",
+      "IsLinked": true,
+      "LongUploadsStatus": "eligible",
+      "IsMadeForKids": false,
+      "IsSelfDeclaredMadeForKids": false
+    },
+    "TopicCategories": [
+      "https://en.wikipedia.org/wiki/Lifestyle_(sociology)",
+      "https://en.wikipedia.org/wiki/Pet"
+    ]
+  },
+  "Posts": [
+    {
+      "PlatformId": "yv_JiivnxNo",
+      "PostProfile": {
+        "PublishedAt": "2025-05-11T01:06:48+00:00",
+        "Title": "This Is What Joy Looks Like",
+        "Description": "Who else rewatched this 3 times?",
+        "ThumbnailUrl": "https://i.ytimg.com/vi/yv_JiivnxNo/sddefault.jpg",
+        "Tags": null,
+        "CategoryId": "22",
+        "LocalizedInfo": {
+          "LocalizedTitle": "This Is What Joy Looks Like",
+          "LocalizedDescription": "Who else rewatched this 3 times?"
+        },
+        "ETag": null
+      },
+      "PostStatistics": {
+        "ViewCount": 0,
+        "LikeCount": 0,
+        "DislikeCount": 0,
+        "CommentCount": 0
+      },
+      "ContentDetails": {
+        "Duration": "00:00:59",
+        "Dimension": "2d",
+        "Definition": "hd",
+        "Caption": "false",
+        "IsLicensedContent": false,
+        "RegionRestriction": null
+      },
+      "PostStatusInfo": {
+        "PrivacyStatus": "public",
+        "License": "youtube",
+        "IsEmbeddable": true,
+        "UploadStatus": "processed"
+      },
+      "Player": {
+        "EmbedHtml": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/yv_JiivnxNo\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+      },
+      "TopicDetails": {
+        "TopicIds": null,
+        "RelevantTopicIds": null,
+        "TopicCategories": [
+          "https://en.wikipedia.org/wiki/Lifestyle_(sociology)",
+          "https://en.wikipedia.org/wiki/Pet"
+        ]
+      }
+    },
+    {
+      "PlatformId": "Eyw_ZjWqRCc",
+      "PostProfile": {
+        "PublishedAt": "2025-05-10T01:06:40+00:00",
+        "Title": "Wholesome with a Side of Chaos",
+        "Description": "The internet at its purest form",
+        "ThumbnailUrl": "https://i.ytimg.com/vi/Eyw_ZjWqRCc/sddefault.jpg",
+        "Tags": null,
+        "CategoryId": "22",
+        "LocalizedInfo": {
+          "LocalizedTitle": "Wholesome with a Side of Chaos",
+          "LocalizedDescription": "The internet at its purest form"
+        },
+        "ETag": null
+      },
+      "PostStatistics": {
+        "ViewCount": 0,
+        "LikeCount": 0,
+        "DislikeCount": 0,
+        "CommentCount": 0
+      },
+      "ContentDetails": {
+        "Duration": "00:00:59",
+        "Dimension": "2d",
+        "Definition": "hd",
+        "Caption": "false",
+        "IsLicensedContent": false,
+        "RegionRestriction": null
+      },
+      "PostStatusInfo": {
+        "PrivacyStatus": "public",
+        "License": "youtube",
+        "IsEmbeddable": true,
+        "UploadStatus": "processed"
+      },
+      "Player": {
+        "EmbedHtml": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/Eyw_ZjWqRCc\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+      },
+      "TopicDetails": {
+        "TopicIds": null,
+        "RelevantTopicIds": null,
+        "TopicCategories": [
+          "https://en.wikipedia.org/wiki/Lifestyle_(sociology)",
+          "https://en.wikipedia.org/wiki/Pet"
+        ]
+      }
+    },
+    {
+      "PlatformId": "jISXtdMajBA",
+      "PostProfile": {
+        "PublishedAt": "2025-05-08T01:06:28+00:00",
+        "Title": "Comedic Timing: Nailed It",
+        "Description": "One word: awwww!",
+        "ThumbnailUrl": "https://i.ytimg.com/vi/jISXtdMajBA/sddefault.jpg",
+        "Tags": null,
+        "CategoryId": "22",
+        "LocalizedInfo": {
+          "LocalizedTitle": "Comedic Timing: Nailed It",
+          "LocalizedDescription": "One word: awwww!"
+        },
+        "ETag": null
+      },
+      "PostStatistics": {
+        "ViewCount": 0,
+        "LikeCount": 0,
+        "DislikeCount": 0,
+        "CommentCount": 0
+      },
+      "ContentDetails": {
+        "Duration": "00:00:59",
+        "Dimension": "2d",
+        "Definition": "hd",
+        "Caption": "false",
+        "IsLicensedContent": false,
+        "RegionRestriction": null
+      },
+      "PostStatusInfo": {
+        "PrivacyStatus": "public",
+        "License": "youtube",
+        "IsEmbeddable": true,
+        "UploadStatus": "processed"
+      },
+      "Player": {
+        "EmbedHtml": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/jISXtdMajBA\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+      },
+      "TopicDetails": {
+        "TopicIds": null,
+        "RelevantTopicIds": null,
+        "TopicCategories": [
+          "https://en.wikipedia.org/wiki/Entertainment"
+        ]
+      }
+    },
+    {
+      "PlatformId": "l5kkW1dfCJg",
+      "PostProfile": {
+        "PublishedAt": "2025-05-07T01:06:25+00:00",
+        "Title": "What a Ride",
+        "Description": "Joy comes in small, furry packages!",
+        "ThumbnailUrl": "https://i.ytimg.com/vi/l5kkW1dfCJg/sddefault.jpg",
+        "Tags": null,
+        "CategoryId": "22",
+        "LocalizedInfo": {
+          "LocalizedTitle": "What a Ride",
+          "LocalizedDescription": "Joy comes in small, furry packages!"
+        },
+        "ETag": null
+      },
+      "PostStatistics": {
+        "ViewCount": 0,
+        "LikeCount": 0,
+        "DislikeCount": 0,
+        "CommentCount": 0
+      },
+      "ContentDetails": {
+        "Duration": "00:00:59",
+        "Dimension": "2d",
+        "Definition": "hd",
+        "Caption": "false",
+        "IsLicensedContent": false,
+        "RegionRestriction": null
+      },
+      "PostStatusInfo": {
+        "PrivacyStatus": "public",
+        "License": "youtube",
+        "IsEmbeddable": true,
+        "UploadStatus": "processed"
+      },
+      "Player": {
+        "EmbedHtml": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/l5kkW1dfCJg\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+      },
+      "TopicDetails": {
+        "TopicIds": null,
+        "RelevantTopicIds": null,
+        "TopicCategories": [
+          "https://en.wikipedia.org/wiki/Pet"
+        ]
+      }
+    },
+    {
+      "PlatformId": "2Ko0xMKFFXU",
+      "PostProfile": {
+        "PublishedAt": "2025-05-06T15:25:46+00:00",
+        "Title": "This Made My Day",
+        "Description": "A perfect example of why animals rule.",
+        "ThumbnailUrl": "https://i.ytimg.com/vi/2Ko0xMKFFXU/sddefault.jpg",
+        "Tags": null,
+        "CategoryId": "22",
+        "LocalizedInfo": {
+          "LocalizedTitle": "This Made My Day",
+          "LocalizedDescription": "A perfect example of why animals rule."
+        },
+        "ETag": null
+      },
+      "PostStatistics": {
+        "ViewCount": 0,
+        "LikeCount": 0,
+        "DislikeCount": 0,
+        "CommentCount": 0
+      },
+      "ContentDetails": {
+        "Duration": "00:00:59",
+        "Dimension": "2d",
+        "Definition": "hd",
+        "Caption": "false",
+        "IsLicensedContent": false,
+        "RegionRestriction": null
+      },
+      "PostStatusInfo": {
+        "PrivacyStatus": "public",
+        "License": "youtube",
+        "IsEmbeddable": true,
+        "UploadStatus": "processed"
+      },
+      "Player": {
+        "EmbedHtml": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/2Ko0xMKFFXU\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+      },
+      "TopicDetails": {
+        "TopicIds": null,
+        "RelevantTopicIds": null,
+        "TopicCategories": [
+          "https://en.wikipedia.org/wiki/Lifestyle_(sociology)",
+          "https://en.wikipedia.org/wiki/Pet"
+        ]
+      }
+    },
+    {
+      "PlatformId": "CoTrQKfFZ_A",
+      "PostProfile": {
+        "PublishedAt": "2025-05-06T15:14:28+00:00",
+        "Title": "The Art of the Flop",
+        "Description": "Joy comes in small, furry packages!",
+        "ThumbnailUrl": "https://i.ytimg.com/vi/CoTrQKfFZ_A/sddefault.jpg",
+        "Tags": null,
+        "CategoryId": "22",
+        "LocalizedInfo": {
+          "LocalizedTitle": "The Art of the Flop",
+          "LocalizedDescription": "Joy comes in small, furry packages!"
+        },
+        "ETag": null
+      },
+      "PostStatistics": {
+        "ViewCount": 0,
+        "LikeCount": 0,
+        "DislikeCount": 0,
+        "CommentCount": 0
+      },
+      "ContentDetails": {
+        "Duration": "00:00:31",
+        "Dimension": "2d",
+        "Definition": "hd",
+        "Caption": "false",
+        "IsLicensedContent": false,
+        "RegionRestriction": null
+      },
+      "PostStatusInfo": {
+        "PrivacyStatus": "public",
+        "License": "youtube",
+        "IsEmbeddable": true,
+        "UploadStatus": "processed"
+      },
+      "Player": {
+        "EmbedHtml": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/CoTrQKfFZ_A\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+      },
+      "TopicDetails": {
+        "TopicIds": null,
+        "RelevantTopicIds": null,
+        "TopicCategories": [
+          "https://en.wikipedia.org/wiki/Lifestyle_(sociology)",
+          "https://en.wikipedia.org/wiki/Pet"
+        ]
+      }
+    }
+  ]
+}

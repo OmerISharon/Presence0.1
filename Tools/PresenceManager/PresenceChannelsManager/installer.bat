@@ -10,7 +10,7 @@ set "PYTHON_PATH=C:\Users\omers\AppData\Local\Programs\Python\Python311\pythonw.
 :: Shortcut file name.
 set "SHORTCUT_NAME=PresenceChannelsManager.lnk"
 :: Custom icon path.
-set "ICON_PATH=D:\2025\Projects\Presence\Presence0.1\Resources\Brand_Resources\Brand Logo\v1\Presence Icon v1.ico"
+set "ICON_PATH=D:\2025\Projects\Presence\Presence0.1\Tools\PresenceManager\PresenceChannelsManager\Uriy1966-Wooden-System.ico"
 
 :: Create the shortcut using PowerShell.
 powershell -NoProfile -Command ^

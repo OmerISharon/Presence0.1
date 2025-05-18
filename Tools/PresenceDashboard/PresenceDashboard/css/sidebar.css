@@ -114,6 +114,44 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
+.data-update-btn {
+    position: fixed;
+    top: 65px;  /* Positioned 65px from the top, right under the sidebar toggle */
+    left: 15px;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: #28a745; /* Green color */
+    color: white;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.data-update-btn:hover {
+    background-color: #218838; /* Darker green */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.data-update-loading {
+    opacity: 0.7;
+    pointer-events: none;
+    animation: pulse 1.5s infinite;
+}
+
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
 /* Overlay for sidebar */
 .sidebar-overlay {
     display: block;

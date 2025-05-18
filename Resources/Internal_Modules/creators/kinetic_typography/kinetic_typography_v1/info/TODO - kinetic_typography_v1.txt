@@ -1,0 +1,7 @@
+TODO - kinetic_typography_v1:
+
+1. set the audio file as input argument.
+2. set the output video file path as input argument.
+3. set the WORD_SPEED_FACTOR as an input argument (default: 1).
+4. Set the TEXT_COLOR as an RGB input argument (default: 255, 255, 255).
+5. Set the BACKGROUND_COLOR as an RGB input argument (default: 0, 0, 0).

@@ -1,0 +1,5 @@
+base_dir = fr"D:\2025\Projects\Presence\Presence0.1\Channels\Wise Jellyfish"
+background_music_dir = fr"D:\2025\Projects\Presence\Presence0.1\Resources\Media_Resources\Audio\Background_Audio\Inspirational"
+typinng_sounds_dir =  fr"D:\2025\Projects\Presence\Presence0.1\Creator\Channels\RedNBlack\Resources\Audio\Typing_Sounds"
+matrix_script_path = fr"D:\2025\Projects\Presence\Presence0.1\Resources\Internal_Modules\creators\matrix\matrix_v1\matrix_v1.py"
+outro_logo_path = fr"D:\2025\Projects\Presence\Presence0.1\Creator\Channels\Wise Jellyfish\Resources\Logo\Outro_Logo.mp4"

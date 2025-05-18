@@ -7,7 +7,7 @@
 const state = {
     channels: [],
     currentChannel: null,
-    basePath: 'D:/2025/Projects/Presence/Presence0.1/Tools/PresenceDashboard/Resources/output_data_json_files/'
+    basePath: 'D:/2025/Projects/Presence/Presence0.1/Tools/PresenceDashboard/Resources/output_data_json_files/YoutubeDashboardData/'
 };
 
 // DOM elements

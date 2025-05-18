@@ -1,0 +1,237 @@
+{
+  "Account": {
+    "PlatformId": "UCUjekS1QXErLdYhRNivxuog",
+    "Platform": "YouTube",
+    "AccountProfile": {
+      "Title": "Zoonami",
+      "Description": "Zoonami is your daily dose of cuteness and laughs — featuring the funniest dogs, cats, bunnies, horses & more! 🐶🐱🐰🐴\nLove animals? Hit subscribe and join the wildest, fluffiest ride on YouTube! 💥\n\nSubscribe now to never miss a tail-wagging moment! 🐾\n#funnyanimals #zoonami #cutepets\n",
+      "PublishedAt": "2025-04-15T16:34:28.165889+00:00",
+      "CustomUrl": "@zoonamiclips",
+      "ThumbnailUrl": "https://yt3.ggpht.com/ytc/AIdro_kfABKUga5pkR_PK1zv25kVetQzu8rI1gpUCBBfrfozEcXzfLd7PfV06oBEEbUdzI7HWg=s800-c-k-c0x00ffffff-no-rj",
+      "BannerUrl": "",
+      "LocalizedInfo": {
+        "LocalizedTitle": "Zoonami",
+        "LocalizedDescription": "Zoonami is your daily dose of cuteness and laughs — featuring the funniest dogs, cats, bunnies, horses & more! 🐶🐱🐰🐴\nLove animals? Hit subscribe and join the wildest, fluffiest ride on YouTube! 💥\n\nSubscribe now to never miss a tail-wagging moment! 🐾\n#funnyanimals #zoonami #cutepets\n"
+      },
+      "Country": null,
+      "Language": null,
+      "ETag": null
+    },
+    "AccountStatistics": {
+      "ViewCount": 0,
+      "SubscriberCount": 0,
+      "IsSubscriberCountHidden": false,
+      "VideoCount": 4
+    },
+    "BrandingSettings": {
+      "ChannelKeywords": null,
+      "IsModerateCommentsEnabled": false,
+      "FeaturedChannels": [],
+      "FeaturedChannelsTitle": "",
+      "BannerImageUrl": "",
+      "UnsubscribedTrailer": "",
+      "DefaultTab": "",
+      "ShowBrowseView": false,
+      "ShowRelatedChannels": false,
+      "ProfileColor": ""
+    },
+    "AccountStatus": {
+      "PrivacyStatus": "public",
+      "IsLinked": true,
+      "LongUploadsStatus": "eligible",
+      "IsMadeForKids": false,
+      "IsSelfDeclaredMadeForKids": false
+    },
+    "TopicCategories": [
+      "https://en.wikipedia.org/wiki/Lifestyle_(sociology)"
+    ]
+  },
+  "Posts": [
+    {
+      "PlatformId": "CcHrleGMN6I",
+      "PostProfile": {
+        "PublishedAt": "2025-04-20T01:20:51+00:00",
+        "Title": "Zoonami #4",
+        "Description": "",
+        "ThumbnailUrl": "https://i.ytimg.com/vi/CcHrleGMN6I/sddefault.jpg",
+        "Tags": null,
+        "CategoryId": "22",
+        "LocalizedInfo": {
+          "LocalizedTitle": "Zoonami #4",
+          "LocalizedDescription": ""
+        },
+        "ETag": null
+      },
+      "PostStatistics": {
+        "ViewCount": 0,
+        "LikeCount": 0,
+        "DislikeCount": 0,
+        "CommentCount": 0
+      },
+      "ContentDetails": {
+        "Duration": "00:00:31",
+        "Dimension": "2d",
+        "Definition": "hd",
+        "Caption": "false",
+        "IsLicensedContent": false,
+        "RegionRestriction": null
+      },
+      "PostStatusInfo": {
+        "PrivacyStatus": "public",
+        "License": "youtube",
+        "IsEmbeddable": true,
+        "UploadStatus": "processed"
+      },
+      "Player": {
+        "EmbedHtml": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/CcHrleGMN6I\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+      },
+      "TopicDetails": {
+        "TopicIds": null,
+        "RelevantTopicIds": null,
+        "TopicCategories": [
+          "https://en.wikipedia.org/wiki/Entertainment",
+          "https://en.wikipedia.org/wiki/Pet"
+        ]
+      }
+    },
+    {
+      "PlatformId": "cFM4e8I7w6s",
+      "PostProfile": {
+        "PublishedAt": "2025-04-19T01:14:36+00:00",
+        "Title": "Zoonami #3",
+        "Description": "",
+        "ThumbnailUrl": "https://i.ytimg.com/vi/cFM4e8I7w6s/sddefault.jpg",
+        "Tags": null,
+        "CategoryId": "22",
+        "LocalizedInfo": {
+          "LocalizedTitle": "Zoonami #3",
+          "LocalizedDescription": ""
+        },
+        "ETag": null
+      },
+      "PostStatistics": {
+        "ViewCount": 0,
+        "LikeCount": 0,
+        "DislikeCount": 0,
+        "CommentCount": 0
+      },
+      "ContentDetails": {
+        "Duration": "00:00:31",
+        "Dimension": "2d",
+        "Definition": "hd",
+        "Caption": "false",
+        "IsLicensedContent": false,
+        "RegionRestriction": null
+      },
+      "PostStatusInfo": {
+        "PrivacyStatus": "public",
+        "License": "youtube",
+        "IsEmbeddable": true,
+        "UploadStatus": "processed"
+      },
+      "Player": {
+        "EmbedHtml": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/cFM4e8I7w6s\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+      },
+      "TopicDetails": {
+        "TopicIds": null,
+        "RelevantTopicIds": null,
+        "TopicCategories": [
+          "https://en.wikipedia.org/wiki/Entertainment"
+        ]
+      }
+    },
+    {
+      "PlatformId": "kJbBqqH7ilc",
+      "PostProfile": {
+        "PublishedAt": "2025-04-17T01:11:13+00:00",
+        "Title": "Zoonami #2",
+        "Description": "",
+        "ThumbnailUrl": "https://i.ytimg.com/vi/kJbBqqH7ilc/sddefault.jpg",
+        "Tags": null,
+        "CategoryId": "22",
+        "LocalizedInfo": {
+          "LocalizedTitle": "Zoonami #2",
+          "LocalizedDescription": ""
+        },
+        "ETag": null
+      },
+      "PostStatistics": {
+        "ViewCount": 0,
+        "LikeCount": 0,
+        "DislikeCount": 0,
+        "CommentCount": 0
+      },
+      "ContentDetails": {
+        "Duration": "00:00:31",
+        "Dimension": "2d",
+        "Definition": "hd",
+        "Caption": "false",
+        "IsLicensedContent": false,
+        "RegionRestriction": null
+      },
+      "PostStatusInfo": {
+        "PrivacyStatus": "public",
+        "License": "youtube",
+        "IsEmbeddable": true,
+        "UploadStatus": "processed"
+      },
+      "Player": {
+        "EmbedHtml": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/kJbBqqH7ilc\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+      },
+      "TopicDetails": {
+        "TopicIds": null,
+        "RelevantTopicIds": null,
+        "TopicCategories": [
+          "https://en.wikipedia.org/wiki/Entertainment"
+        ]
+      }
+    },
+    {
+      "PlatformId": "c03gxlNMKvo",
+      "PostProfile": {
+        "PublishedAt": "2025-04-16T08:32:17+00:00",
+        "Title": "20250415_192619",
+        "Description": "20250415_192619",
+        "ThumbnailUrl": "https://i.ytimg.com/vi/c03gxlNMKvo/sddefault.jpg",
+        "Tags": null,
+        "CategoryId": "22",
+        "LocalizedInfo": {
+          "LocalizedTitle": "20250415_192619",
+          "LocalizedDescription": "20250415_192619"
+        },
+        "ETag": null
+      },
+      "PostStatistics": {
+        "ViewCount": 0,
+        "LikeCount": 0,
+        "DislikeCount": 0,
+        "CommentCount": 0
+      },
+      "ContentDetails": {
+        "Duration": "00:00:31",
+        "Dimension": "2d",
+        "Definition": "hd",
+        "Caption": "false",
+        "IsLicensedContent": false,
+        "RegionRestriction": null
+      },
+      "PostStatusInfo": {
+        "PrivacyStatus": "public",
+        "License": "youtube",
+        "IsEmbeddable": true,
+        "UploadStatus": "processed"
+      },
+      "Player": {
+        "EmbedHtml": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/c03gxlNMKvo\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+      },
+      "TopicDetails": {
+        "TopicIds": null,
+        "RelevantTopicIds": null,
+        "TopicCategories": [
+          "https://en.wikipedia.org/wiki/Lifestyle_(sociology)",
+          "https://en.wikipedia.org/wiki/Pet"
+        ]
+      }
+    }
+  ]
+}

@@ -4,7 +4,7 @@ setlocal EnableDelayedExpansion
 :: -------------------------------
 :: Display the batch file's name in uppercase as a title
 :: -------------------------------
-for /f "delims=" %%A in ('powershell -NoProfile -Command "Write-Output '%~nx0'.ToUpper()"') do set BATCHNAME=%%A
+for /f "delims=" %%A in ('powershell -NoProfile -Command "[System.IO.Path]::GetFileName('%~nx0').ToUpper()"') do set BATCHNAME=%%A
 echo ===========================
 echo %BATCHNAME%
 echo ===========================
@@ -22,8 +22,19 @@ echo.
 :: -------------------------------
 for /D %%I in ("%CHANNELSDIR%\*") do (
     set "CHANNAME=%%~nI"
+    set "EXECPATH=%CHANNELSDIR%\%%~nI\Executer\%%~nI.bat"
+
+    call :ProcessChannel
+)
+goto :eof
+
+:ProcessChannel
+:: Skip folders ending with "(not in use)"
+echo !CHANNAME! | findstr /R /C:"(not in use)$" >nul
+if !errorlevel! equ 0 (
+    echo Skipping channel: !CHANNAME! (marked as not in use)
+) else (
     echo Processing channel: !CHANNAME!
-    set "EXECPATH=%CHANNELSDIR%\!CHANNAME!\Executer\!CHANNAME!.bat"
     echo Checking executer file at: !EXECPATH!
     if exist "!EXECPATH!" (
         echo Executer found for channel: !CHANNAME!. Executing...
@@ -32,9 +43,6 @@ for /D %%I in ("%CHANNELSDIR%\*") do (
     ) else (
         echo Executer not found for channel: !CHANNAME!
     )
-    echo.
 )
-
-echo All channels processed.
-
+echo.
 exit /b
